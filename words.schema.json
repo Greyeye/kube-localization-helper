@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "Shared schema for every words/<lang>/*.json file (e.g. words/ja/, words/ko/). glossary_id links to https://kubernetes.io/{lang}/docs/reference/glossary/#term-{glossary_id} (matches the `id:` front matter in content/en/docs/reference/glossary/*.md, or the target-language glossary's own front matter). null when the term has no glossary page.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "english",
+      "translate"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "stable slug, e.g. \"deployment\""
+      },
+      "english": {
+        "type": "string",
+        "description": "canonical display form"
+      },
+      "aliases": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "other surface forms to match in text (plurals, verb forms, casing variants)"
+      },
+      "translate": {
+        "type": "boolean",
+        "description": "default behavior when no contextual_rules entry matches"
+      },
+      "translation": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "default rendering in the target language when translate=true; null when translate=false"
+      },
+      "definition": {
+        "type": "object",
+        "properties": {
+          "translation": {
+            "type": "string",
+            "description": "dictionary meaning in the target language, keep it short"
+          },
+          "english": {
+            "type": "string",
+            "description": "dictionary meaning in english, keep it short"
+          }
+        }
+      },
+      "glossary_id": {
+        "type": ["string", "null"],
+        "description": "id from content/en/docs/reference/glossary/*.md front matter, e.g. \"cluster\" or \"kube-apiserver\". Build the link as https://kubernetes.io/{lang}/docs/reference/glossary/#term-{glossary_id}. null if this term has no glossary page."
+      },
+      "translation_sample": {
+        "type": ["string", "null"],
+        "description": "sample sentence using the word, keep it short, a full sentence is not needed."
+      },
+      "contextual_rules": {
+        "type": "array",
+        "description": "present only on terms whose translation depends on usage; checked in order, first match wins, else fall back to top-level translate/translation",
+        "items": {
+          "type": "object",
+          "required": [
+            "when",
+            "translate"
+          ],
+          "properties": {
+            "when": {
+              "type": "string",
+              "description": "human-readable condition, e.g. \"refers to the kind: Deployment resource\""
+            },
+            "translate": {
+              "type": "boolean"
+            },
+            "translation": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      },
+      "notes": {
+        "type": "string"
+      }
+    }
+  }
+}

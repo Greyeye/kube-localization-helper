@@ -1,0 +1,79 @@
+[
+  {
+    "id": "certificate",
+    "glossary_id": "certificate",
+    "english": "Certificate",
+    "translate": true,
+    "translation": "証明書",
+    "definition": {
+      "english": "A cryptographically secure file used to validate access to the Kubernetes cluster.",
+      "translation": "Kubernetesクラスターへのアクセスを検証するために使用される暗号化されたセキュアなファイル。"
+    }
+  },
+  {
+    "id": "jwt",
+    "glossary_id": "jwt",
+    "english": "JSON Web Token (JWT)",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "A means of representing claims to be transferred between two parties.",
+      "translation": "2つの通信主体間で送受信されるクレームを表現する手段。"
+    }
+  },
+  {
+    "id": "pod-security-policy",
+    "glossary_id": "pod-security-policy",
+    "english": "Pod Security Policy",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "Removed API that enforced Pod security restrictions."
+    },
+    "notes": "No official Japanese glossary page for this term yet — needs review."
+  },
+  {
+    "id": "rbac",
+    "glossary_id": "rbac",
+    "english": "RBAC (Role-Based Access Control)",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "Manages authorization decisions, allowing admins to dynamically configure access policies through the Kubernetes API.",
+      "translation": "管理者がKubernetes APIを通じてアクセスポリシーを動的に設定できるようにし、認可の判断を管理します。"
+    }
+  },
+  {
+    "id": "san",
+    "glossary_id": "san",
+    "english": "Subject Alternative Name",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "An X.509 certificate extension to identify what hostname or IP address the certificate applies to."
+    },
+    "notes": "No official Japanese glossary page for this term yet — needs review."
+  },
+  {
+    "id": "security-context",
+    "glossary_id": "security-context",
+    "english": "Security Context",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "The securityContext field defines privilege and access control settings for a Pod or container.",
+      "translation": "`securityContext`フィールドは、Podまたはコンテナの権限とアクセス制御の設定を定義します。"
+    }
+  },
+  {
+    "id": "userns",
+    "glossary_id": "userns",
+    "english": "user namespace",
+    "translate": true,
+    "translation": "ユーザー名前空間",
+    "definition": {
+      "english": "A Linux kernel feature to emulate superuser privilege for unprivileged users.",
+      "translation": "非特権ユーザーに対して管理者権限をエミュレートするLinuxカーネルの機能。"
+    }
+  }
+]

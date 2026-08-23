@@ -1,0 +1,57 @@
+[
+  {
+    "id": "app-container",
+    "glossary_id": "app-container",
+    "english": "App Container",
+    "translate": true,
+    "translation": "Appコンテナ",
+    "definition": {
+      "english": "A container used to run part of a workload. Compare with init container.",
+      "translation": "ワークロードの一部を実行するために使用されるコンテナ。Initコンテナと比較してください。"
+    }
+  },
+  {
+    "id": "replication-controller",
+    "glossary_id": "replication-controller",
+    "english": "ReplicationController",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "A (deprecated) API object that manages a replicated application."
+    },
+    "notes": "No official Japanese glossary page for this term yet — needs review."
+  },
+  {
+    "id": "resourceclaim",
+    "glossary_id": "resourceclaim",
+    "english": "ResourceClaim",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "Describes the resources that a workload needs, such as devices. ResourceClaims can request devices from DeviceClasses."
+    },
+    "notes": "No official Japanese glossary page for this term yet — needs review."
+  },
+  {
+    "id": "resourceclaimtemplate",
+    "glossary_id": "resourceclaimtemplate",
+    "english": "ResourceClaimTemplate",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "Defines a template for Kubernetes to create ResourceClaims. Used to provide per-Pod or per-PodGroup access to separate, similar resources."
+    },
+    "notes": "No official Japanese glossary page for this term yet — needs review."
+  },
+  {
+    "id": "resourceslice",
+    "glossary_id": "resourceslice",
+    "english": "ResourceSlice",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "Represents one or more infrastructure resources, like devices, in a pool of similar resources."
+    },
+    "notes": "No official Japanese glossary page for this term yet — needs review."
+  }
+]

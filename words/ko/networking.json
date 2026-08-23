@@ -1,0 +1,64 @@
+[
+  {
+    "id": "endpoint",
+    "glossary_id": "endpoint",
+    "english": "endpoint",
+    "translate": true,
+    "translation": "엔드포인트",
+    "definition": {
+      "english": "(Deprecated) API representing endpoints of a Service",
+      "translation": "엔드포인트는 서비스(Service) 셀렉터에 매치되는 파드의 IP 주소를 추적한다."
+    },
+    "translation_sample": "엔드포인트는 셀렉터를 명시하지 않고도 service에 대해 수동으로 구성할 수 있다."
+  },
+  {
+    "id": "endpoints",
+    "glossary_id": "endpoint",
+    "english": "Endpoints",
+    "translate": true,
+    "translation": "엔드포인트(Endpoints)",
+    "definition": {
+      "english": "(Deprecated) API representing endpoints of a Service",
+      "translation": "엔드포인트는 서비스(Service) 셀렉터에 매치되는 파드의 IP 주소를 추적한다."
+    },
+    "translation_sample": "엔드포인트는 셀렉터를 명시하지 않고도 service에 대해 수동으로 구성할 수 있다.",
+    "notes": "API 오브젝트인 경우"
+  },
+  {
+    "id": "ingress",
+    "glossary_id": "ingress",
+    "english": "Ingress",
+    "translate": true,
+    "translation": "인그레스(Ingress)",
+    "definition": {
+      "english": "An API object that manages external access to the services in a cluster, typically HTTP.",
+      "translation": "클러스터 내의 서비스에 대한 외부 접근을 관리하는 API 오브젝트이며, 일반적으로 HTTP를 관리함."
+    },
+    "translation_sample": "인그레스는 부하 분산, SSL 종료, 명칭 기반의 가상 호스팅을 제공할 수 있다.",
+    "notes": "API 오브젝트인 경우"
+  },
+  {
+    "id": "istio",
+    "glossary_id": "istio",
+    "english": "Istio",
+    "translate": true,
+    "translation": "이스티오(Istio)",
+    "definition": {
+      "english": "An open platform (not Kubernetes-specific) that provides a uniform way to integrate microservices, manage traffic flow, enforce policies, and aggregate telemetry data.",
+      "translation": "마이크로서비스의 통합을 위한 통일된 방법을 제공하는 오픈 플랫폼(쿠버네티스에 특정적이지 않음)이며, 트래픽 흐름을 관리하고, 정책을 시행하고, 텔레메트리 데이터를 모은다."
+    },
+    "translation_sample": "Istio를 추가하는 것은 애플리케이션 코드 변경을 요구하지 않는다."
+  },
+  {
+    "id": "proxy",
+    "glossary_id": "proxy",
+    "english": "proxy",
+    "translate": true,
+    "translation": "프록시",
+    "definition": {
+      "english": "An application acting as an intermediary between clients and servers",
+      "translation": "클라이언트와 서버 간의 중개자 역할을 하는 애플리케이션"
+    },
+    "translation_sample": "클라이언트는 프록시와 통신한다."
+  }
+]

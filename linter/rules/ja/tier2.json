@@ -1,0 +1,47 @@
+[
+  {
+    "id": "latin-japanese-spacing",
+    "kind": "regex",
+    "pattern": "(?<=[A-Za-z0-9`])[ \\t]+(?=[\\p{Script=Han}\\p{Script=Hiragana}\\p{Script=Katakana}])|(?<=[\\p{Script=Han}\\p{Script=Hiragana}\\p{Script=Katakana}])[ \\t]+(?=[A-Za-z0-9`])",
+    "flags": "gu",
+    "message": {
+      "japanese": "英単語と日本語の間の半角スペースを削除してください。不要です。",
+      "english": "Remove the space between Latin text and Japanese text — none is needed."
+    },
+    "severity": "warning"
+  },
+  {
+    "id": "code-span-spacing",
+    "kind": "codeSpanSpacing",
+    "beforeMessage": {
+      "japanese": "このコードスパンの前に半角スペースを入れてください。英単語に直接接しています。",
+      "english": "Insert a space before this code span — it's directly against English text."
+    },
+    "afterMessage": {
+      "japanese": "このコードスパンの後に半角スペースを入れてください。英単語に直接接しています。",
+      "english": "Insert a space after this code span — it's directly against English text."
+    },
+    "severity": "warning"
+  },
+  {
+    "id": "paren-period-order",
+    "kind": "regex",
+    "pattern": "。\\)",
+    "flags": "g",
+    "message": {
+      "japanese": "閉じ括弧は。の前に置いてください。「。)」ではなく「)。」としてください。",
+      "english": "Put the closing parenthesis before the 。: use \")。\" instead of \"。)\"."
+    },
+    "severity": "warning"
+  },
+  {
+    "id": "mid-sentence-linebreak",
+    "kind": "prosePairMustEndWith",
+    "endMarkers": ["。", "、", ":", "："],
+    "message": {
+      "japanese": "この行は「。」「、」または行末のコロンで終わっていませんが、次の行にも文章が続いています。文の途中で改行されていないか確認してください。",
+      "english": "This line doesn't end in 。, 、, or a trailing colon but is immediately followed by more prose — check for an unintended mid-sentence line break."
+    },
+    "severity": "information"
+  }
+]

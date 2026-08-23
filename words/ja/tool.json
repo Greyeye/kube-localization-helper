@@ -1,0 +1,112 @@
+[
+  {
+    "id": "addons",
+    "glossary_id": "addons",
+    "english": "Add-ons",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "Resources that extend the functionality of Kubernetes.",
+      "translation": "Kubernetesの機能を拡張するリソース。"
+    }
+  },
+  {
+    "id": "cadvisor",
+    "glossary_id": "cadvisor",
+    "english": "cAdvisor",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "Tool that provides understanding of the resource usage and performance characteristics for containers",
+      "translation": "コンテナのリソース使用量とパフォーマンス特性を理解するためのツール"
+    }
+  },
+  {
+    "id": "containerd",
+    "glossary_id": "containerd",
+    "english": "containerd",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "A container runtime with an emphasis on simplicity, robustness and portability",
+      "translation": "シンプルさ、堅牢性、移植性を重視したコンテナランタイムです。"
+    }
+  },
+  {
+    "id": "cri-o",
+    "glossary_id": "cri-o",
+    "english": "CRI-O",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "A lightweight container runtime specifically for Kubernetes",
+      "translation": "Kubernetesに特化した軽量コンテナランタイム"
+    }
+  },
+  {
+    "id": "helm-chart",
+    "glossary_id": "helm-chart",
+    "english": "Helm Chart",
+    "translate": true,
+    "translation": "Helmチャート",
+    "definition": {
+      "english": "A package of pre-configured Kubernetes configurations that can be managed with the Helm tool.",
+      "translation": "Helmツールで管理できる、事前構成されたKubernetesリソースのパッケージ。"
+    }
+  },
+  {
+    "id": "kops",
+    "glossary_id": "kops",
+    "english": "kOps (Kubernetes Operations)",
+    "translate": true,
+    "translation": "kOps(Kubernetes Operations)",
+    "definition": {
+      "english": "kOps will not only help you create, destroy, upgrade and maintain production-grade, highly available, Kubernetes cluster, but it will also provision the necessary cloud infrastructure.",
+      "translation": "kOpsは、プロダクショングレードの高可用性のあるKubernetesクラスターの作成、破棄、アップグレード、メンテナンスを支援するだけでなく、それに必要なクラウドインフラストラクチャのプロビジョニングも行います。"
+    }
+  },
+  {
+    "id": "kubeadm",
+    "glossary_id": "kubeadm",
+    "english": "Kubeadm",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "A tool for quickly installing Kubernetes and setting up a secure cluster.",
+      "translation": "Kubernetesを迅速にインストールし、安全なクラスターをセットアップするためのツール。"
+    }
+  },
+  {
+    "id": "kubectl",
+    "glossary_id": "kubectl",
+    "english": "Kubectl",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "A command line tool for communicating with a Kubernetes cluster.",
+      "translation": "Kubernetesクラスターと通信するためのコマンドラインツールです。"
+    }
+  },
+  {
+    "id": "probe",
+    "glossary_id": "probe",
+    "english": "Probe",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "A check performed periodically by the kubelet on a container in a Pod.",
+      "translation": "Pod内のコンテナに対して、kubeletが定期的に実行するチェック。"
+    }
+  },
+  {
+    "id": "sysctl",
+    "glossary_id": "sysctl",
+    "english": "sysctl",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "An interface for getting and setting Unix kernel parameters"
+    },
+    "notes": "No official Japanese glossary page for this term yet — needs review."
+  }
+]

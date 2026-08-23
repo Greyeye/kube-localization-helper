@@ -1,0 +1,26 @@
+[
+  {
+    "id": "addons",
+    "glossary_id": "addons",
+    "english": "addons",
+    "translate": true,
+    "translation": "애드온",
+    "definition": {
+      "english": "Resources that extend the functionality of Kubernetes.",
+      "translation": "쿠버네티스의 기능을 확장하는 리소스."
+    },
+    "translation_sample": "[애드온 설치](/ko/docs/concepts/cluster-administration/addons/)에서는 클러스터에서 애드온을 사용하는 자세한 방법을 설명하며, 인기 있는 애드온들을 나열한다."
+  },
+  {
+    "id": "probe",
+    "glossary_id": "probe",
+    "english": "probe",
+    "translate": true,
+    "translation": "프로브(probe)",
+    "definition": {
+      "english": "A check performed periodically by the kubelet on a container in a Pod.",
+      "translation": "kubelet이 파드 내 컨테이너에 대해 주기적으로 수행하는 검사."
+    },
+    "translation_sample": "자세한 내용은 [컨테이너 프로브](/ko/docs/concepts/workloads/pods/pod-lifecycle/#container-probes)를 참고한다."
+  }
+]

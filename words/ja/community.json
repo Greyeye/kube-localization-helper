@@ -1,0 +1,145 @@
+[
+  {
+    "id": "approver",
+    "glossary_id": "approver",
+    "english": "Approver",
+    "translate": true,
+    "translation": "承認者",
+    "definition": {
+      "english": "A person who can review and approve Kubernetes code contributions.",
+      "translation": "Kubernetesコードの貢献をレビュー、および承認できる人。"
+    }
+  },
+  {
+    "id": "cla",
+    "glossary_id": "cla",
+    "english": "CLA (Contributor License Agreement)",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "Terms under which a contributor grants a license to an open source project for their contributions.",
+      "translation": "コントリビューターが行った貢献について、オープンソースプロジェクトが利用することを許諾する同意契約。"
+    }
+  },
+  {
+    "id": "cloud-provider",
+    "glossary_id": "cloud-provider",
+    "english": "Cloud Provider",
+    "translate": true,
+    "translation": "クラウドプロバイダー",
+    "definition": {
+      "english": "An organization that offers a cloud computing platform.",
+      "translation": "クラウドコンピューティングプラットフォームを提供する組織。"
+    }
+  },
+  {
+    "id": "cncf",
+    "glossary_id": "cncf",
+    "english": "Cloud Native Computing Foundation (CNCF)",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "Cloud Native Computing Foundation",
+      "translation": "Cloud Native Computing Foundation"
+    }
+  },
+  {
+    "id": "code-contributor",
+    "glossary_id": "code-contributor",
+    "english": "Code Contributor",
+    "translate": true,
+    "translation": "コードコントリビューター",
+    "definition": {
+      "english": "A person who develops and contributes code to the Kubernetes open source codebase.",
+      "translation": "Kubernetesのオープンソースのコードベースを開発し、貢献する人。"
+    }
+  },
+  {
+    "id": "contributor",
+    "glossary_id": "contributor",
+    "english": "Contributor",
+    "translate": true,
+    "translation": "コントリビューター",
+    "definition": {
+      "english": "Someone who donates code, documentation, or their time to help the Kubernetes project or community.",
+      "translation": "Kubernetesプロジェクトやコミュニティのために、コード、ドキュメント、またはその他の作業に自身の時間を使って貢献している人々"
+    }
+  },
+  {
+    "id": "developer",
+    "glossary_id": "developer",
+    "english": "Developer (disambiguation)",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "May refer to&#58; Application Developer, Code Contributor, or Platform Developer."
+    },
+    "notes": "No official Japanese glossary page for this term yet — needs review."
+  },
+  {
+    "id": "downstream",
+    "glossary_id": "downstream",
+    "english": "Downstream (disambiguation)",
+    "translate": true,
+    "translation": "ダウンストリーム(曖昧さ回避)",
+    "definition": {
+      "english": "May refer to: code in the Kubernetes ecosystem that depends upon the core Kubernetes codebase or a forked repo.",
+      "translation": "Kubernetesエコシステムにおいて、Kubernetesコアのコードベースに依存するコード、またはフォークされたリポジトリのいずれかを指す場合があります。"
+    }
+  },
+  {
+    "id": "member",
+    "glossary_id": "member",
+    "english": "Member",
+    "translate": true,
+    "translation": "メンバー",
+    "definition": {
+      "english": "A continuously active contributor in the K8s community.",
+      "translation": "K8sコミュニティの継続的かつアクティブなコントリビューター"
+    }
+  },
+  {
+    "id": "reviewer",
+    "glossary_id": "reviewer",
+    "english": "Reviewer",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "A person who reviews code for quality and correctness on some part of the project."
+    },
+    "notes": "No official Japanese glossary page for this term yet — needs review."
+  },
+  {
+    "id": "sig",
+    "glossary_id": "sig",
+    "english": "SIG (special interest group)",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "Community members who collectively manage an ongoing piece or aspect of the larger Kubernetes open source project.",
+      "translation": "大規模なKubernetesオープンソースプロジェクトにおいて、開発中の部分または側面を集合的に管理するコミュニティのメンバー"
+    }
+  },
+  {
+    "id": "upstream",
+    "glossary_id": "upstream",
+    "english": "Upstream (disambiguation)",
+    "translate": true,
+    "translation": "アップストリーム(曖昧さ回避)",
+    "definition": {
+      "english": "May refer to: core Kubernetes or the source repo from which a repo was forked.",
+      "translation": "Kubernetesのコア、またはリポジトリのフォーク元となるソースリポジトリのいずれかを指す場合があります。"
+    }
+  },
+  {
+    "id": "wg",
+    "glossary_id": "wg",
+    "english": "WG (working group)",
+    "translate": true,
+    "translation": "WG(ワーキンググループ)",
+    "definition": {
+      "english": "Facilitates the discussion and/or implementation of a short-lived, narrow, or decoupled project for a committee, SIG, or cross-SIG effort.",
+      "translation": "委員会、SIG、またはSIG横断の取り組みにおいて、短期的、限定的、または独立したプロジェクトの議論や実装を促進します。"
+    }
+  }
+]

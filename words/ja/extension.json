@@ -1,0 +1,101 @@
+[
+  {
+    "id": "admission-controller",
+    "glossary_id": "admission-controller",
+    "english": "Admission Controller",
+    "translate": true,
+    "translation": "アドミッションコントローラー",
+    "definition": {
+      "english": "A piece of code that intercepts requests to the Kubernetes API server prior to persistence of the object.",
+      "translation": "オブジェクトを永続化する前に、Kubernetes APIサーバーへのリクエストをインターセプトするコード。"
+    }
+  },
+  {
+    "id": "cdi",
+    "glossary_id": "cdi",
+    "english": "Container Device Interface (CDI)",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "A CNCF specification for describing device configuration that container runtimes apply when creating containers."
+    },
+    "notes": "No official Japanese glossary page for this term yet — needs review."
+  },
+  {
+    "id": "cel",
+    "glossary_id": "cel",
+    "english": "Common Expression Language",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "An expression language that's designed to be safe for executing user code."
+    },
+    "notes": "No official Japanese glossary page for this term yet — needs review."
+  },
+  {
+    "id": "container-lifecycle-hooks",
+    "glossary_id": "container-lifecycle-hooks",
+    "english": "Container Lifecycle Hooks",
+    "translate": true,
+    "translation": "コンテナライフサイクルフック",
+    "definition": {
+      "english": "The lifecycle hooks expose events in the container management lifecycle and let the user run code when the events occur.",
+      "translation": "ライフサイクルフックは、コンテナ管理のライフサイクルにおけるイベントを公開し、イベントが発生したときにユーザーがコードを実行できるようにします。"
+    }
+  },
+  {
+    "id": "device",
+    "glossary_id": "device",
+    "english": "Device",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "Any resource that's directly or indirectly attached your cluster's nodes, like GPUs or circuit boards."
+    },
+    "notes": "No official Japanese glossary page for this term yet — needs review."
+  },
+  {
+    "id": "deviceclass",
+    "glossary_id": "deviceclass",
+    "english": "DeviceClass",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "A category of devices in the cluster. Users can claim specific devices in a DeviceClass."
+    },
+    "notes": "No official Japanese glossary page for this term yet — needs review."
+  },
+  {
+    "id": "dra",
+    "glossary_id": "dra",
+    "english": "Dynamic Resource Allocation",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "A Kubernetes feature for requesting and sharing resources, like hardware accelerators, among Pods.",
+      "translation": "ハードウェアアクセラレーターのようなリソースを、Pod間で要求・共有するためのKubernetesの機能。"
+    }
+  },
+  {
+    "id": "managed-service",
+    "glossary_id": "managed-service",
+    "english": "Managed Service",
+    "translate": true,
+    "translation": "マネージドサービス",
+    "definition": {
+      "english": "A software offering maintained by a third-party provider.",
+      "translation": "サードパーティのプロバイダーによって保守されるソフトウェアの提供形態です。"
+    }
+  },
+  {
+    "id": "service-catalog",
+    "glossary_id": "service-catalog",
+    "english": "Service Catalog",
+    "translate": true,
+    "translation": "サービスカタログ",
+    "definition": {
+      "english": "A former extension API that enabled applications running in Kubernetes clusters to easily use external managed software offerings, such as a datastore service offered by a cloud provider.",
+      "translation": "Kubernetesクラスターで稼働するアプリケーションが、クラウドプロバイダーによって提供されるデータストアサービスのように、外部のマネージドソフトウェアを容易に使えるようにするための古い拡張APIです。"
+    }
+  }
+]

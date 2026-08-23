@@ -1,0 +1,57 @@
+[
+  {
+    "id": "application-architect",
+    "glossary_id": "application-architect",
+    "english": "Application Architect",
+    "translate": true,
+    "translation": "アプリケーションアーキテクト",
+    "definition": {
+      "english": "A person responsible for the high-level design of an application.",
+      "translation": "アプリケーションの高レベルの設計を担当する人。"
+    }
+  },
+  {
+    "id": "application-developer",
+    "glossary_id": "application-developer",
+    "english": "Application Developer",
+    "translate": true,
+    "translation": "アプリケーション開発者",
+    "definition": {
+      "english": "A person who writes an application that runs in a Kubernetes cluster.",
+      "translation": "Kubernetesクラスターで実行されるアプリケーションを作成する人。"
+    }
+  },
+  {
+    "id": "cluster-architect",
+    "glossary_id": "cluster-architect",
+    "english": "Cluster Architect",
+    "translate": true,
+    "translation": "クラスターアーキテクト",
+    "definition": {
+      "english": "A person who designs infrastructure that involves one or more Kubernetes clusters.",
+      "translation": "一つ以上のKubernetesクラスターで構成されるインフラストラクチャーを設計する人。"
+    }
+  },
+  {
+    "id": "cluster-operator",
+    "glossary_id": "cluster-operator",
+    "english": "Cluster Operator",
+    "translate": true,
+    "translation": "クラスター管理者",
+    "definition": {
+      "english": "A person who configures, controls, and monitors clusters.",
+      "translation": "クラスターを設定、管理そして、監視する人"
+    }
+  },
+  {
+    "id": "platform-developer",
+    "glossary_id": "platform-developer",
+    "english": "Platform Developer",
+    "translate": true,
+    "translation": "プラットフォーム開発者",
+    "definition": {
+      "english": "A person who customizes the Kubernetes platform to fit the needs of their project.",
+      "translation": "自身のプロジェクトの要件に合わせ、Kubernetesプラットフォームをカスタマイズする人"
+    }
+  }
+]

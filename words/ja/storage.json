@@ -1,0 +1,46 @@
+[
+  {
+    "id": "csi",
+    "glossary_id": "csi",
+    "english": "Container Storage Interface (CSI)",
+    "translate": true,
+    "translation": "コンテナストレージインターフェース(CSI)",
+    "definition": {
+      "english": "The Container Storage Interface (CSI) defines a standard interface to expose storage systems to containers.",
+      "translation": "コンテナストレージインターフェース(CSI)はストレージシステムをコンテナに公開するための標準インターフェースを定義します。"
+    }
+  },
+  {
+    "id": "dynamicvolumeprovisioning",
+    "glossary_id": "dynamicvolumeprovisioning",
+    "english": "Dynamic Volume Provisioning",
+    "translate": true,
+    "translation": "ボリュームの動的プロビジョニング",
+    "definition": {
+      "english": "Allows users to request automatic creation of storage Volumes.",
+      "translation": "ユーザーがストレージボリュームの自動作成をリクエストできるようにします。"
+    }
+  },
+  {
+    "id": "flexvolume",
+    "glossary_id": "flexvolume",
+    "english": "FlexVolume",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "FlexVolume is a deprecated interface for creating out-of-tree volume plugins. The Container Storage Interface is a newer interface that addresses several problems with FlexVolume.",
+      "translation": "FlexVolumeは、ツリー外のボリュームプラグインを作成するための非推奨なインターフェースです。コンテナストレージインターフェース(CSI)は、FlexVolumeのいくつかの問題に対処する新しいインターフェースです。"
+    }
+  },
+  {
+    "id": "volumeplugin",
+    "glossary_id": "volumeplugin",
+    "english": "Volume Plugin",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "A Volume Plugin enables integration of storage within a Pod."
+    },
+    "notes": "No official Japanese glossary page for this term yet — needs review."
+  }
+]

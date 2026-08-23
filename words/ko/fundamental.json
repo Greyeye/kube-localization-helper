@@ -1,0 +1,373 @@
+[
+  {
+    "id": "annotation",
+    "glossary_id": "annotation",
+    "english": "annotation",
+    "translate": true,
+    "translation": "어노테이션",
+    "definition": {
+      "english": "A key-value pair that is used to attach arbitrary non-identifying metadata to objects.",
+      "translation": "임의의 식별되지 않는 메타데이터를 오브젝트에 첨부할 때 이용하는 키-밸류 쌍."
+    },
+    "translation_sample": "어노테이션으로 된 메타데이터는 작거나 클 수 있고, 구조화되어 있거나 구조화되어 있지 않을 수도 있고, 레이블에서는 허용되지 않는 문자도 포함할 수 있다."
+  },
+  {
+    "id": "cluster",
+    "glossary_id": "cluster",
+    "english": "cluster",
+    "translate": true,
+    "translation": "클러스터",
+    "definition": {
+      "english": "A set of worker machines, called nodes, that run containerized applications. Every cluster has at least one worker node.",
+      "translation": "컨테이너화된 애플리케이션을 실행하는 노드라고 하는 워커 머신의 집합. 모든 클러스터는 최소 한 개의 워커 노드를 가진다."
+    },
+    "translation_sample": "워커 노드는 애플리케이션의 구성요소인 파드를 호스트한다."
+  },
+  {
+    "id": "control-plane",
+    "glossary_id": "control-plane",
+    "english": "control plane",
+    "translate": true,
+    "translation": "컨트롤 플레인",
+    "definition": {
+      "english": "The container orchestration layer that exposes the API and interfaces to define, deploy, and manage the lifecycle of containers.",
+      "translation": "컨테이너의 라이프사이클을 정의, 배포, 관리하기 위한 API와 인터페이스들을 노출하는 컨테이너 오케스트레이션 레이어."
+    },
+    "translation_sample": "이 계층은 다음과 같은 다양한 컴포넌트로 구성된다(그러나 제한되지는 않는다)."
+  },
+  {
+    "id": "customresourcedefinition",
+    "glossary_id": "customresourcedefinition",
+    "english": "CustomResourceDefinition",
+    "translate": true,
+    "translation": "커스텀리소스데피니션(CustomResourceDefinition)",
+    "definition": {
+      "english": "Custom code that defines a resource to add to your Kubernetes API server without building a complete custom server.",
+      "translation": "사용자 정의 서버를 완전히 새로 구축할 필요가 없도록 쿠버네티스 API 서버에 추가할 리소스를 정의하는 사용자 정의 코드."
+    },
+    "translation_sample": "만약 공개적으로 지원되는 API 리소스가 사용자의 요구를 충족할 수 없는 경우, 커스텀 리소스 데피니션은 사용자의 환경에 따라 쿠버네티스 API를 확장하게 해준다.",
+    "notes": "API 오브젝트인 경우"
+  },
+  {
+    "id": "daemonset",
+    "glossary_id": "daemonset",
+    "english": "DaemonSet",
+    "translate": true,
+    "translation": "데몬셋(DaemonSet)",
+    "definition": {
+      "english": "Ensures a copy of a Pod is running across a set of nodes in a cluster.",
+      "translation": "파드의 복제본을 클러스터 노드 집합에서 동작하게 한다."
+    },
+    "translation_sample": "일반적으로 모든 노드에서 실행돼야 하는 로그 수집기 및 모니터링 에이전트 등의 시스템 데몬을 배포하기 위해서 사용된다.",
+    "notes": "API 오브젝트인 경우"
+  },
+  {
+    "id": "data-plane",
+    "glossary_id": "data-plane",
+    "english": "data plane",
+    "translate": true,
+    "translation": "데이터 플레인",
+    "definition": {
+      "english": "The layer that provides capacity such as CPU, memory, network, and storage so that the containers can run and connect to a network.",
+      "translation": "컨테이너가 실행되고 네트워크에 연결될 수 있게 CPU, 메모리, 네트워크, 스토리지와 같은 능력을 제공하는 레이어."
+    },
+    "translation_sample": "컨테이너가 실행되고 네트워크에 연결될 수 있게 CPU, 메모리, 네트워크, 스토리지와 같은 능력을 제공하는 레이어."
+  },
+  {
+    "id": "deployment",
+    "glossary_id": "deployment",
+    "english": "Deployment",
+    "translate": true,
+    "translation": "디플로이먼트(Deployment)",
+    "definition": {
+      "english": "Manages a replicated application on your cluster.",
+      "translation": "클러스터에서 복제된 애플리케이션을 관리한다."
+    },
+    "translation_sample": "각 레플리카는 파드로 표현되며, 파드는 클러스터의 노드에 분산된다.",
+    "notes": "API 오브젝트인 경우"
+  },
+  {
+    "id": "disruption",
+    "glossary_id": "disruption",
+    "english": "disruption",
+    "translate": true,
+    "translation": "중단(disruption)",
+    "definition": {
+      "english": "An event that leads to Pod(s) going out of service",
+      "translation": "파드의 서비스 중단으로 이어지는 이벤트"
+    },
+    "translation_sample": "클러스터 오퍼레이터로서, 애플리케이션에 속한 파드를 직접 파괴하는 경우 쿠버네티스는 이를 _자발적 중단(voluntary disruption)_ 이라고 칭한다."
+  },
+  {
+    "id": "docker",
+    "glossary_id": "docker",
+    "english": "Docker",
+    "translate": true,
+    "translation": "도커",
+    "definition": {
+      "english": "Docker is a software technology providing operating-system-level virtualization also known as containers.",
+      "translation": "Docker는 운영 시스템 수준의 가상화를 제공하는 소프트웨어 기술이며, 컨테이너로도 알려져 있다."
+    },
+    "translation_sample": "Docker는 리눅스 커널의 리소스 격리 기능을 사용하며, 그 격리 기능의 예는 cgroups, 커널 네임스페이스, OverlayFS와 같은 조합 가능한 파일 시스템, 컨테이너가 단일 리눅스 인스턴스에서 독립적으로 실행되게 하여 가상 머신(VM)을 시작하고 관리하는 오버헤드를 피할 수 있도록 하는 기타 기능 등이 있다."
+  },
+  {
+    "id": "finalizer",
+    "glossary_id": "finalizer",
+    "english": "finalizer",
+    "translate": true,
+    "translation": "파이널라이저(finalizer)",
+    "definition": {
+      "english": "A namespaced key that tells Kubernetes to wait until specific conditions are met before it fully deletes an object marked for deletion.",
+      "translation": "쿠버네티스가 오브젝트를 완전히 삭제하기 이전, 삭제 표시를 위해 특정 조건이 충족될 때까지 대기하도록 알려주기 위한 네임스페이스에 속한 키(namespaced key)이다."
+    },
+    "translation_sample": "파이널라이저를 가진 특정한 오브젝트를 쿠버네티스가 삭제하도록 지시할 때, 쿠버네티스 API는 `.metadata.deletionTimestamp`을 덧붙여 삭제하도록 오브젝트에 표시하며, `202` 상태코드(HTTP \"Accepted\")를 리턴한다."
+  },
+  {
+    "id": "image",
+    "glossary_id": "image",
+    "english": "image",
+    "translate": true,
+    "translation": "이미지",
+    "definition": {
+      "english": "Stored instance of a container that holds a set of software needed to run an application.",
+      "translation": "컨테이너의 저장된 인스턴스이며, 애플리케이션 구동에 필요한 소프트웨어 집합을 가지고 있다."
+    },
+    "translation_sample": "소프트웨어가 컨테이너 레지스트리에 저장되고, 로컬 시스템에 풀(pull)되고, 애플리케이션으로서 실행되도록 패키징하는 방법."
+  },
+  {
+    "id": "init-container",
+    "glossary_id": "init-container",
+    "english": "init container",
+    "translate": true,
+    "translation": "초기화 컨테이너",
+    "definition": {
+      "english": "One or more initialization containers that must run to completion before any app containers run.",
+      "translation": "앱 컨테이너가 동작하기 전에 완료되기 위해 실행되는 하나 이상의 초기화 컨테이너."
+    },
+    "translation_sample": "한 가지 차이점을 제외하면, 초기화 컨테이너는 일반적인 앱 컨테이너와 동일하다."
+  },
+  {
+    "id": "job",
+    "glossary_id": "job",
+    "english": "Job",
+    "translate": true,
+    "translation": "잡(Job)",
+    "definition": {
+      "english": "A finite or batch task that runs to completion.",
+      "translation": "완료를 목표로 실행되는 유한 또는 배치 작업."
+    },
+    "translation_sample": "하나 이상의 파드 오브젝트를 생성하고 지정된 수의 파드가 성공적으로 종료되는지 확인한다.",
+    "notes": "API 오브젝트인 경우"
+  },
+  {
+    "id": "kube-proxy",
+    "glossary_id": "kube-proxy",
+    "english": "kube-proxy",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "`kube-proxy` is a network proxy that runs on each node in the cluster.",
+      "translation": "`kube-proxy`는 클러스터의 각 노드에서 실행되는 네트워크 프록시이다."
+    },
+    "translation_sample": "[kube-proxy](/ko/docs/reference/command-line-tools-reference/kube-proxy/)는 노드의 네트워크 규칙을 유지 관리한다."
+  },
+  {
+    "id": "kubelet",
+    "glossary_id": "kubelet",
+    "english": "Kubelet",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "An agent that runs on each node in the cluster. It makes sure that containers are running in a pod.",
+      "translation": "클러스터의 각 노드에서 실행되는 에이전트. Kubelet은 파드에서 컨테이너가 확실하게 동작하도록 관리한다."
+    },
+    "translation_sample": "Kubelet은 다양한 메커니즘을 통해 제공된 파드 스펙(PodSpec)의 집합을 받아서 컨테이너가 해당 파드 스펙에 따라 건강하게 동작하는 것을 확실히 한다."
+  },
+  {
+    "id": "label",
+    "glossary_id": "label",
+    "english": "label",
+    "translate": true,
+    "translation": "레이블",
+    "definition": {
+      "english": "Tags objects with identifying attributes that are meaningful and relevant to users.",
+      "translation": "사용자에게 의미 있고 관련성 높은 특징으로 식별할 수 있도록 오브젝트에 태그를 붙인다."
+    },
+    "translation_sample": "레이블은 파드와 같은 오브젝트에 붙일 수 있는 키/값 쌍이다."
+  },
+  {
+    "id": "manifest",
+    "glossary_id": "manifest",
+    "english": "manifest",
+    "translate": true,
+    "translation": "매니페스트",
+    "definition": {
+      "english": "A serialized specification of one or more Kubernetes API objects.",
+      "translation": "하나 이상의 쿠버네티스 API 오브젝트를 직렬화한 명세(specification)."
+    },
+    "translation_sample": "매니페스트는 사용자가 해당 매니페스트를 적용했을 때 쿠버네티스가 유지해야 하는 오브젝트의 의도한 상태(desired state)를 나타낸다."
+  },
+  {
+    "id": "minikube",
+    "glossary_id": "minikube",
+    "english": "Minikube",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "A tool for running Kubernetes locally.",
+      "translation": "로컬에서 쿠버네티스를 실행하기 위한 도구."
+    },
+    "translation_sample": "Minikube는 VM이나 사용자 컴퓨터에서 단일 노드 클러스터를 실행한다."
+  },
+  {
+    "id": "mirror-pod",
+    "glossary_id": "mirror-pod",
+    "english": "mirror pod",
+    "translate": true,
+    "translation": "미러 파드(mirror pod)",
+    "definition": {
+      "english": "An object in the API server that tracks a static pod on a kubelet.",
+      "translation": "Kubelet의 스태틱 파드(Static Pod)를 추적하는 API 서버 내부의 오브젝트."
+    },
+    "translation_sample": "Kubelet이 설정에서 스태틱 파드를 찾으면, 자동으로 쿠버네티스 API 서버에 파드 오브젝트 생성을 시도한다."
+  },
+  {
+    "id": "namespace",
+    "glossary_id": "namespace",
+    "english": "Namespace",
+    "translate": true,
+    "translation": "네임스페이스(Namespace)",
+    "definition": {
+      "english": "An abstraction used by Kubernetes to support isolation of groups of resources within a single cluster.",
+      "translation": "쿠버네티스에서, 하나의 클러스터 내에서 리소스 그룹의 격리를 지원하기 위해 사용하는 추상화."
+    },
+    "translation_sample": "네임스페이스는 클러스터의 오브젝트를 체계화하고 클러스터의 리소스를 분리하는 방법을 제공한다.",
+    "notes": "API 오브젝트인 경우"
+  },
+  {
+    "id": "node",
+    "glossary_id": "node",
+    "english": "Node",
+    "translate": true,
+    "translation": "노드(Node)",
+    "definition": {
+      "english": "A node is a worker machine in Kubernetes.",
+      "translation": "노드는 쿠버네티스의 작업 장비(worker machine)이다."
+    },
+    "translation_sample": "작업 노드는 클러스터에 따라 VM이거나 물리 머신일 것이다.",
+    "notes": "API 오브젝트인 경우"
+  },
+  {
+    "id": "object",
+    "glossary_id": "object",
+    "english": "object",
+    "translate": true,
+    "translation": "오브젝트",
+    "definition": {
+      "english": "An entity in the Kubernetes system, representing part of the state of your cluster.",
+      "translation": "클러스터 상태의 일부를 나타내는 쿠버네티스 시스템의 엔티티이다."
+    },
+    "translation_sample": "쿠버네티스 오브젝트는 일반적으로 \"의도를 담은 레코드\"이다."
+  },
+  {
+    "id": "replicaset",
+    "glossary_id": "replica-set",
+    "english": "ReplicaSet",
+    "translate": true,
+    "translation": "레플리카셋(ReplicaSet)",
+    "definition": {
+      "english": "ReplicaSet ensures that a specified number of Pod replicas are running at one time",
+      "translation": "레플리카셋은 지정된 수의 파드 레플리카가 동시에 실행이 되도록 보장한다"
+    },
+    "translation_sample": "deployment 와 같은 워크로드 오브젝트는 레플리카셋을 사용해서 해당 레플리카셋의 스펙에 따라 구성된 pod 의 수를 클러스터에서 실행한다.",
+    "notes": "API 오브젝트인 경우"
+  },
+  {
+    "id": "resourcequota",
+    "glossary_id": "resource-quota",
+    "english": "ResourceQuota",
+    "translate": true,
+    "translation": "리소스쿼터(ResourceQuota)",
+    "definition": {
+      "english": "Provides constraints that limit aggregate resource consumption per namespace.",
+      "translation": "네임스페이스당 전체 리소스 소비를 제한하는 제약을 제공한다."
+    },
+    "translation_sample": "타입에 따라 네임스페이스에서 생성될 수 있는 오브젝트의 수량과 해당 프로젝트의 리소스에 의해서 소비되는 컴퓨팅 리소스의 총량도 제한한다.",
+    "notes": "API 오브젝트인 경우"
+  },
+  {
+    "id": "selector",
+    "glossary_id": "selector",
+    "english": "selector",
+    "translate": true,
+    "translation": "셀렉터",
+    "definition": {
+      "english": "Allows users to filter a list of resources based on labels.",
+      "translation": "사용자가 레이블에 따라서 리소스 리스트를 필터할 수 있게 한다."
+    },
+    "translation_sample": "셀렉터는 리소스 리스트를 질의할 때 리스트를 레이블에 따라서 필터하기 위해서 적용된다."
+  },
+  {
+    "id": "service",
+    "glossary_id": "service",
+    "english": "Service",
+    "translate": true,
+    "translation": "서비스",
+    "definition": {
+      "english": "A way to expose an application running on a set of Pods as a network service.",
+      "translation": "네트워크 서비스로 파드 집합에서 실행 중인 애플리케이션을 노출하는 방법"
+    },
+    "translation_sample": "서비스의 대상이 되는 파드 집합은 (보통) 셀렉터로 결정된다.",
+    "notes": "API 오브젝트인 경우에도 표현의 간결함을 위해 한영병기를 하지 않음"
+  },
+  {
+    "id": "serviceaccount",
+    "glossary_id": "service-account",
+    "english": "ServiceAccount",
+    "translate": true,
+    "translation": "서비스어카운트(ServiceAccount)",
+    "definition": {
+      "english": "Provides an identity for processes that run in a Pod.",
+      "translation": "파드에서 실행 중인 프로세스를 위한 신원(identity)을 제공한다."
+    },
+    "translation_sample": "파드 내부의 프로세스가 클러스터에 엑세스할 때, API 서버에 의해서 특별한 서비스 어카운트(예를 들면, 기본(default))로 인증된다.",
+    "notes": "API 오브젝트인 경우"
+  },
+  {
+    "id": "statefulset",
+    "glossary_id": "statefulset",
+    "english": "StatefulSet",
+    "translate": true,
+    "translation": "스테이트풀셋(StatefulSet)",
+    "definition": {
+      "english": "A StatefulSet manages deployment and scaling of a set of Pods, with durable storage and persistent identifiers for each Pod.",
+      "translation": "내구성이 있는 스토리지와 파드별로 지속성 식별자를 사용해서 파드 집합의 디플로이먼트와 스케일링을 관리한다."
+    },
+    "translation_sample": "디플로이먼트와 유사하게, 스테이트풀셋은 동일한 컨테이너 스펙을 기반으로 둔 파드들을 관리한다.",
+    "notes": "API 오브젝트인 경우"
+  },
+  {
+    "id": "static-pod",
+    "glossary_id": "static-pod",
+    "english": "static pod",
+    "translate": true,
+    "translation": "스태틱(static) 파드",
+    "definition": {
+      "english": "A pod managed directly by the kubelet daemon on a specific node.",
+      "translation": "특정 노드의 Kubelet 데몬이 직접 관리하는 파드"
+    },
+    "translation_sample": "API 서버가 관찰하지 않는다."
+  },
+  {
+    "id": "workload",
+    "glossary_id": "workload",
+    "english": "workload",
+    "translate": true,
+    "translation": "워크로드",
+    "definition": {
+      "english": "A workload is an application running on Kubernetes.",
+      "translation": "워크로드는 클러스터의 컨테이너를 동작시키고 관리하기 위해 사용하는 오브젝트이다."
+    },
+    "translation_sample": "데몬셋, 디플로이먼트, 잡, 레플리카셋, 그리고 스테이트풀셋 오브젝트를 포함해서 서로 다른 워크로드의 유형이나 부분을 대표하는 다양한 핵심 오브젝트."
+  }
+]

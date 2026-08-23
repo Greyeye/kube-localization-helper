@@ -1,0 +1,27 @@
+[
+  {
+    "id": "eviction",
+    "glossary_id": "eviction",
+    "english": "eviction",
+    "translate": true,
+    "translation": "축출",
+    "definition": {
+      "english": "Process of terminating one or more Pods on Nodes",
+      "translation": "노드에 있는 한 개 이상의 파드를 중단하는 프로세스이다."
+    },
+    "translation_sample": "축출에는 두 가지 종류가 있다."
+  },
+  {
+    "id": "horizontal-pod-autoscaler",
+    "glossary_id": "horizontal-pod-autoscaler",
+    "english": "Horizontal Pod Autoscaler",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "Object that automatically scales the number of pod replicas based on targeted resource utilization or custom metric targets.",
+      "translation": "CPU 사용률 또는 사용자 정의 메트릭을 기반으로 파드의 레플리카 수를 자동으로 조절하는 API 리소스이다."
+    },
+    "translation_sample": "HPA는 일반적으로 레플리케이션 컨트롤러, 디플로이먼트, 레플리카셋과 함께 사용된다.",
+    "notes": "예외적으로 API 오브젝트에 대해 외래어 표기법 적용하지 않고 원문 그대로 표기"
+  }
+]

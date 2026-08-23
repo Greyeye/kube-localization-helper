@@ -1,0 +1,14 @@
+[
+  {
+    "id": "controller",
+    "glossary_id": "controller",
+    "english": "controller",
+    "translate": true,
+    "translation": "컨트롤러",
+    "definition": {
+      "english": "A control loop that watches the shared state of the cluster through the apiserver and makes changes attempting to move the current state towards the desired state.",
+      "translation": "API 서버를 통해 클러스터의 공유된 상태를 감시하고, 현재 상태를 원하는 상태로 이행시키는 컨트롤 루프."
+    },
+    "translation_sample": "컨트롤러는 api 서버 (control-plane의 일부)를 통해 클러스터의 공유 상태를 감시한다."
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "admission-controller",
+    "glossary_id": "admission-controller",
+    "english": "admission controller",
+    "translate": true,
+    "translation": "어드미션 컨트롤러",
+    "definition": {
+      "english": "A piece of code that intercepts requests to the Kubernetes API server prior to persistence of the object.",
+      "translation": "쿠버네티스 API 서버에서 요청을 처리하여 오브젝트가 지속되기 전에 그 요청을 가로채는 코드 조각."
+    },
+    "translation_sample": "어드미션 컨트롤러는 쿠버네티스 API 서버에서 구성할 수 있고, \"유효성 검사\"나 \"변조하기\" 혹은 모두를 진행할 수 있다."
+  }
+]

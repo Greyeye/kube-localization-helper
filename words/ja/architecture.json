@@ -1,0 +1,182 @@
+[
+  {
+    "id": "aggregation-layer",
+    "glossary_id": "aggregation-layer",
+    "english": "Aggregation Layer",
+    "translate": true,
+    "translation": "アグリゲーションレイヤー",
+    "definition": {
+      "english": "The aggregation layer lets you install additional Kubernetes-style APIs in your cluster.",
+      "translation": "アグリゲーションレイヤーを使用すると、追加のKubernetesスタイルのAPIをクラスターにインストールできます。"
+    }
+  },
+  {
+    "id": "api-resource",
+    "glossary_id": "api-resource",
+    "english": "API resource",
+    "translate": true,
+    "translation": "APIリソース",
+    "definition": {
+      "english": "A Kubernetes entity, representing an endpoint on the Kubernetes API server.",
+      "translation": "Kubernetes APIサーバー上のエンドポイントを表すKubernetesのエンティティです。"
+    }
+  },
+  {
+    "id": "cloud-controller-manager",
+    "glossary_id": "cloud-controller-manager",
+    "english": "Cloud Controller Manager",
+    "translate": true,
+    "translation": "クラウドコントローラーマネージャー",
+    "definition": {
+      "english": "Control plane component that integrates Kubernetes with third-party cloud providers.",
+      "translation": "サードパーティクラウドプロバイダーにKubernetesを結合するコントロールプレーンコンポーネント"
+    }
+  },
+  {
+    "id": "controller",
+    "glossary_id": "controller",
+    "english": "Controller",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "A control loop that watches the shared state of the cluster through the apiserver and makes changes attempting to move the current state towards the desired state.",
+      "translation": "クラスターの状態をAPIサーバーから取得、見張る制御ループで、現在の状態を望ましい状態に移行するように更新します。"
+    }
+  },
+  {
+    "id": "downward-api",
+    "glossary_id": "downward-api",
+    "english": "Downward API",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "A mechanism to expose Pod and container field values to code running in a container."
+    },
+    "notes": "No official Japanese glossary page for this term yet — needs review."
+  },
+  {
+    "id": "etcd",
+    "glossary_id": "etcd",
+    "english": "etcd",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "Consistent and highly-available key value store used as backing store of Kubernetes for all cluster data.",
+      "translation": "一貫性、高可用性を持ったキーバリューストアで、Kubernetesの全てのクラスター情報の保存場所として利用されています。"
+    }
+  },
+  {
+    "id": "gvr",
+    "glossary_id": "gvr",
+    "english": "Group Version Resource",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "The API group, API version and name of a Kubernetes API."
+    },
+    "notes": "No official Japanese glossary page for this term yet — needs review."
+  },
+  {
+    "id": "immutable-infrastructure",
+    "glossary_id": "immutable-infrastructure",
+    "english": "Immutable Infrastructure",
+    "translate": true,
+    "translation": "イミュータブルインフラストラクチャ",
+    "definition": {
+      "english": "Immutable Infrastructure refers to computer infrastructure (virtual machines, containers, network appliances) that cannot be changed once deployed",
+      "translation": "イミュータブルインフラストラクチャはデプロイ後に変更できないコンピューターインフラストラクチャ(仮想マシン、コンテナ、ネットワークアプライアンス)を指します。"
+    }
+  },
+  {
+    "id": "infrastructure-resource",
+    "glossary_id": "infrastructure-resource",
+    "english": "Resource (infrastructure)",
+    "translate": true,
+    "translation": "リソース(インフラストラクチャ)",
+    "definition": {
+      "english": "A defined amount of infrastructure available for consumption (CPU, memory, etc).",
+      "translation": "CPU、メモリなど、消費可能な一定量のインフラストラクチャ"
+    }
+  },
+  {
+    "id": "kube-apiserver",
+    "glossary_id": "kube-apiserver",
+    "english": "API server",
+    "translate": true,
+    "translation": "APIサーバー",
+    "definition": {
+      "english": "Control plane component that serves the Kubernetes API.",
+      "translation": "Kubernetes APIを提供するコントロールプレーンのコンポーネントです。"
+    }
+  },
+  {
+    "id": "kube-controller-manager",
+    "glossary_id": "kube-controller-manager",
+    "english": "kube-controller-manager",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "Control Plane component that runs controller processes.",
+      "translation": "コントロールプレーン上で動作するコンポーネントで、複数のコントローラープロセスを実行します。"
+    }
+  },
+  {
+    "id": "kube-scheduler",
+    "glossary_id": "kube-scheduler",
+    "english": "kube-scheduler",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "Control plane component that watches for newly created pods with no assigned node, and selects a node for them to run on.",
+      "translation": "コントロールプレーン上で動作するコンポーネントで、新しく作られたPodにノードが割り当てられているか監視し、割り当てられていなかった場合にそのPodを実行するノードを選択します。"
+    }
+  },
+  {
+    "id": "logging",
+    "glossary_id": "logging",
+    "english": "Logging",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "Logs are the list of events that are logged by cluster or application."
+    },
+    "notes": "No official Japanese glossary page for this term yet — needs review."
+  },
+  {
+    "id": "mvp",
+    "glossary_id": "mvp",
+    "english": "Mixed Version Proxy (MVP)",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "Feature that lets a kube-apiserver proxy a resource request to a different peer API server."
+    },
+    "notes": "No official Japanese glossary page for this term yet — needs review."
+  },
+  {
+    "id": "object",
+    "glossary_id": "object",
+    "english": "object",
+    "aliases": [
+      "objects"
+    ],
+    "translate": true,
+    "translation": "オブジェクト",
+    "definition": {
+      "english": "an object, usually a single resource",
+      "translation": "クラスターの状態の一部を表す、Kubernetesシステムにおけるエンティティ。"
+    },
+    "translation_sample": "このオブジェクトは停止するとこができます。"
+  },
+  {
+    "id": "operator-pattern",
+    "glossary_id": "operator-pattern",
+    "english": "Operator pattern",
+    "translate": true,
+    "translation": "オペレーターパターン",
+    "definition": {
+      "english": "A specialized controller used to manage a custom resource",
+      "translation": "カスタムリソースを管理するために使用される専用のコントローラー。"
+    }
+  }
+]

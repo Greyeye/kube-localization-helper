@@ -1,0 +1,101 @@
+[
+  {
+    "id": "cidr",
+    "glossary_id": "cidr",
+    "english": "CIDR",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "CIDR is a notation for describing blocks of IP addresses and is used heavily in various networking configurations.",
+      "translation": "CIDRは、IPアドレスの範囲を記述するための表記法であり、さまざまなネットワークを構成するために使用されています。"
+    }
+  },
+  {
+    "id": "cni",
+    "glossary_id": "cni",
+    "english": "Container network interface (CNI)",
+    "translate": true,
+    "translation": "コンテナネットワークインターフェース(CNI)",
+    "definition": {
+      "english": "Container network interface (CNI) plugins are a type of Network plugin that adheres to the appc/CNI specification.",
+      "translation": "コンテナネットワークインターフェース(CNI)プラグインは、appc/CNI仕様に準拠したネットワークプラグインの一種です。"
+    }
+  },
+  {
+    "id": "endpoint-slice",
+    "glossary_id": "endpoint-slice",
+    "english": "EndpointSlice",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "EndpointSlices track the IP addresses of Pods for Services.",
+      "translation": "EndpointSliceはServiceに対応するPodのIPアドレスを追跡します。"
+    }
+  },
+  {
+    "id": "endpoints",
+    "glossary_id": "endpoints",
+    "english": "Endpoints",
+    "translate": true,
+    "translation": "エンドポイント（Endpoints）",
+    "definition": {
+      "english": "(Deprecated) API representing endpoints of a Service",
+      "translation": "エンドポイントは、サービスのセレクターに一致するPodのIPアドレスを記録する責任があります。"
+    }
+  },
+  {
+    "id": "gateway-api",
+    "glossary_id": "gateway-api",
+    "english": "Gateway API",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "An API for modeling service networking in Kubernetes.",
+      "translation": "Kubernetesでサービスネットワークをモデル化するために使用されるAPI。"
+    }
+  },
+  {
+    "id": "ingress",
+    "glossary_id": "ingress",
+    "english": "Ingress",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "An API object that manages external access to the services in a cluster, typically HTTP.",
+      "translation": "クラスター内のServiceに対する外部からのアクセス(主にHTTP)を管理するAPIオブジェクトです。"
+    }
+  },
+  {
+    "id": "istio",
+    "glossary_id": "istio",
+    "english": "Istio",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "An open platform (not Kubernetes-specific) that provides a uniform way to integrate microservices, manage traffic flow, enforce policies, and aggregate telemetry data.",
+      "translation": "Istioは、マイクロサービスの統合やトラフィックフローの管理、ポリシーの適用、そしてテレメトリーデータの集約を行うための一様な方法を提供するオープンソースのプラットフォームです(Kubernetesに特化したものではありません)。"
+    }
+  },
+  {
+    "id": "network-policy",
+    "glossary_id": "network-policy",
+    "english": "Network Policy",
+    "translate": true,
+    "translation": "ネットワークポリシー",
+    "definition": {
+      "english": "A specification of how groups of Pods are allowed to communicate with each other and with other network endpoints.",
+      "translation": "一連のPodがPod同士やその他のネットワークエンドポイントとどのように通信することを許可されるかを定める規定。"
+    }
+  },
+  {
+    "id": "proxy",
+    "glossary_id": "proxy",
+    "english": "Proxy",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "An application acting as an intermediary between clients and servers"
+    },
+    "notes": "No official Japanese glossary page for this term yet — needs review."
+  }
+]

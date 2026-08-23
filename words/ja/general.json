@@ -1,0 +1,146 @@
+[
+  {
+    "id": "interface",
+    "glossary_id": null,
+    "english": "Interface",
+    "translate": true,
+    "translation": "インターフェース",
+    "definition": {
+      "english": "A defined boundary or contract between two components or systems.",
+      "translation": "コンポーネントやシステム間の境界となる取り決め。"
+    }
+  },
+  {
+    "id": "quota",
+    "glossary_id": null,
+    "english": "Quota",
+    "translate": true,
+    "translation": "クォータ",
+    "definition": {
+      "english": "A limit set on the amount of a resource that can be consumed.",
+      "translation": "消費できるリソースの量に設けられた上限。"
+    }
+  },
+  {
+    "id": "stacked",
+    "glossary_id": null,
+    "english": "Stacked",
+    "translate": true,
+    "translation": "積層",
+    "definition": {
+      "english": "Describes a topology where etcd runs co-located with the control plane, rather than on separate hosts.",
+      "translation": "etcdを専用ホストではなくコントロールプレーンと同じ場所で稼働させるトポロジーを指す。"
+    }
+  },
+  {
+    "id": "trade-off",
+    "glossary_id": null,
+    "english": "Trade-off",
+    "aliases": [
+      "Trade-offs",
+      "tradeoff",
+      "tradeoffs"
+    ],
+    "translate": true,
+    "translation": "トレードオフ",
+    "definition": {
+      "english": "A balance struck between two desirable but conflicting outcomes.",
+      "translation": "相反する二つの望ましい結果の間で取られるバランス。"
+    }
+  },
+  {
+    "id": "imperative",
+    "glossary_id": null,
+    "english": "Imperative",
+    "translate": true,
+    "translation": "命令(命令的)",
+    "definition": {
+      "english": "A configuration style that specifies the exact steps to reach a desired state, as opposed to declarative.",
+      "translation": "宣言的とは対照的に、目的の状態に至るまでの具体的な手順を指定する構成スタイル。"
+    }
+  },
+  {
+    "id": "declarative",
+    "glossary_id": null,
+    "english": "Declarative",
+    "translate": true,
+    "translation": "宣言(宣言的)",
+    "definition": {
+      "english": "A configuration style that specifies the desired end state, letting the system determine how to reach it.",
+      "translation": "目的の最終状態を指定し、そこに至る方法はシステムに委ねる構成スタイル。"
+    }
+  },
+  {
+    "id": "configuration-file",
+    "glossary_id": null,
+    "english": "Configuration file",
+    "aliases": [
+      "Configuration files"
+    ],
+    "translate": true,
+    "translation": "設定ファイル",
+    "definition": {
+      "english": "A file that specifies settings or desired state for a system or application.",
+      "translation": "システムやアプリケーションの設定または目的の状態を記述するファイル。"
+    }
+  },
+  {
+    "id": "update",
+    "glossary_id": null,
+    "english": "Update",
+    "aliases": [
+      "updated",
+      "updates"
+    ],
+    "translate": true,
+    "translation": "更新",
+    "translation_sample": "コマンドを使ってオブジェクトを更新すると"
+  },
+  {
+    "id": "create",
+    "glossary_id": null,
+    "english": "Create",
+    "aliases": [
+      "created",
+      "creates"
+    ],
+    "translate": true,
+    "translation": "作成",
+    "translation_sample": "Kubernetesオブジェクトの作成"
+  },
+  {
+    "id": "live-object",
+    "glossary_id": null,
+    "english": "Live object",
+    "aliases": [
+      "live objects"
+    ],
+    "translate": true,
+    "translation": "現行のオブジェクト",
+    "translation_sample": "ユーザーはクラスター内の現行のオブジェクトに対して処理を行います。"
+  },
+  {
+    "id": "delete",
+    "glossary_id": null,
+    "english": "Delete",
+    "aliases": [
+      "deletes",
+      "deleted",
+      "deletion"
+    ],
+    "translate": true,
+    "translation": "削除",
+    "translation_sample": "Kubernetesはそのオブジェクトを削除します。"
+  },
+  {
+    "id": "describe",
+    "glossary_id": null,
+    "english": "Describe",
+    "aliases": [
+      "described"
+    ],
+    "translate": true,
+    "translation": "定義",
+    "translation_sample": "設定ファイルで定義されているオブジェクトを削除します。"
+  }
+]

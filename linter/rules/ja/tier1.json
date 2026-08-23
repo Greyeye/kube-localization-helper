@@ -1,0 +1,98 @@
+[
+  {
+    "id": "ascii-punctuation",
+    "kind": "regex",
+    "pattern": "(?<=[\\p{Script=Han}\\p{Script=Hiragana}\\p{Script=Katakana}])[,.]|[,.](?=[\\p{Script=Han}\\p{Script=Hiragana}\\p{Script=Katakana}])",
+    "flags": "gu",
+    "message": {
+      "japanese": "日本語の文章の中では、半角の,や.ではなく全角の「、」「。」を使用してください。",
+      "english": "Use the full-width 、/。 instead of ,/. next to Japanese text."
+    },
+    "severity": "warning"
+  },
+  {
+    "id": "halfwidth-katakana",
+    "kind": "regex",
+    "pattern": "[\\uFF61-\\uFF9F]+",
+    "flags": "g",
+    "message": {
+      "japanese": "半角カタカナが使われています。全角カタカナを使用してください。",
+      "english": "Half-width katakana found — use full-width katakana instead."
+    },
+    "severity": "warning"
+  },
+  {
+    "id": "fullwidth-alnum",
+    "kind": "regex",
+    "pattern": "[\\uFF10-\\uFF19\\uFF21-\\uFF3A\\uFF41-\\uFF5A]+",
+    "flags": "g",
+    "message": {
+      "japanese": "全角の数字・英字が使われています。半角(ASCII)を使用してください。",
+      "english": "Full-width digit/letter found — use half-width (ASCII) instead."
+    },
+    "severity": "warning"
+  },
+  {
+    "id": "fullwidth-punctuation",
+    "kind": "regex",
+    "pattern": "[\\uFF08\\uFF09\\uFF0C\\uFF0E\\uFF0F\\uFF1A\\uFF1B\\uFF0D]+",
+    "flags": "g",
+    "message": {
+      "japanese": "全角の記号が使われています。全角のままでよいのは！と？のみで、それ以外は半角にしてください。",
+      "english": "Full-width punctuation found — only ！ and ？ should stay full-width, everything else is half-width."
+    },
+    "severity": "warning"
+  },
+  {
+    "id": "colon-spacing",
+    "kind": "regex",
+    "pattern": ":(?!\\/\\/)(?![ \\t]|$)",
+    "flags": "gum",
+    "message": {
+      "japanese": "コロンの後には半角スペースを入れてください(行末のコロンの場合は不要です)。",
+      "english": "Add a half-width space after this colon (not needed if it's the last character on the line)."
+    },
+    "severity": "warning"
+  },
+  {
+    "id": "heading-anchor",
+    "kind": "headingAnchorMatchesEnglish",
+    "message": {
+      "japanese": "対応する英語ページの見出しにアンカー({#id})が設定されていますが、この見出しには設定されていません。",
+      "english": "The corresponding English heading has an explicit {#id} anchor, but this translated heading is missing one."
+    },
+    "severity": "warning"
+  },
+  {
+    "id": "reviewers-frontmatter",
+    "kind": "frontmatterKeyForbidden",
+    "key": "reviewers",
+    "message": {
+      "japanese": "日本語訳を提出する前に、メタデータのreviewers:の項目を削除してください。",
+      "english": "Remove the reviewers: field from front matter before submitting a ja translation."
+    },
+    "severity": "warning"
+  },
+  {
+    "id": "internal-ja-link",
+    "kind": "regex",
+    "pattern": "\\]\\(/ja/[^)]*\\)",
+    "flags": "g",
+    "message": {
+      "japanese": "内部ドキュメントへのリンクに/jaが付与されています。サイト側で自動的に付与されるため不要です。",
+      "english": "Internal doc link includes a literal /ja prefix — omit it, the site adds it automatically."
+    },
+    "severity": "warning"
+  },
+  {
+    "id": "cron-no-job",
+    "kind": "regex",
+    "pattern": "cronのジョブ",
+    "flags": "g",
+    "message": {
+      "japanese": "「cron job」はcronのジョブではなく、cronジョブと訳してください。",
+      "english": "Translate \"cron job\" as cronジョブ, not cronのジョブ (see the localization guide's cron job section)."
+    },
+    "severity": "warning"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["words/*/*.json", "**/user-word-list.json"],
+      "url": "./words.schema.json"
+    },
+    {
+      "fileMatch": ["linter/rules/*/*.json", "**/user-lint-rules.json"],
+      "url": "./linter/rules.schema.json"
+    }
+  ]
+}

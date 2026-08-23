@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "Lint rule DSL executed by linter/engine.js. Built-in rules live in linter/rules/*.json; personal rules go in ~/.md-japanese-word-list/user-lint-rules.json (same array shape), loaded last and merged by id — a user rule with the same id overrides a built-in one.",
+  "type": "array",
+  "items": { "$ref": "#/$defs/rule" },
+  "$defs": {
+    "message": {
+      "type": "object",
+      "description": "Bilingual explanation shown in the diagnostic.",
+      "required": ["japanese", "english"],
+      "properties": {
+        "japanese": { "type": "string", "description": "Explanation shown in Japanese." },
+        "english": { "type": "string", "description": "Explanation shown in English." }
+      }
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["error", "warning", "information", "hint"],
+      "default": "warning"
+    },
+    "rule": {
+      "type": "object",
+      "required": ["id", "kind"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Stable unique slug, e.g. \"ascii-punctuation\". A user rule with the same id overrides a built-in rule of that id."
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "regex",
+            "lineMustMatch",
+            "frontmatterKeyForbidden",
+            "codeSpanSpacing",
+            "prosePairMustEndWith",
+            "headingAnchorMatchesEnglish"
+          ],
+          "description": "Which engine handler runs this rule; determines which other fields apply."
+        },
+        "severity": { "$ref": "#/$defs/severity" },
+        "message": { "$ref": "#/$defs/message" },
+
+        "pattern": {
+          "type": "string",
+          "description": "kind: regex only. The pattern to flag; every match becomes a diagnostic."
+        },
+        "flags": {
+          "type": "string",
+          "description": "kind: regex only. Regex flags; defaults to \"gu\" (the \"g\" is added automatically if omitted)."
+        },
+        "includeInlineCode": {
+          "type": "boolean",
+          "default": false,
+          "description": "kind: regex only. By default matches inside inline code spans (`...`) are skipped; set true to also check inside them."
+        },
+
+        "ifMatches": {
+          "type": "string",
+          "description": "kind: lineMustMatch only. Lines matching this pattern are checked against mustAlsoMatch."
+        },
+        "mustAlsoMatch": {
+          "type": "string",
+          "description": "kind: lineMustMatch only. A qualifying line must match this pattern in full, else the whole line is flagged."
+        },
+
+        "key": {
+          "type": "string",
+          "description": "kind: frontmatterKeyForbidden only. The front-matter key (e.g. \"reviewers\") that must not be present."
+        },
+
+        "beforeMessage": {
+          "$ref": "#/$defs/message",
+          "description": "kind: codeSpanSpacing only. Message when the code span is missing a space before it. Falls back to `message` if omitted."
+        },
+        "afterMessage": {
+          "$ref": "#/$defs/message",
+          "description": "kind: codeSpanSpacing only. Message when the code span is missing a space after it. Falls back to `message` if omitted."
+        },
+
+        "endMarkers": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": ["。", "、", ":", "："],
+          "description": "kind: prosePairMustEndWith only. Characters a prose line should end with when immediately followed by another prose line."
+        }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "kind": { "const": "regex" } } },
+          "then": { "required": ["pattern", "message"] }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "lineMustMatch" } } },
+          "then": { "required": ["ifMatches", "mustAlsoMatch", "message"] }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "frontmatterKeyForbidden" } } },
+          "then": { "required": ["key", "message"] }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "prosePairMustEndWith" } } },
+          "then": { "required": ["message"] }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "headingAnchorMatchesEnglish" } } },
+          "then": { "required": ["message"] }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "codeSpanSpacing" } } },
+          "then": {
+            "anyOf": [{ "required": ["message"] }, { "required": ["beforeMessage", "afterMessage"] }]
+          }
+        }
+      ]
+    }
+  }
+}
