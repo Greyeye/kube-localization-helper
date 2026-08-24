@@ -54,7 +54,7 @@ Markdown ドキュメント内の技術用語やフレーズ（例: `Deployment`
 | 言語コード | 言語名 | 用語集 (Glossary) | スタイルリンター |
 | :---: | :---: | :---: | :---: |
 | `ja` | 日本語 | ✅ 13カテゴリ（600語以上） | ✅ Tier 1 + Tier 2 ルール完備 |
-| `ko` | 韓国語 (한국어) | ✅ 9カテゴリ（500語以上） | ルールコントリビューション受付中 |
+| `ko` | 韓国語 (한국어) | ✅ 9カテゴリ（500語以上） | ⏳ 近日対応予定（ルールコントリビューション歓迎） |
 | `<lang>` | その他の言語 | 🔌 `words/<lang>/` を追加可能 | 🔌 `linter/rules/<lang>/` を追加可能 |
 
 ---
@@ -72,8 +72,8 @@ Markdown ドキュメント内の技術用語やフレーズ（例: `Deployment`
 
 リポジトリ自体を変更することなく、ホームディレクトリに個人用ファイルを作成して用語やルールをオーバーライド・追加できます:
 
-- **個人用用語集**: `~/.md-japanese-word-list/<lang>/user-word-list.json`
-- **個人用リンタールール**: `~/.md-japanese-word-list/<lang>/user-lint-rules.json`
+- **個人用用語集**: `~/.kube-localization-helper/<lang>/user-word-list.json`
+- **個人用リンタールール**: `~/.kube-localization-helper/<lang>/user-lint-rules.json`
 
 個人用設定は最後に読み込まれ、`id` に基づいてマージされるため、組み込みの用語やルールを上書きしたり、独自のルールを追加したりできます。
 

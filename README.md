@@ -26,21 +26,7 @@ Hover over any technical term or phrase (e.g. `Deployment`, `Control Plane`, `Pe
 
 ### 3. 📏 Style & Quality Linter
 Provides real-time diagnostics (squiggly underlines and entries in the VS Code **Problems** panel) aligned with official localization style guides (such as `content/ja/docs/contribute/localization.md`):
-
-- **Mechanical Rules (Tier 1)**:
-  - **Punctuation**: Flags ASCII `,` and `.` when used next to CJK characters (prompts for `、` / `。`).
-  - **Full-width / Half-width Normalization**: Detects half-width katakana, full-width alphanumeric characters, and non-standard full-width symbols.
-  - **Colon Spacing**: Ensures mid-line colons are followed by a space.
-  - **Forbidden Metadata**: Flags prohibited front matter fields (e.g. `reviewers:` in Japanese docs).
-  - **Link Prefixes**: Flags redundant language prefixes in internal links (e.g. `](/ja/docs/...)` → `](/docs/...)`).
-  - **Common Anti-patterns**: Catches specific prohibited phrasing (e.g. `cronのジョブ` → `cronジョブ`).
-  - **Heading Anchor Matching**: Cross-references the English sibling document (`content/en/...`) to ensure translated headings retain explicit `{#anchor}` IDs when present upstream.
-
-- **Heuristic & Boundary Rules (Tier 2)**:
-  - **Script Spacing**: Flags unnecessary spaces between Latin alphanumeric text and Japanese characters.
-  - **Inline Code Boundary Spacing**: Enforces spacing around backtick code spans (no space against CJK, space required against English words).
-  - **Parenthesis / Period Order**: Flags `。)` and suggests `)。`.
-  - **Mid-sentence Linebreaks**: Flags unpunctuated line breaks in consecutive prose lines to prevent accidental hard wraps.
+Please check each languages' README for further rules.
 
 ### 4. 🌐 Multi-Language Architecture
 - **Dynamic Path Detection**: Automatically activates based on document path pattern `/content/<lang>/...` (e.g., `ja`, `ko`, `pt-br`, `zh-cn`, `de`, `bn`).
@@ -54,7 +40,7 @@ Provides real-time diagnostics (squiggly underlines and entries in the VS Code *
 | Language Code | Language | Glossary Terms | Style Linter |
 | :---: | :---: | :---: | :---: |
 | `ja` | Japanese (日本語) | ✅ 13 categories (600+ terms) | ✅ Tier 1 + Tier 2 rules |
-| `ko` | Korean (한국어) | ✅ 9 categories (500+ terms) | Ready for rule contributions |
+| `ko` | Korean (한국어) | ✅ 9 categories (500+ terms) | ⏳ Coming Soon (Rule contributions welcome) |
 | `<lang>` | Any other target | 🔌 Extensible via `words/<lang>/` | 🔌 Extensible via `linter/rules/<lang>/` |
 
 ---
@@ -72,8 +58,8 @@ Provides real-time diagnostics (squiggly underlines and entries in the VS Code *
 
 You can define personal glossary overrides and custom linter rules without modifying the extension repository:
 
-- **Personal Glossary**: `~/.md-japanese-word-list/<lang>/user-word-list.json`
-- **Personal Linter Rules**: `~/.md-japanese-word-list/<lang>/user-lint-rules.json`
+- **Personal Glossary**: `~/.kube-localization-helper/<lang>/user-word-list.json`
+- **Personal Linter Rules**: `~/.kube-localization-helper/<lang>/user-lint-rules.json`
 
 User rules and terms are loaded last and merge by `id`, allowing you to override built-in terms and rules or add your own workspace-specific conventions.
 

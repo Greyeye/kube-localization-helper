@@ -1,7 +1,7 @@
 {
   "name": "kube-localization-helper",
   "displayName": "Kubernetes Localization Helper",
-  "publisher": "local-host",
+  "publisher": "greyeye",
   "version": "0.0.1",
   "description": "Hover glossary, translation samples, and a style linter for localizing Kubernetes documentation (kubernetes-website) into Japanese, Korean, and more.",
   "keywords": [
@@ -21,6 +21,14 @@
     "Other"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Greyeye/kube-localization-helper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Greyeye/kube-localization-helper/issues"
+  },
+  "homepage": "https://github.com/Greyeye/kube-localization-helper#readme",
   "engines": {
     "vscode": "^1.80.0"
   },

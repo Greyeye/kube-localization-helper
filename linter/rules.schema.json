@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$comment": "Lint rule DSL executed by linter/engine.js. Built-in rules live in linter/rules/*.json; personal rules go in ~/.md-japanese-word-list/user-lint-rules.json (same array shape), loaded last and merged by id — a user rule with the same id overrides a built-in one.",
+  "$comment": "Lint rule DSL executed by linter/engine.js. Built-in rules live in linter/rules/*.json; personal rules go in ~/.kube-localization-helper/user-lint-rules.json (same array shape), loaded last and merged by id — a user rule with the same id overrides a built-in one.",
   "type": "array",
   "items": { "$ref": "#/$defs/rule" },
   "$defs": {
