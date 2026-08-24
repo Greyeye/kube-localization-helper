@@ -6,7 +6,7 @@
       "type": "extensionHost",
       "request": "launch",
       "args": [
-        "--extensionDevelopmentPath=${workspaceFolder:md-japanese-hover}"
+        "--extensionDevelopmentPath=${workspaceFolder:kube-localization-helper}"
       ]
     }
   ]

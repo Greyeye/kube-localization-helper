@@ -20,6 +20,7 @@
     "Linters",
     "Other"
   ],
+  "license": "MIT",
   "engines": {
     "vscode": "^1.80.0"
   },
