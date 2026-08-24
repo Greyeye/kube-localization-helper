@@ -110,7 +110,7 @@ npm test
 
 자세한 내용은 아래 기여 가이드를 확인해 주세요:
 
-👉 **[기여 가이드 (CONTRIBUTING.md)](./CONTRIBUTING.md)**
+👉 **[기여 가이드 (CONTRIBUTING.ko.md)](./CONTRIBUTING.ko.md)**
 
 ---
 

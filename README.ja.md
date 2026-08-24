@@ -115,7 +115,7 @@ npm test
 
 詳細は以下をご覧ください:
 
-👉 **[コントリビューションガイド (CONTRIBUTING.md)](./CONTRIBUTING.md)**
+👉 **[コントリビューションガイド (CONTRIBUTING.ja.md)](./CONTRIBUTING.ja.md)**
 
 ---
 
