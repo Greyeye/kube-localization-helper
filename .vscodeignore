@@ -1,0 +1,10 @@
+.vscode/**
+.idea/**
+.claude/**
+.github/**
+test/**
+plan/**
+.gitignore
+.vscodeignore
+CONTRIBUTING.md
+**/*.test.js

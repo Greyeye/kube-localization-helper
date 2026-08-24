@@ -5,7 +5,7 @@ const { HANDLERS } = require('./engine');
 const { discoverLanguages } = require('../contentLanguage');
 
 // Same personal-customization folder as the glossary's user-word-list.json.
-const USER_LINT_RULES_DIR = path.join(os.homedir(), '.md-japanese-word-list');
+const USER_LINT_RULES_DIR = path.join(os.homedir(), '.kube-localization-helper');
 
 function userLintRulesPath(lang) {
   return path.join(USER_LINT_RULES_DIR, lang, 'user-lint-rules.json');

@@ -3,7 +3,7 @@ const path = require('path');
 const os = require('os');
 const { discoverLanguages } = require('./contentLanguage');
 
-const USER_WORD_LIST_DIR = path.join(os.homedir(), '.md-japanese-word-list');
+const USER_WORD_LIST_DIR = path.join(os.homedir(), '.kube-localization-helper');
 
 function userWordListPath(lang) {
   return path.join(USER_WORD_LIST_DIR, lang, 'user-word-list.json');

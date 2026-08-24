@@ -1,0 +1,54 @@
+name: Publish to VS Code Marketplace
+
+on:
+  release:
+    types: [published]
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Perform dry run (package only, do not publish)'
+        type: boolean
+        default: false
+        required: false
+
+jobs:
+  publish:
+    name: Build & Publish Extension
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build VSIX package
+        run: npx @vscode/vsce package --no-dependencies
+
+      - name: Upload VSIX artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: vsix-package
+          path: '*.vsix'
+
+      - name: Publish to VS Code Marketplace
+        if: ${{ !inputs.dry_run }}
+        env:
+          VSCE_PAT: ${{ secrets.AZURE_DEVOPS_PAT || vars.AZURE_DEVOPS_PAT }}
+        run: |
+          if [ -z "$VSCE_PAT" ]; then
+            echo "::error::AZURE_DEVOPS_PAT secret or variable is not set."
+            exit 1
+          fi
+          npx @vscode/vsce publish -p "$VSCE_PAT"
