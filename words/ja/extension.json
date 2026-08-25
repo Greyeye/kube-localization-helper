@@ -8,7 +8,8 @@
     "definition": {
       "english": "A piece of code that intercepts requests to the Kubernetes API server prior to persistence of the object.",
       "translation": "オブジェクトを永続化する前に、Kubernetes APIサーバーへのリクエストをインターセプトするコード。"
-    }
+    },
+    "translation_sample": "アドミッションコントローラーがリクエストのバリデーションを実行します。"
   },
   {
     "id": "cdi",
@@ -19,6 +20,7 @@
     "definition": {
       "english": "A CNCF specification for describing device configuration that container runtimes apply when creating containers."
     },
+    "translation_sample": "CDIを使用してGPUなどのデバイスプラグインを設定します。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   },
   {
@@ -30,6 +32,7 @@
     "definition": {
       "english": "An expression language that's designed to be safe for executing user code."
     },
+    "translation_sample": "CEL式を記述してAdmissionPolicyの条件を評価します。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   },
   {
@@ -41,7 +44,8 @@
     "definition": {
       "english": "The lifecycle hooks expose events in the container management lifecycle and let the user run code when the events occur.",
       "translation": "ライフサイクルフックは、コンテナ管理のライフサイクルにおけるイベントを公開し、イベントが発生したときにユーザーがコードを実行できるようにします。"
-    }
+    },
+    "translation_sample": "コンテナライフサイクルフックのpostStartおよびpreStopハンドラーを設定します。"
   },
   {
     "id": "device",
@@ -52,6 +56,7 @@
     "definition": {
       "english": "Any resource that's directly or indirectly attached your cluster's nodes, like GPUs or circuit boards."
     },
+    "translation_sample": "ノード上のデバイスリソースをPodに割り当てます。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   },
   {
@@ -63,6 +68,7 @@
     "definition": {
       "english": "A category of devices in the cluster. Users can claim specific devices in a DeviceClass."
     },
+    "translation_sample": "特定のDeviceClassを選択してGPUデバイスを要求します。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   },
   {
@@ -74,7 +80,8 @@
     "definition": {
       "english": "A Kubernetes feature for requesting and sharing resources, like hardware accelerators, among Pods.",
       "translation": "ハードウェアアクセラレーターのようなリソースを、Pod間で要求・共有するためのKubernetesの機能。"
-    }
+    },
+    "translation_sample": "DRAを使用してハードウェアアクセラレーターを効率的に共有します。"
   },
   {
     "id": "managed-service",
@@ -85,7 +92,8 @@
     "definition": {
       "english": "A software offering maintained by a third-party provider.",
       "translation": "サードパーティのプロバイダーによって保守されるソフトウェアの提供形態です。"
-    }
+    },
+    "translation_sample": "クラウドプロバイダーが提供するマネージドサービスと連携します。"
   },
   {
     "id": "service-catalog",
@@ -96,6 +104,7 @@
     "definition": {
       "english": "A former extension API that enabled applications running in Kubernetes clusters to easily use external managed software offerings, such as a datastore service offered by a cloud provider.",
       "translation": "Kubernetesクラスターで稼働するアプリケーションが、クラウドプロバイダーによって提供されるデータストアサービスのように、外部のマネージドソフトウェアを容易に使えるようにするための古い拡張APIです。"
-    }
+    },
+    "translation_sample": "サービスカタログを使用して外部データストアに接続します。"
   }
 ]

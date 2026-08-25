@@ -8,7 +8,8 @@
     "definition": {
       "english": "A person responsible for the high-level design of an application.",
       "translation": "アプリケーションの高レベルの設計を担当する人。"
-    }
+    },
+    "translation_sample": "アプリケーションアーキテクトがサービス構成を決定します。"
   },
   {
     "id": "application-developer",
@@ -19,7 +20,8 @@
     "definition": {
       "english": "A person who writes an application that runs in a Kubernetes cluster.",
       "translation": "Kubernetesクラスターで実行されるアプリケーションを作成する人。"
-    }
+    },
+    "translation_sample": "アプリケーション開発者がコンテナイメージをビルドします。"
   },
   {
     "id": "cluster-architect",
@@ -30,7 +32,8 @@
     "definition": {
       "english": "A person who designs infrastructure that involves one or more Kubernetes clusters.",
       "translation": "一つ以上のKubernetesクラスターで構成されるインフラストラクチャーを設計する人。"
-    }
+    },
+    "translation_sample": "クラスターアーキテクトがマルチゾーン構成を設計します。"
   },
   {
     "id": "cluster-operator",
@@ -41,7 +44,8 @@
     "definition": {
       "english": "A person who configures, controls, and monitors clusters.",
       "translation": "クラスターを設定、管理そして、監視する人"
-    }
+    },
+    "translation_sample": "クラスター管理者がノードのメンテナンスを実施します。"
   },
   {
     "id": "platform-developer",
@@ -52,6 +56,7 @@
     "definition": {
       "english": "A person who customizes the Kubernetes platform to fit the needs of their project.",
       "translation": "自身のプロジェクトの要件に合わせ、Kubernetesプラットフォームをカスタマイズする人"
-    }
+    },
+    "translation_sample": "プラットフォーム開発者がCRDとカスタムコントローラーを構築します。"
   }
 ]

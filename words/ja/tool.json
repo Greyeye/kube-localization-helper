@@ -8,7 +8,8 @@
     "definition": {
       "english": "Resources that extend the functionality of Kubernetes.",
       "translation": "Kubernetesの機能を拡張するリソース。"
-    }
+    },
+    "translation_sample": "CoreDNSなどのAdd-onsをクラスターにデプロイします。"
   },
   {
     "id": "cadvisor",
@@ -19,7 +20,8 @@
     "definition": {
       "english": "Tool that provides understanding of the resource usage and performance characteristics for containers",
       "translation": "コンテナのリソース使用量とパフォーマンス特性を理解するためのツール"
-    }
+    },
+    "translation_sample": "cAdvisorが各コンテナのリソース使用量を収集します。"
   },
   {
     "id": "containerd",
@@ -30,7 +32,8 @@
     "definition": {
       "english": "A container runtime with an emphasis on simplicity, robustness and portability",
       "translation": "シンプルさ、堅牢性、移植性を重視したコンテナランタイムです。"
-    }
+    },
+    "translation_sample": "containerdをコンテナランタイムとしてノードに構成します。"
   },
   {
     "id": "cri-o",
@@ -41,7 +44,8 @@
     "definition": {
       "english": "A lightweight container runtime specifically for Kubernetes",
       "translation": "Kubernetesに特化した軽量コンテナランタイム"
-    }
+    },
+    "translation_sample": "CRI-Oを使用してKubernetes専用の軽量な実行環境を提供します。"
   },
   {
     "id": "helm-chart",
@@ -52,7 +56,8 @@
     "definition": {
       "english": "A package of pre-configured Kubernetes configurations that can be managed with the Helm tool.",
       "translation": "Helmツールで管理できる、事前構成されたKubernetesリソースのパッケージ。"
-    }
+    },
+    "translation_sample": "Helmチャートを使用してアプリケーションを一括インストールします。"
   },
   {
     "id": "kops",
@@ -63,7 +68,8 @@
     "definition": {
       "english": "kOps will not only help you create, destroy, upgrade and maintain production-grade, highly available, Kubernetes cluster, but it will also provision the necessary cloud infrastructure.",
       "translation": "kOpsは、プロダクショングレードの高可用性のあるKubernetesクラスターの作成、破棄、アップグレード、メンテナンスを支援するだけでなく、それに必要なクラウドインフラストラクチャのプロビジョニングも行います。"
-    }
+    },
+    "translation_sample": "kOpsを使用してAWS上に本番用クラスターを構築します。"
   },
   {
     "id": "kubeadm",
@@ -74,7 +80,8 @@
     "definition": {
       "english": "A tool for quickly installing Kubernetes and setting up a secure cluster.",
       "translation": "Kubernetesを迅速にインストールし、安全なクラスターをセットアップするためのツール。"
-    }
+    },
+    "translation_sample": "kubeadm initコマンドを実行してコントロールプレーンを初期化します。"
   },
   {
     "id": "kubectl",
@@ -85,7 +92,8 @@
     "definition": {
       "english": "A command line tool for communicating with a Kubernetes cluster.",
       "translation": "Kubernetesクラスターと通信するためのコマンドラインツールです。"
-    }
+    },
+    "translation_sample": "kubectlコマンドを使用してクラスターの状態を確認します。"
   },
   {
     "id": "probe",
@@ -96,7 +104,8 @@
     "definition": {
       "english": "A check performed periodically by the kubelet on a container in a Pod.",
       "translation": "Pod内のコンテナに対して、kubeletが定期的に実行するチェック。"
-    }
+    },
+    "translation_sample": "コンテナにlivenessProbeとreadinessProbeを設定します。"
   },
   {
     "id": "sysctl",
@@ -107,6 +116,7 @@
     "definition": {
       "english": "An interface for getting and setting Unix kernel parameters"
     },
+    "translation_sample": "Podのセキュリティ設定で安全なsysctlパラメーターを指定します。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   }
 ]

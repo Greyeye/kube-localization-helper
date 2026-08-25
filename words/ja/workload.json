@@ -8,7 +8,8 @@
     "definition": {
       "english": "A container used to run part of a workload. Compare with init container.",
       "translation": "ワークロードの一部を実行するために使用されるコンテナ。Initコンテナと比較してください。"
-    }
+    },
+    "translation_sample": "Appコンテナはアプリケーションのメインプロセスを実行します。"
   },
   {
     "id": "replication-controller",
@@ -19,6 +20,7 @@
     "definition": {
       "english": "A (deprecated) API object that manages a replicated application."
     },
+    "translation_sample": "ReplicationControllerを使用してPodのレプリカ数を維持します。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   },
   {
@@ -30,6 +32,7 @@
     "definition": {
       "english": "Describes the resources that a workload needs, such as devices. ResourceClaims can request devices from DeviceClasses."
     },
+    "translation_sample": "PodスペックでResourceClaimを参照してデバイスを要求します。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   },
   {
@@ -41,6 +44,7 @@
     "definition": {
       "english": "Defines a template for Kubernetes to create ResourceClaims. Used to provide per-Pod or per-PodGroup access to separate, similar resources."
     },
+    "translation_sample": "ResourceClaimTemplateからPodごとのクレームを生成します。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   },
   {
@@ -52,6 +56,7 @@
     "definition": {
       "english": "Represents one or more infrastructure resources, like devices, in a pool of similar resources."
     },
+    "translation_sample": "ResourceSliceオブジェクトが利用可能なデバイスを公開します。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   }
 ]

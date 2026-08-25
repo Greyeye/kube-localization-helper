@@ -8,7 +8,8 @@
     "definition": {
       "english": "The aggregation layer lets you install additional Kubernetes-style APIs in your cluster.",
       "translation": "アグリゲーションレイヤーを使用すると、追加のKubernetesスタイルのAPIをクラスターにインストールできます。"
-    }
+    },
+    "translation_sample": "アグリゲーションレイヤーを有効にしてカスタムAPIサーバーを統合します。"
   },
   {
     "id": "api-resource",
@@ -19,7 +20,8 @@
     "definition": {
       "english": "A Kubernetes entity, representing an endpoint on the Kubernetes API server.",
       "translation": "Kubernetes APIサーバー上のエンドポイントを表すKubernetesのエンティティです。"
-    }
+    },
+    "translation_sample": "利用可能なAPIリソースの一覧をkubectl api-resourcesで表示します。"
   },
   {
     "id": "cloud-controller-manager",
@@ -30,7 +32,8 @@
     "definition": {
       "english": "Control plane component that integrates Kubernetes with third-party cloud providers.",
       "translation": "サードパーティクラウドプロバイダーにKubernetesを結合するコントロールプレーンコンポーネント"
-    }
+    },
+    "translation_sample": "クラウドコントローラーマネージャーがロードバランサーをプロビジョニングします。"
   },
   {
     "id": "controller",
@@ -41,7 +44,8 @@
     "definition": {
       "english": "A control loop that watches the shared state of the cluster through the apiserver and makes changes attempting to move the current state towards the desired state.",
       "translation": "クラスターの状態をAPIサーバーから取得、見張る制御ループで、現在の状態を望ましい状態に移行するように更新します。"
-    }
+    },
+    "translation_sample": "コントローラーが望ましい状態と現在の状態の差異を解消します。"
   },
   {
     "id": "downward-api",
@@ -52,6 +56,7 @@
     "definition": {
       "english": "A mechanism to expose Pod and container field values to code running in a container."
     },
+    "translation_sample": "Downward APIを使用してPodのメタデータを環境変数に公開します。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   },
   {
@@ -63,7 +68,8 @@
     "definition": {
       "english": "Consistent and highly-available key value store used as backing store of Kubernetes for all cluster data.",
       "translation": "一貫性、高可用性を持ったキーバリューストアで、Kubernetesの全てのクラスター情報の保存場所として利用されています。"
-    }
+    },
+    "translation_sample": "etcdにクラスターのすべての状態データが保存されます。"
   },
   {
     "id": "gvr",
@@ -74,6 +80,7 @@
     "definition": {
       "english": "The API group, API version and name of a Kubernetes API."
     },
+    "translation_sample": "Group Version Resourceを指定してRESTエンドポイントにアクセスします。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   },
   {
@@ -85,7 +92,8 @@
     "definition": {
       "english": "Immutable Infrastructure refers to computer infrastructure (virtual machines, containers, network appliances) that cannot be changed once deployed",
       "translation": "イミュータブルインフラストラクチャはデプロイ後に変更できないコンピューターインフラストラクチャ(仮想マシン、コンテナ、ネットワークアプライアンス)を指します。"
-    }
+    },
+    "translation_sample": "イミュータブルインフラストラクチャの原則に従いコンテナを再作成します。"
   },
   {
     "id": "infrastructure-resource",
@@ -96,7 +104,8 @@
     "definition": {
       "english": "A defined amount of infrastructure available for consumption (CPU, memory, etc).",
       "translation": "CPU、メモリなど、消費可能な一定量のインフラストラクチャ"
-    }
+    },
+    "translation_sample": "CPUやメモリなどのインフラストラクチャリソースを割り当てます。"
   },
   {
     "id": "kube-apiserver",
@@ -107,7 +116,8 @@
     "definition": {
       "english": "Control plane component that serves the Kubernetes API.",
       "translation": "Kubernetes APIを提供するコントロールプレーンのコンポーネントです。"
-    }
+    },
+    "translation_sample": "APIサーバーがすべてのコンポーネントからのリクエストを処理します。"
   },
   {
     "id": "kube-controller-manager",
@@ -118,7 +128,8 @@
     "definition": {
       "english": "Control Plane component that runs controller processes.",
       "translation": "コントロールプレーン上で動作するコンポーネントで、複数のコントローラープロセスを実行します。"
-    }
+    },
+    "translation_sample": "kube-controller-managerがコア制御ループを実行します。"
   },
   {
     "id": "kube-scheduler",
@@ -129,7 +140,8 @@
     "definition": {
       "english": "Control plane component that watches for newly created pods with no assigned node, and selects a node for them to run on.",
       "translation": "コントロールプレーン上で動作するコンポーネントで、新しく作られたPodにノードが割り当てられているか監視し、割り当てられていなかった場合にそのPodを実行するノードを選択します。"
-    }
+    },
+    "translation_sample": "kube-schedulerが最適なノードを選択してPodを配置します。"
   },
   {
     "id": "logging",
@@ -140,6 +152,7 @@
     "definition": {
       "english": "Logs are the list of events that are logged by cluster or application."
     },
+    "translation_sample": "アプリケーションの標準出力をクラスターのLogging機構で収集します。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   },
   {
@@ -151,6 +164,7 @@
     "definition": {
       "english": "Feature that lets a kube-apiserver proxy a resource request to a different peer API server."
     },
+    "translation_sample": "コントロールプレーンのアップグレード中にMVPがリクエストを中継します。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   },
   {
@@ -177,6 +191,7 @@
     "definition": {
       "english": "A specialized controller used to manage a custom resource",
       "translation": "カスタムリソースを管理するために使用される専用のコントローラー。"
-    }
+    },
+    "translation_sample": "オペレーターパターンを用いてデータベースの運用を自動化します。"
   }
 ]
