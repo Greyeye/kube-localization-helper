@@ -36,6 +36,25 @@
   "activationEvents": [
     "onLanguage:markdown"
   ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "kube-localization-helper.openPersonalWordList",
+        "title": "Open Personal Word List",
+        "category": "Kubernetes Localization"
+      },
+      {
+        "command": "kube-localization-helper.addPersonalWord",
+        "title": "Add Term to Personal Word List",
+        "category": "Kubernetes Localization"
+      },
+      {
+        "command": "kube-localization-helper.openPersonalLintRules",
+        "title": "Open Personal Lint Rules",
+        "category": "Kubernetes Localization"
+      }
+    ]
+  },
   "scripts": {
     "test": "node --test"
   }

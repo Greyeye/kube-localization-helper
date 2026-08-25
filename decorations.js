@@ -43,6 +43,10 @@ function createDecorationManager(glossariesByLang) {
     debounceTimers.set(key, setTimeout(() => updateDecorations(editor), DEBOUNCE_MS));
   }
 
+  function refreshAll() {
+    vscode.window.visibleTextEditors.forEach(updateDecorations);
+  }
+
   function activate(context) {
     vscode.window.visibleTextEditors.forEach(updateDecorations);
 
@@ -57,7 +61,7 @@ function createDecorationManager(glossariesByLang) {
     );
   }
 
-  return { activate };
+  return { activate, refreshAll };
 }
 
 module.exports = { createDecorationManager };

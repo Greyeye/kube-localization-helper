@@ -47,14 +47,14 @@ function toDiagnostic(document, finding) {
     formatMessage(finding.message),
     SEVERITY_MAP[finding.severity] || vscode.DiagnosticSeverity.Warning
   );
-  diagnostic.source = 'md-japanese-hover';
+  diagnostic.source = 'kube-localization-helper';
   diagnostic.code = finding.ruleId;
   return diagnostic;
 }
 
 function createLinter(context) {
   const rulesByLang = loadAllRules(context.extensionPath, message => vscode.window.showErrorMessage(message));
-  const diagnosticCollection = vscode.languages.createDiagnosticCollection('md-japanese-hover-lint');
+  const diagnosticCollection = vscode.languages.createDiagnosticCollection('kube-localization-helper-lint');
 
   // These rules encode kubernetes/website-specific per-language translation
   // conventions, not general Markdown style, so only lint files actually under

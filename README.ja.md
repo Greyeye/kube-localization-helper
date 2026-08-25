@@ -77,6 +77,11 @@ Markdown ドキュメント内の技術用語やフレーズ（例: `Deployment`
 
 個人用設定は最後に読み込まれ、`id` に基づいてマージされるため、組み込みの用語やルールを上書きしたり、独自のルールを追加したりできます。
 
+### コマンドパレットでの便利機能 (`Cmd+Shift+P` / `Ctrl+Shift+P`)
+- **`Kubernetes Localization: Add Term to Personal Word List`**: エディタで選択した単語（または入力した単語）を個人用語集に即座に追加します。保存後、拡張機能の再起動不要で即座に反映されます。
+- **`Kubernetes Localization: Open Personal Word List`**: 現在の言語（または選択した言語）の `user-word-list.json` を開きます（存在しない場合は自動生成）。
+- **`Kubernetes Localization: Open Personal Lint Rules`**: 個人用リンタールールファイル `user-lint-rules.json` を開きます。
+
 ---
 
 ## 開発とテスト

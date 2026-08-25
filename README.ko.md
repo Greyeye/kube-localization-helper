@@ -72,6 +72,11 @@ Markdown 문서 내의 기술 용어 및 구문(예: `Deployment`, `Control Plan
 
 개인 설정 파일은 가장 마지막에 로드되어 `id`를 기준으로 병합되므로, 내장된 용어나 린터 규칙을 덮어쓰거나 나만의 규칙을 추가할 수 있습니다.
 
+### 명령 팔레트 단축 기능 (`Cmd+Shift+P` / `Ctrl+Shift+P`)
+- **`Kubernetes Localization: Add Term to Personal Word List`**: 에디터에서 선택한 텍스트(또는 직접 입력)를 기반으로 개인 용어집에 새 단어를 즉시 추가합니다. 추가 즉시 인메모리 캐시가 갱신되어 에디터에 바로 반영됩니다.
+- **`Kubernetes Localization: Open Personal Word List`**: 현재 활성화된 언어(또는 선택한 언어)의 개인 `user-word-list.json` 파일을 에디터로 엽니다 (파일이 없으면 자동 생성).
+- **`Kubernetes Localization: Open Personal Lint Rules`**: 개인 린터 규칙 파일 `user-lint-rules.json`을 엽니다.
+
 ---
 
 ## 개발 및 테스트
