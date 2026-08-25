@@ -2,7 +2,7 @@
   "name": "kube-localization-helper",
   "displayName": "Kubernetes Localization Helper",
   "publisher": "greyeye",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Hover glossary, translation samples, and a style linter for localizing Kubernetes documentation (kubernetes-website) into Japanese, Korean, and more.",
   "keywords": [
     "kubernetes",
