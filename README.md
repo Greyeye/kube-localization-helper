@@ -63,6 +63,11 @@ You can define personal glossary overrides and custom linter rules without modif
 
 User rules and terms are loaded last and merge by `id`, allowing you to override built-in terms and rules or add your own workspace-specific conventions.
 
+### Quick Commands (Command Palette: `Cmd+Shift+P` / `Ctrl+Shift+P`)
+- **`Kubernetes Localization: Add Term to Personal Word List`**: Select text in your editor (or type it in) to quickly add a custom term and translation to your personal word list with automatic live cache reloading.
+- **`Kubernetes Localization: Open Personal Word List`**: Opens your personal `user-word-list.json` for the selected/active language in VS Code (auto-created if missing).
+- **`Kubernetes Localization: Open Personal Lint Rules`**: Opens your personal `user-lint-rules.json` in VS Code.
+
 ---
 
 ## Development & Testing

@@ -18,7 +18,7 @@ test('detectContentLanguage normalizes Windows-style backslash paths', () => {
 });
 
 test('detectContentLanguage returns null for paths with no content/<lang>/ segment', () => {
-  assert.equal(detectContentLanguage('/repo/md-japanese-hover/README.md'), null);
+  assert.equal(detectContentLanguage('/repo/kube-localization-helper/README.md'), null);
   assert.equal(detectContentLanguage('/repo/kubernetes-website/content/foo.md'), null);
 });
 
