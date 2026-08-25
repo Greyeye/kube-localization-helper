@@ -34,6 +34,8 @@ jobs:
     steps:
       - name: Checkout release commit
         uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.release-please.outputs.tag_name }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
