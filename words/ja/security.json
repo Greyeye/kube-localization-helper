@@ -8,7 +8,8 @@
     "definition": {
       "english": "A cryptographically secure file used to validate access to the Kubernetes cluster.",
       "translation": "Kubernetesクラスターへのアクセスを検証するために使用される暗号化されたセキュアなファイル。"
-    }
+    },
+    "translation_sample": "kube-apiserverと通信するためのクライアント証明書を発行します。"
   },
   {
     "id": "jwt",
@@ -19,7 +20,8 @@
     "definition": {
       "english": "A means of representing claims to be transferred between two parties.",
       "translation": "2つの通信主体間で送受信されるクレームを表現する手段。"
-    }
+    },
+    "translation_sample": "ServiceAccountトークンはJWTとして発行されます。"
   },
   {
     "id": "pod-security-policy",
@@ -30,6 +32,7 @@
     "definition": {
       "english": "Removed API that enforced Pod security restrictions."
     },
+    "translation_sample": "Pod Security Policyは非推奨となりPod Security Standardsに置き換えられました。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   },
   {
@@ -41,7 +44,8 @@
     "definition": {
       "english": "Manages authorization decisions, allowing admins to dynamically configure access policies through the Kubernetes API.",
       "translation": "管理者がKubernetes APIを通じてアクセスポリシーを動的に設定できるようにし、認可の判断を管理します。"
-    }
+    },
+    "translation_sample": "RBACロールとRoleBindingを設定してアクセス権限を制御します。"
   },
   {
     "id": "san",
@@ -52,6 +56,7 @@
     "definition": {
       "english": "An X.509 certificate extension to identify what hostname or IP address the certificate applies to."
     },
+    "translation_sample": "証明書のSubject Alternative NameにクラスターIPを含めます。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   },
   {
@@ -63,7 +68,8 @@
     "definition": {
       "english": "The securityContext field defines privilege and access control settings for a Pod or container.",
       "translation": "`securityContext`フィールドは、Podまたはコンテナの権限とアクセス制御の設定を定義します。"
-    }
+    },
+    "translation_sample": "securityContextを設定して非rootユーザーでの実行を強制します。"
   },
   {
     "id": "userns",
@@ -74,6 +80,7 @@
     "definition": {
       "english": "A Linux kernel feature to emulate superuser privilege for unprivileged users.",
       "translation": "非特権ユーザーに対して管理者権限をエミュレートするLinuxカーネルの機能。"
-    }
+    },
+    "translation_sample": "ユーザー名前空間を有効化してホストとコンテナのUIDを分離します。"
   }
 ]

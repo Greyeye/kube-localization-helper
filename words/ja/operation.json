@@ -8,7 +8,8 @@
     "definition": {
       "english": "API-initiated eviction is the process by which you use the Eviction API to create an Eviction object that triggers graceful pod termination.",
       "translation": "APIを起点とした退避は、Eviction APIを使用してEvictionオブジェクトを作成し、Podの正常終了を起動させるプロセスです。"
-    }
+    },
+    "translation_sample": "APIを起点とした退避によりPodを安全にドレインします。"
   },
   {
     "id": "cluster-infrastructure",
@@ -19,7 +20,8 @@
     "definition": {
       "english": "The infrastructure layer provides and maintains VMs, networking, security groups and others.",
       "translation": "インフラストラクチャレイヤーは、VM、ネットワーキング、セキュリティグループなどを提供および運用します。"
-    }
+    },
+    "translation_sample": "クラスターインフラストラクチャとしてパブリッククラウドのIaaSを利用します。"
   },
   {
     "id": "cluster-operations",
@@ -30,7 +32,8 @@
     "definition": {
       "english": "The work involved in managing a Kubernetes cluster.",
       "translation": "Kubernetesクラスターの管理に関連する作業です。"
-    }
+    },
+    "translation_sample": "ノードのアップグレードなどのクラスター管理作業を実施します。"
   },
   {
     "id": "eviction",
@@ -41,7 +44,8 @@
     "definition": {
       "english": "Process of terminating one or more Pods on Nodes",
       "translation": "ノード上の1つ以上のPodを終了させるプロセス。"
-    }
+    },
+    "translation_sample": "ノードのリソース不足時にPodの退避が実行されます。"
   },
   {
     "id": "horizontal-pod-autoscaler",
@@ -52,7 +56,8 @@
     "definition": {
       "english": "Object that automatically scales the number of pod replicas based on targeted resource utilization or custom metric targets.",
       "translation": "水平Pod自動スケーラーは、ターゲットCPU使用率またはカスタムメトリクスターゲットに基づいて、Podのレプリカ数をスケーリングするAPIリソースです。"
-    }
+    },
+    "translation_sample": "Horizontal Pod Autoscalerを設定してCPU負荷に応じてPod数を自動調整します。"
   },
   {
     "id": "HostAliases",
@@ -63,7 +68,8 @@
     "definition": {
       "english": "A HostAliases is a mapping between the IP address and hostname to be injected into a Pod's hosts file.",
       "translation": "HostAliasesは、Podのhostsファイルに注入されるIPアドレスとホスト名の間のマッピングです。"
-    }
+    },
+    "translation_sample": "PodスペックのHostAliasesで追加のDNSエントリをマッピングします。"
   },
   {
     "id": "node-pressure-eviction",
@@ -74,7 +80,8 @@
     "definition": {
       "english": "Node-pressure eviction is the process by which the kubelet proactively fails pods to reclaim resources on nodes.",
       "translation": "ノード圧迫による退避は、kubeletがノード上のリソースを回収するためにPodを積極的に失敗させるプロセスです。"
-    }
+    },
+    "translation_sample": "メモリ枯渇時にノード圧迫による退避が発生します。"
   },
   {
     "id": "pod-disruption",
@@ -85,7 +92,8 @@
     "definition": {
       "english": "The process by which Pods on Nodes are terminated either voluntarily or involuntarily.",
       "translation": "ノード上のPodが自発的または非自発的に終了されるプロセス。"
-    }
+    },
+    "translation_sample": "計画停止やノード障害によるPod Disruptionの影響を最小限に抑えます。"
   },
   {
     "id": "pod-disruption-budget",
@@ -96,6 +104,7 @@
     "definition": {
       "english": "An object that limits the number of Pods of a replicated application that are down simultaneously from voluntary disruptions."
     },
+    "translation_sample": "Pod Disruption Budgetを定義して同時停止可能なPod数を制限します。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   },
   {
@@ -107,7 +116,8 @@
     "definition": {
       "english": "Pod Priority indicates the importance of a Pod relative to other Pods.",
       "translation": "Podの優先度は、他のPodと比較したPodの重要度を示します。"
-    }
+    },
+    "translation_sample": "PriorityClassを用いてPodの優先度を設定します。"
   },
   {
     "id": "preemption",
@@ -118,6 +128,7 @@
     "definition": {
       "english": "Preemption logic in Kubernetes helps a pending Pod to find a suitable Node by evicting low priority Pods existing on that Node.",
       "translation": "Kubernetesのプリエンプションロジックは、ノード上に存在する優先度の低いPodを追い出すことで、保留中のPodが適切なノードを見つけられるようにします。"
-    }
+    },
+    "translation_sample": "高優先度Podをスケジュールするためにプリエンプションが実行されます。"
   }
 ]

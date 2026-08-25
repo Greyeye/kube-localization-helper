@@ -8,7 +8,8 @@
     "definition": {
       "english": "An API object used to store non-confidential data in key-value pairs. Can be consumed as environment variables, command-line arguments, or configuration files in a volume.",
       "translation": "機密性のないデータをキーと値のペアで保存するために使用されるAPIオブジェクトです。環境変数、コマンドライン引数、またはボリューム内の設定ファイルとして使用できます。"
-    }
+    },
+    "translation_sample": "ConfigMapを作成してコンテナに設定値を注入します。"
   },
   {
     "id": "cronjob",
@@ -19,7 +20,8 @@
     "definition": {
       "english": "A repeating task (a Job) that runs on a regular schedule.",
       "translation": "定期的なスケジュールで繰り返し実行されるタスク(Job)"
-    }
+    },
+    "translation_sample": "夜間にバッチ処理を実行するCronJobを定義します。"
   },
   {
     "id": "event",
@@ -30,6 +32,7 @@
     "definition": {
       "english": "Kubernetes objects that describe some state change in the cluster."
     },
+    "translation_sample": "kubectl get eventsコマンドでクラスター内のEventを確認します。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   },
   {
@@ -41,7 +44,8 @@
     "definition": {
       "english": "Provides constraints to limit resource consumption per Containers or Pods in a namespace.",
       "translation": "各Namespace内のコンテナまたはPodごとのリソース消費量を制限するための制約を提供します。"
-    }
+    },
+    "translation_sample": "NamespaceにLimitRangeを設定してPodの最大メモリサイズを制限します。"
   },
   {
     "id": "node",
@@ -52,7 +56,8 @@
     "definition": {
       "english": "A node is a worker machine in Kubernetes.",
       "translation": "ノードはKubernetesのワーカーマシンです。"
-    }
+    },
+    "translation_sample": "クラスター内の各ノードでコンテナが実行されます。"
   },
   {
     "id": "persistent-volume",
@@ -63,7 +68,8 @@
     "definition": {
       "english": "API object that represents a piece of storage in the cluster.",
       "translation": "クラスター内のストレージの一部を表すAPIオブジェクトです。通常利用可能で、個々のPodのライフサイクルの先にあるプラグイン形式のリソースです。"
-    }
+    },
+    "translation_sample": "永続ボリュームを使用してデータを安全に保持します。"
   },
   {
     "id": "persistent-volume-claim",
@@ -74,7 +80,8 @@
     "definition": {
       "english": "Claims storage resources defined in a PersistentVolume so that it can be mounted as a volume in a container.",
       "translation": "コンテナ内でボリュームとしてマウントするためにPersistentVolume内で定義されたストレージリソースを要求します。"
-    }
+    },
+    "translation_sample": "Podから永続ボリューム要求を発行してストレージをマウントします。"
   },
   {
     "id": "pod",
@@ -88,7 +95,8 @@
     "definition": {
       "english": "The smallest deployable unit in Kubernetes.",
       "translation": "一番小さく一番シンプルな Kubernetes のオブジェクト。Pod とはクラスターで動作しているいくつかのコンテナのまとまりです。"
-    }
+    },
+    "translation_sample": "PodはKubernetesにおける最小のデプロイ単位です。"
   },
   {
     "id": "pod-template",
@@ -99,6 +107,7 @@
     "definition": {
       "english": "A template for creating Pods."
     },
+    "translation_sample": "DeploymentのPodTemplateにコンテナの仕様を記述します。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   },
   {
@@ -110,6 +119,7 @@
     "definition": {
       "english": "A PodGroup represents a set of Pods with common scheduling policy and constraints."
     },
+    "translation_sample": "PodGroupを使用して複数のPodを一括でスケジューリングします。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   },
   {
@@ -121,7 +131,8 @@
     "definition": {
       "english": "A mapping from a class name to the scheduling priority that a Pod should have.",
       "translation": "クラス名からPodが持つべきスケジューリングの優先度への対応付け。"
-    }
+    },
+    "translation_sample": "重要なワークロードに高優先度のPriorityClassを割り当てます。"
   },
   {
     "id": "secret",
@@ -132,7 +143,8 @@
     "definition": {
       "english": "Stores sensitive information, such as passwords, OAuth tokens, and ssh keys.",
       "translation": "パスワードやOAuthトークン、SSHキーのような機密の情報を保持します。"
-    }
+    },
+    "translation_sample": "機密情報はSecretオブジェクトとして暗号化して保存します。"
   },
   {
     "id": "storageclass",
@@ -143,7 +155,8 @@
     "definition": {
       "english": "A StorageClass provides a way for administrators to describe different available storage types.",
       "translation": "StorageClassは管理者が利用可能なさまざまなストレージタイプを記述する方法を提供します。"
-    }
+    },
+    "translation_sample": "StorageClassを指定して適切なストレージプロビジョナーを選択します。"
   },
   {
     "id": "toleration",
@@ -154,6 +167,7 @@
     "definition": {
       "english": "A core object consisting of three required properties: key, value, and effect. Tolerations enable the scheduling of pods on nodes or node groups that have a matching taint.",
       "translation": "key、value、effectの3つの必須属性からなるコアオブジェクトです。 Tolerationは、対応するTaintを持つノードやノードグループにPodをスケジューリングできるようにします。"
-    }
+    },
+    "translation_sample": "ノードのTaintに対応するTolerationをPodに設定します。"
   }
 ]

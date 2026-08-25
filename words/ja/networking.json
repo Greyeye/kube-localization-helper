@@ -8,7 +8,8 @@
     "definition": {
       "english": "CIDR is a notation for describing blocks of IP addresses and is used heavily in various networking configurations.",
       "translation": "CIDRは、IPアドレスの範囲を記述するための表記法であり、さまざまなネットワークを構成するために使用されています。"
-    }
+    },
+    "translation_sample": "PodネットワークとServiceネットワークに適切なCIDRブロックを割り当てます。"
   },
   {
     "id": "cni",
@@ -19,7 +20,8 @@
     "definition": {
       "english": "Container network interface (CNI) plugins are a type of Network plugin that adheres to the appc/CNI specification.",
       "translation": "コンテナネットワークインターフェース(CNI)プラグインは、appc/CNI仕様に準拠したネットワークプラグインの一種です。"
-    }
+    },
+    "translation_sample": "クラスターにCNIプラグインをインストールしてPod間通信を構成します。"
   },
   {
     "id": "endpoint-slice",
@@ -30,7 +32,8 @@
     "definition": {
       "english": "EndpointSlices track the IP addresses of Pods for Services.",
       "translation": "EndpointSliceはServiceに対応するPodのIPアドレスを追跡します。"
-    }
+    },
+    "translation_sample": "EndpointSliceは大量のエンドポイントを持つServiceのスケーラビリティを向上させます。"
   },
   {
     "id": "endpoints",
@@ -41,7 +44,8 @@
     "definition": {
       "english": "(Deprecated) API representing endpoints of a Service",
       "translation": "エンドポイントは、サービスのセレクターに一致するPodのIPアドレスを記録する責任があります。"
-    }
+    },
+    "translation_sample": "エンドポイント（Endpoints）オブジェクトがServiceの転送先Pod一覧を保持します。"
   },
   {
     "id": "gateway-api",
@@ -52,7 +56,8 @@
     "definition": {
       "english": "An API for modeling service networking in Kubernetes.",
       "translation": "Kubernetesでサービスネットワークをモデル化するために使用されるAPI。"
-    }
+    },
+    "translation_sample": "Gateway APIを使用して高度なルーティングとトラフィック管理を実装します。"
   },
   {
     "id": "ingress",
@@ -63,7 +68,8 @@
     "definition": {
       "english": "An API object that manages external access to the services in a cluster, typically HTTP.",
       "translation": "クラスター内のServiceに対する外部からのアクセス(主にHTTP)を管理するAPIオブジェクトです。"
-    }
+    },
+    "translation_sample": "Ingressリソースを定義して外部HTTPトラフィックをルーティングします。"
   },
   {
     "id": "istio",
@@ -74,7 +80,8 @@
     "definition": {
       "english": "An open platform (not Kubernetes-specific) that provides a uniform way to integrate microservices, manage traffic flow, enforce policies, and aggregate telemetry data.",
       "translation": "Istioは、マイクロサービスの統合やトラフィックフローの管理、ポリシーの適用、そしてテレメトリーデータの集約を行うための一様な方法を提供するオープンソースのプラットフォームです(Kubernetesに特化したものではありません)。"
-    }
+    },
+    "translation_sample": "Istioサービスメッシュを導入してmTLS暗号化を有効化します。"
   },
   {
     "id": "network-policy",
@@ -85,7 +92,8 @@
     "definition": {
       "english": "A specification of how groups of Pods are allowed to communicate with each other and with other network endpoints.",
       "translation": "一連のPodがPod同士やその他のネットワークエンドポイントとどのように通信することを許可されるかを定める規定。"
-    }
+    },
+    "translation_sample": "ネットワークポリシーを設定してPod間の不要な通信をブロックします。"
   },
   {
     "id": "proxy",
@@ -96,6 +104,7 @@
     "definition": {
       "english": "An application acting as an intermediary between clients and servers"
     },
+    "translation_sample": "kube-proxyが各ノード上でトラフィックを転送します。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   }
 ]

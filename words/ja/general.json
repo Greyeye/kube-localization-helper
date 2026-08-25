@@ -8,7 +8,8 @@
     "definition": {
       "english": "A defined boundary or contract between two components or systems.",
       "translation": "コンポーネントやシステム間の境界となる取り決め。"
-    }
+    },
+    "translation_sample": "ネットワークインターフェースを構成します。"
   },
   {
     "id": "quota",
@@ -19,7 +20,8 @@
     "definition": {
       "english": "A limit set on the amount of a resource that can be consumed.",
       "translation": "消費できるリソースの量に設けられた上限。"
-    }
+    },
+    "translation_sample": "Namespaceごとのリソースクォータを設定します。"
   },
   {
     "id": "stacked",
@@ -30,7 +32,8 @@
     "definition": {
       "english": "Describes a topology where etcd runs co-located with the control plane, rather than on separate hosts.",
       "translation": "etcdを専用ホストではなくコントロールプレーンと同じ場所で稼働させるトポロジーを指す。"
-    }
+    },
+    "translation_sample": "積層コントロールプレーントポロジーを採用します。"
   },
   {
     "id": "trade-off",
@@ -46,7 +49,8 @@
     "definition": {
       "english": "A balance struck between two desirable but conflicting outcomes.",
       "translation": "相反する二つの望ましい結果の間で取られるバランス。"
-    }
+    },
+    "translation_sample": "パフォーマンスと可用性のトレードオフを検討します。"
   },
   {
     "id": "imperative",
@@ -57,7 +61,8 @@
     "definition": {
       "english": "A configuration style that specifies the exact steps to reach a desired state, as opposed to declarative.",
       "translation": "宣言的とは対照的に、目的の状態に至るまでの具体的な手順を指定する構成スタイル。"
-    }
+    },
+    "translation_sample": "命令的なコマンドを使用してリソースを管理します。"
   },
   {
     "id": "declarative",
@@ -68,7 +73,8 @@
     "definition": {
       "english": "A configuration style that specifies the desired end state, letting the system determine how to reach it.",
       "translation": "目的の最終状態を指定し、そこに至る方法はシステムに委ねる構成スタイル。"
-    }
+    },
+    "translation_sample": "マニフェストを用いた宣言的な管理を行います。"
   },
   {
     "id": "configuration-file",
@@ -82,7 +88,8 @@
     "definition": {
       "english": "A file that specifies settings or desired state for a system or application.",
       "translation": "システムやアプリケーションの設定または目的の状態を記述するファイル。"
-    }
+    },
+    "translation_sample": "設定ファイルを指定してkubectl applyを実行します。"
   },
   {
     "id": "update",
@@ -142,5 +149,130 @@
     "translate": true,
     "translation": "定義",
     "translation_sample": "設定ファイルで定義されているオブジェクトを削除します。"
+  },
+  {
+    "id": "field",
+    "glossary_id": null,
+    "english": "Field",
+    "aliases": [
+      "fields",
+      "field"
+    ],
+    "translate": true,
+    "translation": "フィールド",
+    "definition": {
+      "english": "A key-value element or attribute in an object or resource configuration.",
+      "translation": "オブジェクトやリソース設定内の属性やキーと値の要素。"
+    },
+    "translation_sample": "マニフェスト内で必要なフィールドを設定します。"
+  },
+  {
+    "id": "for-example",
+    "glossary_id": null,
+    "english": "For example",
+    "aliases": [
+      "for example",
+      "For Example",
+      "e.g.",
+      "e.g"
+    ],
+    "translate": true,
+    "translation": "例えば",
+    "definition": {
+      "english": "Used to introduce an illustration or instance of a concept or rule.",
+      "translation": "概念やルールの具体例を挙げる際に使われる表現。"
+    },
+    "translation_sample": "例えば、以下のようにマニフェストを定義します。"
+  },
+  {
+    "id": "specify",
+    "glossary_id": null,
+    "english": "Specify",
+    "aliases": [
+      "specifies",
+      "specified",
+      "specifying",
+      "specify"
+    ],
+    "translate": true,
+    "translation": "指定",
+    "definition": {
+      "english": "To explicitly state, configure, or define a value, attribute, or requirement.",
+      "translation": "値、属性、要件などを明示的に設定または記述すること。"
+    },
+    "translation_sample": "設定ファイル内で必要なフィールドの値を指定します。"
+  },
+  {
+    "id": "source",
+    "glossary_id": null,
+    "english": "Source",
+    "aliases": [
+      "sources",
+      "source"
+    ],
+    "translate": true,
+    "translation": "情報源",
+    "definition": {
+      "english": "The origin, provider, or reference from which data, configuration, or code is obtained.",
+      "translation": "データ、設定、コードなどの取得元や参照先となる起源。"
+    },
+    "translation_sample": "設定やデータの信頼できる情報源として機能します。"
+  },
+  {
+    "id": "replace",
+    "glossary_id": null,
+    "english": "Replace",
+    "aliases": [
+      "replaces",
+      "replaced",
+      "replacing",
+      "replace",
+      "replacement"
+    ],
+    "translate": true,
+    "translation": "置換",
+    "definition": {
+      "english": "To substitute, overwrite, or take the place of an existing resource, object, or value.",
+      "translation": "既存のリソース、オブジェクト、値などを別のものに置き換えること。"
+    },
+    "translation_sample": "既存のPodや設定を新しいもので置換します。"
+  },
+  {
+    "id": "migrate",
+    "glossary_id": null,
+    "english": "Migrate",
+    "aliases": [
+      "migrates",
+      "migrated",
+      "migrating",
+      "migrate",
+      "migration",
+      "migrations"
+    ],
+    "translate": true,
+    "translation": "移行",
+    "definition": {
+      "english": "To move workloads, data, or configuration from one environment, system, or version to another.",
+      "translation": "ワークロード、データ、設定などを別の環境、システム、バージョンへ移動すること。"
+    },
+    "translation_sample": "既存のワークロードを新しいクラスターへ移行します。"
+  },
+  {
+    "id": "export",
+    "glossary_id": null,
+    "english": "Export",
+    "aliases": [
+      "exports",
+      "exported",
+      "exporting",
+      "export"
+    ],
+    "translate": true,
+    "translation": "エクスポート",
+    "definition": {
+      "english": "To output, extract, or make data, resources, or configurations available to external systems or files.",
+      "translation": "データ、リソース、設定などを外部システムやファイルへ出力・抽出すること。"
+    },
+    "translation_sample": "リソースの定義をYAML形式でエクスポートします。"
   }
 ]

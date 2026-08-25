@@ -8,7 +8,8 @@
     "definition": {
       "english": "Rules used by the scheduler to determine where to place pods",
       "translation": "Podを配置する場所を決定するためにスケジューラーによって使用されるルール"
-    }
+    },
+    "translation_sample": "NodeAffinityまたはPodAffinityルールを設定してPodの配置を制御します。"
   },
   {
     "id": "annotation",
@@ -19,7 +20,8 @@
     "definition": {
       "english": "A key-value pair that is used to attach arbitrary non-identifying metadata to objects.",
       "translation": "任意の非識別メタデータをオブジェクトにアタッチするために使用されるキーと値のペア。"
-    }
+    },
+    "translation_sample": "オブジェクトにアノテーションを付与して補足情報を記録します。"
   },
   {
     "id": "api-group",
@@ -30,7 +32,8 @@
     "definition": {
       "english": "A set of related paths in the Kubernetes API.",
       "translation": "Kubernetes APIの関連するパスのセット。"
-    }
+    },
+    "translation_sample": "APIグループごとにバージョン管理されたエンドポイントが提供されます。"
   },
   {
     "id": "applications",
@@ -44,7 +47,8 @@
     "definition": {
       "english": "The layer where various containerized applications run.",
       "translation": "様々なコンテナ化されたアプリケーションが実行される層。"
-    }
+    },
+    "translation_sample": "コンテナ化されたアプリケーションをクラスター上でスケーリングします。"
   },
   {
     "id": "cgroup",
@@ -55,7 +59,8 @@
     "definition": {
       "english": "A group of Linux processes with optional resource isolation, accounting and limits.",
       "translation": "リソースの分離、使用状況の監視、制限を行うLinuxプロセスのグループ。"
-    }
+    },
+    "translation_sample": "cgroupを使用してCPUやメモリの利用上限を設定します。"
   },
   {
     "id": "cluster",
@@ -80,7 +85,8 @@
     "definition": {
       "english": "A condition represents the current state of a Kubernetes resource, providing information about whether certain aspects of the resource are true.",
       "translation": "Kubernetesリソースの現在の状態を表し、リソースの特定の観点が真であるかどうかを示す情報を提供します。"
-    }
+    },
+    "translation_sample": "PodのReady ConditionがTrueであることを確認します。"
   },
   {
     "id": "container",
@@ -91,7 +97,8 @@
     "definition": {
       "english": "A lightweight and portable executable image that contains software and all of its dependencies.",
       "translation": "ソフトウェアとそのすべての依存関係を含む、軽量でポータブルな実行可能イメージです。"
-    }
+    },
+    "translation_sample": "1つのPod内で複数のコンテナを実行できます。"
   },
   {
     "id": "container-env-variables",
@@ -102,7 +109,8 @@
     "definition": {
       "english": "Container environment variables are name=value pairs that provide useful information into containers running in a Pod.",
       "translation": "コンテナ環境変数は、Pod内で実行されているコンテナに関する有用な情報を提供する`name=value`のペアです。"
-    }
+    },
+    "translation_sample": "ConfigMapからコンテナ環境変数を読み込みます。"
   },
   {
     "id": "container-runtime",
@@ -113,7 +121,8 @@
     "definition": {
       "english": "The container runtime is the software that is responsible for running containers.",
       "translation": "コンテナランタイムは、コンテナの実行を担当するソフトウェアです。"
-    }
+    },
+    "translation_sample": "ノード上で動作するコンテナランタイムがイメージを起動します。"
   },
   {
     "id": "control-plane",
@@ -124,7 +133,8 @@
     "definition": {
       "english": "The container orchestration layer that exposes the API and interfaces to define, deploy, and manage the lifecycle of containers.",
       "translation": "コンテナのライフサイクルを定義、展開、管理するためのAPIとインターフェースを公開するコンテナオーケストレーションレイヤーです。"
-    }
+    },
+    "translation_sample": "コントロールプレーンがクラスター全体の望ましい状態を維持します。"
   },
   {
     "id": "cri",
@@ -135,7 +145,8 @@
     "definition": {
       "english": "Protocol for communication between the kubelet and the local container runtime.",
       "translation": "kubeletとローカルコンテナランタイム間の通信のためのプロトコルです。"
-    }
+    },
+    "translation_sample": "CRIを介してkubeletがランタイムと対話します。"
   },
   {
     "id": "CustomResourceDefinition",
@@ -146,7 +157,8 @@
     "definition": {
       "english": "Custom code that defines a resource to add to your Kubernetes API server without building a complete custom server.",
       "translation": "拡張APIサーバーを構築することなく、Kubernetes APIサーバーに追加するリソースを定義するカスタムコードです。"
-    }
+    },
+    "translation_sample": "CRD(CustomResourceDefinition)を適用して新しいAPIタイプを定義します。"
   },
   {
     "id": "daemonset",
@@ -157,7 +169,8 @@
     "definition": {
       "english": "Ensures a copy of a Pod is running across a set of nodes in a cluster.",
       "translation": "Podのコピーがクラスター内の一連のNodeに渡って実行されることを保証します。"
-    }
+    },
+    "translation_sample": "すべてのノードでログ収集エージェントを実行するためにDaemonSetを作成します。"
   },
   {
     "id": "data-plane",
@@ -168,7 +181,8 @@
     "definition": {
       "english": "The layer that provides capacity such as CPU, memory, network, and storage so that the containers can run and connect to a network.",
       "translation": "コンテナを実行し、ネットワークに接続できるように、CPU、メモリ、ネットワーク、ストレージなどのキャパシティを提供するレイヤーです。"
-    }
+    },
+    "translation_sample": "データプレーンは実際のアプリケーションコンテナ間でパケットを転送します。"
   },
   {
     "id": "deployment",
@@ -194,7 +208,8 @@
         "translate": true,
         "translation": "デプロイ"
       }
-    ]
+    ],
+    "translation_sample": "Deploymentリソースを適用してローリングアップデートを実行します。"
   },
   {
     "id": "device-plugin",
@@ -205,7 +220,8 @@
     "definition": {
       "english": "Software extensions to let Pods access devices that need vendor-specific initialization or setup",
       "translation": "ベンダー固有の初期化やセットアップを必要とするデバイスにPodがアクセスできるようにするためのソフトウェア拡張機能"
-    }
+    },
+    "translation_sample": "デバイスプラグインを使用してGPUなどの特殊なハードウェアを利用可能にします。"
   },
   {
     "id": "disruption",
@@ -216,7 +232,8 @@
     "definition": {
       "english": "An event that leads to Pod(s) going out of service",
       "translation": "Podが利用不可に陥る原因となる事象。"
-    }
+    },
+    "translation_sample": "ノードのメンテナンスによる自発的なDisruptionを管理します。"
   },
   {
     "id": "docker",
@@ -227,7 +244,8 @@
     "definition": {
       "english": "Docker is a software technology providing operating-system-level virtualization also known as containers.",
       "translation": "Dockerは、コンテナとして知られる、オペレーティングシステムレベルでの仮想化を提供するソフトウェア技術です。"
-    }
+    },
+    "translation_sample": "DockerイメージをOCI準拠のレジストリからプルします。"
   },
   {
     "id": "dockershim",
@@ -238,7 +256,8 @@
     "definition": {
       "english": "A component of Kubernetes v1.23 and earlier, which allows Kubernetes system components to communicate with Docker Engine.",
       "translation": "Kubernetesバージョン1.23およびそれ以前のバージョンに存在するコンポーネントです。DockershimによりKubernetesシステムのコンポーネントがDocker Engineと通信できるようになります。"
-    }
+    },
+    "translation_sample": "Kubernetes 1.24で非推奨となったdockershimは完全に削除されました。"
   },
   {
     "id": "drain",
@@ -249,7 +268,8 @@
     "definition": {
       "english": "Safely evicts Pods from a Node to prepare for maintenance or removal.",
       "translation": "メンテナンスや削除に備え、Podをノードから安全に退避します。"
-    }
+    },
+    "translation_sample": "kubectl drainコマンドを実行してノード上のPodを退避させます。"
   },
   {
     "id": "duration",
@@ -260,7 +280,8 @@
     "definition": {
       "english": "A string value representing an amount of time.",
       "translation": "時間の長さを表す文字列値です。"
-    }
+    },
+    "translation_sample": "タイムアウトの期間(Duration)を秒単位で指定します。"
   },
   {
     "id": "ephemeral-container",
@@ -271,7 +292,8 @@
     "definition": {
       "english": "A type of container type that you can temporarily run inside a Pod"
     },
-    "notes": "No official Japanese glossary page for this term yet — needs review."
+    "notes": "No official Japanese glossary page for this term yet — needs review.",
+    "translation_sample": "トラブルシューティングのためにデバッグ用Ephemeral ContainerをPodに注入します。"
   },
   {
     "id": "Extensions",
@@ -282,7 +304,8 @@
     "definition": {
       "english": "Extensions are software components that extend and deeply integrate with Kubernetes to support new types of hardware."
     },
-    "notes": "No official Japanese glossary page for this term yet — needs review."
+    "notes": "No official Japanese glossary page for this term yet — needs review.",
+    "translation_sample": "Kubernetes API Extensionsを利用して機能を拡張します。"
   },
   {
     "id": "feature-gate",
@@ -293,7 +316,8 @@
     "definition": {
       "english": "A way to control whether or not a particular Kubernetes feature is enabled.",
       "translation": "特定のKubernetes機能を有効にするかどうかを制御する方法。"
-    }
+    },
+    "translation_sample": "フィーチャーゲート(Feature gate)を有効にしてアルファ機能をテストします。"
   },
   {
     "id": "finalizer",
@@ -304,7 +328,8 @@
     "definition": {
       "english": "A namespaced key that tells Kubernetes to wait until specific conditions are met before it fully deletes an object marked for deletion.",
       "translation": "削除対象としてマークされたオブジェクトを完全に削除する前に、特定の条件が満たされるまでKubernetesを待機させるための名前空間付きのキーです。"
-    }
+    },
+    "translation_sample": "リソースの削除前にファイナライザーによるクリーンアップ処理を実行します。"
   },
   {
     "id": "garbage-collection",
@@ -315,7 +340,8 @@
     "definition": {
       "english": "A collective term for the various mechanisms Kubernetes uses to clean up cluster resources.",
       "translation": "Kubernetesがクラスターリソースをクリーンアップするために使用するさまざまなメカニズムの総称です。"
-    }
+    },
+    "translation_sample": "ガベージコレクションが不要になったコンテナやイメージを自動削除します。"
   },
   {
     "id": "image",
@@ -326,7 +352,8 @@
     "definition": {
       "english": "Stored instance of a container that holds a set of software needed to run an application.",
       "translation": "アプリケーションの実行に必要なソフトウェアのセットを持つ、保存されたコンテナの実体です。"
-    }
+    },
+    "translation_sample": "コンテナイメージをダウンロードしてPodを起動します。"
   },
   {
     "id": "init-container",
@@ -337,7 +364,8 @@
     ],
     "translate": true,
     "translation": "Initコンテナ",
-    "notes": "partial translation — English core word 'Init' stays"
+    "notes": "partial translation — English core word 'Init' stays",
+    "translation_sample": "Initコンテナでアプリケーション起動前の初期化スクリプトを実行します。"
   },
   {
     "id": "job",
@@ -348,7 +376,8 @@
     "definition": {
       "english": "A finite or batch task that runs to completion.",
       "translation": "完了まで実行される有限またはバッチのタスク。"
-    }
+    },
+    "translation_sample": "一度だけ実行して完了するバッチ処理用のJobを作成します。"
   },
   {
     "id": "kube-proxy",
@@ -359,7 +388,8 @@
     "definition": {
       "english": "`kube-proxy` is a network proxy that runs on each node in the cluster.",
       "translation": "`kube-proxy`はクラスター内の各Nodeで動作しているネットワークプロキシです。"
-    }
+    },
+    "translation_sample": "kube-proxyが各ノード上でiptablesやIPVSルールを管理します。"
   },
   {
     "id": "kubelet",
@@ -370,7 +400,8 @@
     "definition": {
       "english": "An agent that runs on each node in the cluster. It makes sure that containers are running in a pod.",
       "translation": "クラスター内の各ノードで実行されるエージェント。コンテナがPod内で実行されていることを保証します。"
-    }
+    },
+    "translation_sample": "kubeletがノード上のコンテナの状態を監視してAPIサーバーに報告します。"
   },
   {
     "id": "kubernetes-api",
@@ -381,7 +412,8 @@
     "definition": {
       "english": "The application that serves Kubernetes functionality through a RESTful interface and stores the state of the cluster."
     },
-    "notes": "No official Japanese glossary page for this term yet — needs review."
+    "notes": "No official Japanese glossary page for this term yet — needs review.",
+    "translation_sample": "Kubernetes APIに対して宣言的なマニフェストを送信します。"
   },
   {
     "id": "label",
@@ -392,7 +424,8 @@
     "definition": {
       "english": "Tags objects with identifying attributes that are meaningful and relevant to users.",
       "translation": "ユーザーにとって意味があり関連性のある識別属性を、オブジェクトにタグ付けするものです。"
-    }
+    },
+    "translation_sample": "Podにラベルを付与してServiceセレクターでグループ化します。"
   },
   {
     "id": "manifest",
@@ -403,7 +436,8 @@
     "definition": {
       "english": "A serialized specification of one or more Kubernetes API objects.",
       "translation": "1つ以上のKubernetes APIオブジェクトをシリアライズした仕様です。"
-    }
+    },
+    "translation_sample": "YAML形式のマニフェストファイルを記述してリソースを定義します。"
   },
   {
     "id": "master",
@@ -414,7 +448,8 @@
     "definition": {
       "english": "Legacy term, used as synonym for nodes running the control plane."
     },
-    "notes": "No official Japanese glossary page for this term yet — needs review."
+    "notes": "No official Japanese glossary page for this term yet — needs review.",
+    "translation_sample": "コントロールプレーンノード（旧称Master）でAPIサーバーが稼働します。"
   },
   {
     "id": "minikube",
@@ -425,7 +460,8 @@
     "definition": {
       "english": "A tool for running Kubernetes locally.",
       "translation": "ローカルでKubernetesを実行するためのツールです。"
-    }
+    },
+    "translation_sample": "ローカル開発環境としてminikubeクラスターを起動します。"
   },
   {
     "id": "mirror-pod",
@@ -436,7 +472,8 @@
     "definition": {
       "english": "An object in the API server that tracks a static pod on a kubelet.",
       "translation": "kubelet上のstatic Podを追跡するAPIサーバー内のオブジェクトです。"
-    }
+    },
+    "translation_sample": "kubeletがStatic Podの状態を表すミラーPodをAPIサーバー上に作成します。"
   },
   {
     "id": "name",
@@ -447,7 +484,8 @@
     "definition": {
       "english": "A client-provided string that refers to an object in a resource URL, such as `/api/v1/pods/some-name`.",
       "translation": "クライアントから提供され、リソースURL内のオブジェクトを参照する文字列です。例えば`/api/v1/pods/何らかの名前`のようになります。"
-    }
+    },
+    "translation_sample": "Namespace内で一意の名前(Name)をオブジェクトに指定します。"
   },
   {
     "id": "namespace",
@@ -458,7 +496,8 @@
     "definition": {
       "english": "An abstraction used by Kubernetes to support isolation of groups of resources within a single cluster.",
       "translation": "同一の物理クラスター上で複数の仮想クラスターをサポートするために使われる抽象概念です。"
-    }
+    },
+    "translation_sample": "Namespaceを使用して環境ごとにリソースを分離します。"
   },
   {
     "id": "pod-lifecycle",
@@ -469,7 +508,8 @@
     "definition": {
       "english": "The sequence of states through which a Pod passes during its lifetime.",
       "translation": "Podがそのライフサイクル中にたどる一連の状態。"
-    }
+    },
+    "translation_sample": "PodのライフサイクルフェーズがRunningからSucceededへ遷移します。"
   },
   {
     "id": "qos-class",
@@ -480,7 +520,8 @@
     "definition": {
       "english": "QoS Class (Quality of Service Class) provides a way for Kubernetes to classify pods within the cluster into several classes and make decisions about scheduling and eviction.",
       "translation": "QoSクラス(Quality of Serviceクラス)は、Kubernetesがクラスター内のPodをいくつかのクラスに分類し、スケジューリングと退避に関する決定を行う方法を提供します。"
-    }
+    },
+    "translation_sample": "リソースの要求と制限に応じてQoSクラス(Guaranteed/Burstable/BestEffort)が割り当てられます。"
   },
   {
     "id": "quantity",
@@ -491,7 +532,8 @@
     "definition": {
       "english": "A whole-number representation of small or large numbers using SI suffixes."
     },
-    "notes": "No official Japanese glossary page for this term yet — needs review."
+    "notes": "No official Japanese glossary page for this term yet — needs review.",
+    "translation_sample": "メモリのQuantityを512Miのように単位付きで指定します。"
   },
   {
     "id": "replica",
@@ -502,7 +544,8 @@
     "definition": {
       "english": "Replicas are copies of pods, ensuring availability, scalability, and fault tolerance by maintaining identical instances.",
       "translation": "ReplicaはPodのコピーであり、同一インスタンスを維持することで、可用性、スケーラビリティ、耐障害性を保証します。"
-    }
+    },
+    "translation_sample": "指定された数のPodレプリカを常に稼働させます。"
   },
   {
     "id": "replica-set",
@@ -513,7 +556,8 @@
     "definition": {
       "english": "ReplicaSet ensures that a specified number of Pod replicas are running at one time",
       "translation": "ReplicaSetは、指定された数のPodレプリカが一度に動作するように保証します。"
-    }
+    },
+    "translation_sample": "ReplicaSetがPodのレプリカ数を保証します。"
   },
   {
     "id": "resource-quota",
@@ -524,7 +568,8 @@
     "definition": {
       "english": "Provides constraints that limit aggregate resource consumption per namespace."
     },
-    "notes": "No official Japanese glossary page for this term yet — needs review."
+    "notes": "No official Japanese glossary page for this term yet — needs review.",
+    "translation_sample": "ResourceQuotaを設定してCPU使用量の総和を制限します。"
   },
   {
     "id": "selector",
@@ -535,7 +580,8 @@
     "definition": {
       "english": "Allows users to filter a list of resources based on labels.",
       "translation": "セレクターを利用すると、ユーザーはラベルに基づいてリソースのリストをフィルタリングできます。"
-    }
+    },
+    "translation_sample": "ラベルセレクターを使用してターゲットとなるPodを特定します。"
   },
   {
     "id": "service",
@@ -546,7 +592,8 @@
     "definition": {
       "english": "A way to expose an application running on a set of Pods as a network service.",
       "translation": "Podの集合で実行されているアプリケーションをネットワークサービスとして公開する方法。"
-    }
+    },
+    "translation_sample": "Serviceを定義してPod群への安定したアクセスエンドポイントを提供します。"
   },
   {
     "id": "service-account",
@@ -561,7 +608,8 @@
     "definition": {
       "english": "Provides an identity for processes that run in a Pod.",
       "translation": "Pod内で動作するプロセスのアイデンティティを提供します。"
-    }
+    },
+    "translation_sample": "Podにサービスアカウントを割り当ててAPIアクセス権限を付与します。"
   },
   {
     "id": "shuffle-sharding",
@@ -572,7 +620,8 @@
     "definition": {
       "english": "A technique for assigning requests to queues that provides better isolation than hashing modulo the number of queues."
     },
-    "notes": "No official Japanese glossary page for this term yet — needs review."
+    "notes": "No official Japanese glossary page for this term yet — needs review.",
+    "translation_sample": "shuffle-shardingを適用してマルチテナント環境の耐障害性を向上させます。"
   },
   {
     "id": "sidecar-container",
@@ -583,7 +632,8 @@
     "definition": {
       "english": "An auxilliary container that stays running throughout the lifecycle of a Pod.",
       "translation": "Podのライフサイクル全体を通して実行を続ける補助コンテナ。"
-    }
+    },
+    "translation_sample": "サイドカーコンテナを追加してメインコンテナのログを転送します。"
   },
   {
     "id": "spec",
@@ -594,7 +644,8 @@
     "definition": {
       "english": "Field in Kubernetes manifests that defines the desired state or configuration.",
       "translation": "望ましい状態や設定を定義するKubernetesのマニフェストのフィールド。"
-    }
+    },
+    "translation_sample": "マニフェストのspecセクションに望ましい状態を記述します。"
   },
   {
     "id": "statefulset",
@@ -605,7 +656,8 @@
     "definition": {
       "english": "A StatefulSet manages deployment and scaling of a set of Pods, with durable storage and persistent identifiers for each Pod.",
       "translation": "StatefulSetはPodのデプロイとスケーリングを管理し、永続化ストレージと各Podの永続的な識別子を備えています。"
-    }
+    },
+    "translation_sample": "ステートフルなアプリケーションにはStatefulSetを使用します。"
   },
   {
     "id": "static-pod",
@@ -616,7 +668,8 @@
     "definition": {
       "english": "A pod managed directly by the kubelet daemon on a specific node.",
       "translation": "特定のノード上でkubeletデーモンによって直接管理されるPodです。"
-    }
+    },
+    "translation_sample": "Static Podはkubeletが設定ディレクトリから直接管理します。"
   },
   {
     "id": "taint",
@@ -627,7 +680,8 @@
     "definition": {
       "english": "A core object consisting of three required properties: key, value, and effect. Taints prevent the scheduling of pods on nodes or node groups.",
       "translation": "key、value、effectの3つの必須属性からなり、Podが特定のノードやノードグループにスケジューリングされることを防ぎます。"
-    }
+    },
+    "translation_sample": "ノードにTaintを付与して特定のPod以外のスケジュールを拒否します。"
   },
   {
     "id": "uid",
@@ -638,7 +692,8 @@
     "definition": {
       "english": "A Kubernetes systems-generated string to uniquely identify objects.",
       "translation": "オブジェクトを一意に識別するためのKubernetesが生成する文字列です。"
-    }
+    },
+    "translation_sample": "オブジェクトの作成時にKubernetesによって一意のUIDが割り当てられます。"
   },
   {
     "id": "volume",
@@ -649,7 +704,8 @@
     "definition": {
       "english": "A directory containing data, accessible to the containers in a pod.",
       "translation": "データを格納するディレクトリで、Pod内のコンテナからアクセス可能です。"
-    }
+    },
+    "translation_sample": "コンテナ間でデータを共有するためにボリュームをマウントします。"
   },
   {
     "id": "watch",
@@ -660,7 +716,8 @@
     "definition": {
       "english": "A verb that is used to track changes to an object in Kubernetes as a stream.",
       "translation": "Kubernetes内のオブジェクトへの変更をストリームとして追跡するために使用される動詞です。"
-    }
+    },
+    "translation_sample": "APIサーバーのWatch機能を使用してリソースの変更イベントを購読します。"
   },
   {
     "id": "workload",
@@ -671,6 +728,7 @@
     "definition": {
       "english": "A workload is an application running on Kubernetes.",
       "translation": "ワークロードとは、Kubernetes上で実行中のアプリケーションです。"
-    }
+    },
+    "translation_sample": "DeploymentやStatefulSetなどのワークロードリソースを管理します。"
   }
 ]

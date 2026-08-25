@@ -8,7 +8,8 @@
     "definition": {
       "english": "A person who can review and approve Kubernetes code contributions.",
       "translation": "Kubernetesコードの貢献をレビュー、および承認できる人。"
-    }
+    },
+    "translation_sample": "PRをマージするには承認者によるレビューと承認が必要です。"
   },
   {
     "id": "cla",
@@ -19,7 +20,8 @@
     "definition": {
       "english": "Terms under which a contributor grants a license to an open source project for their contributions.",
       "translation": "コントリビューターが行った貢献について、オープンソースプロジェクトが利用することを許諾する同意契約。"
-    }
+    },
+    "translation_sample": "コードをコントリビュートする前にCNCFのCLAに同意してください。"
   },
   {
     "id": "cloud-provider",
@@ -30,7 +32,8 @@
     "definition": {
       "english": "An organization that offers a cloud computing platform.",
       "translation": "クラウドコンピューティングプラットフォームを提供する組織。"
-    }
+    },
+    "translation_sample": "特定のクラウドプロバイダーに依存しない構成を作成します。"
   },
   {
     "id": "cncf",
@@ -41,7 +44,8 @@
     "definition": {
       "english": "Cloud Native Computing Foundation",
       "translation": "Cloud Native Computing Foundation"
-    }
+    },
+    "translation_sample": "KubernetesはCNCFがホストするオープンソースプロジェクトです。"
   },
   {
     "id": "code-contributor",
@@ -52,7 +56,8 @@
     "definition": {
       "english": "A person who develops and contributes code to the Kubernetes open source codebase.",
       "translation": "Kubernetesのオープンソースのコードベースを開発し、貢献する人。"
-    }
+    },
+    "translation_sample": "コードコントリビューターとして新機能の実装に参加します。"
   },
   {
     "id": "contributor",
@@ -63,7 +68,8 @@
     "definition": {
       "english": "Someone who donates code, documentation, or their time to help the Kubernetes project or community.",
       "translation": "Kubernetesプロジェクトやコミュニティのために、コード、ドキュメント、またはその他の作業に自身の時間を使って貢献している人々"
-    }
+    },
+    "translation_sample": "世界中のコントリビューターによってドキュメントが翻訳されています。"
   },
   {
     "id": "developer",
@@ -74,6 +80,7 @@
     "definition": {
       "english": "May refer to&#58; Application Developer, Code Contributor, or Platform Developer."
     },
+    "translation_sample": "開発者向けのAPIドキュメントを参照してください。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   },
   {
@@ -85,7 +92,8 @@
     "definition": {
       "english": "May refer to: code in the Kubernetes ecosystem that depends upon the core Kubernetes codebase or a forked repo.",
       "translation": "Kubernetesエコシステムにおいて、Kubernetesコアのコードベースに依存するコード、またはフォークされたリポジトリのいずれかを指す場合があります。"
-    }
+    },
+    "translation_sample": "ダウンストリームのディストリビューションに修正を適用します。"
   },
   {
     "id": "member",
@@ -96,7 +104,8 @@
     "definition": {
       "english": "A continuously active contributor in the K8s community.",
       "translation": "K8sコミュニティの継続的かつアクティブなコントリビューター"
-    }
+    },
+    "translation_sample": "Kubernetesオーガニゼーションのメンバーとして活動します。"
   },
   {
     "id": "reviewer",
@@ -107,6 +116,7 @@
     "definition": {
       "english": "A person who reviews code for quality and correctness on some part of the project."
     },
+    "translation_sample": "PRの変更内容をReviewerが確認します。",
     "notes": "No official Japanese glossary page for this term yet — needs review."
   },
   {
@@ -118,7 +128,8 @@
     "definition": {
       "english": "Community members who collectively manage an ongoing piece or aspect of the larger Kubernetes open source project.",
       "translation": "大規模なKubernetesオープンソースプロジェクトにおいて、開発中の部分または側面を集合的に管理するコミュニティのメンバー"
-    }
+    },
+    "translation_sample": "SIG Docsがドキュメントの作成と翻訳を管理しています。"
   },
   {
     "id": "upstream",
@@ -129,7 +140,8 @@
     "definition": {
       "english": "May refer to: core Kubernetes or the source repo from which a repo was forked.",
       "translation": "Kubernetesのコア、またはリポジトリのフォーク元となるソースリポジトリのいずれかを指す場合があります。"
-    }
+    },
+    "translation_sample": "アップストリームリポジトリの最新の変更を同期します。"
   },
   {
     "id": "wg",
@@ -140,6 +152,7 @@
     "definition": {
       "english": "Facilitates the discussion and/or implementation of a short-lived, narrow, or decoupled project for a committee, SIG, or cross-SIG effort.",
       "translation": "委員会、SIG、またはSIG横断の取り組みにおいて、短期的、限定的、または独立したプロジェクトの議論や実装を促進します。"
-    }
+    },
+    "translation_sample": "WGで特定の技術課題に関する議論が行われます。"
   }
 ]
