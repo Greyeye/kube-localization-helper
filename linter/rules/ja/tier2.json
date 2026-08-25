@@ -37,10 +37,10 @@
   {
     "id": "mid-sentence-linebreak",
     "kind": "prosePairMustEndWith",
-    "endMarkers": ["。", "、", ":", "："],
+    "endMarkers": ["。", ":", "："],
     "message": {
-      "japanese": "この行は「。」「、」または行末のコロンで終わっていませんが、次の行にも文章が続いています。文の途中で改行されていないか確認してください。",
-      "english": "This line doesn't end in 。, 、, or a trailing colon but is immediately followed by more prose — check for an unintended mid-sentence line break."
+      "japanese": "この行は「。」または行末のコロンで終わっていませんが、次の行にも文章が続いています。文の途中で改行されていないか確認してください。",
+      "english": "This line doesn't end in 。,or a trailing colon but is immediately followed by more prose — check for an unintended mid-sentence line break."
     },
     "severity": "information"
   }

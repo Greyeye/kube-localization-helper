@@ -1,5 +1,7 @@
 # Contributing to Kubernetes Localization Helper
 
+[English](CONTRIBUTING.md) | [日本語](CONTRIBUTING.ja.md) | [한국어](CONTRIBUTING.ko.md)
+
 Thank you for your interest in contributing to **Kubernetes Localization Helper**!
 
 This extension is built to help localization teams (SIG Docs) maintain accurate terminology and consistent style when translating Kubernetes documentation. We welcome contributions for:
@@ -373,13 +375,34 @@ test('my-new-rule flags improper formatting', () => {
 
 ## Submitting a Pull Request
 
+### 1. Commit Messages & Conventional Commits
+This repository uses [Conventional Commits](https://www.conventionalcommits.org/) and **Release Please** to automate SemVer versioning and `CHANGELOG.md` generation.
+
+Please format your commit messages (or PR title) using standard prefixes:
+
+| Type | Description | SemVer Impact |
+|---|---|---|
+| `feat:` | A new feature, new language glossary, or new linter rule | Minor (`0.x.0`) |
+| `fix:` | A bug fix or correction to an existing term/rule | Patch (`0.0.x`) |
+| `docs:` | Documentation changes only (`README`, etc.) | None / Patch |
+| `chore:` / `refactor:` / `test:` | Maintenance, test additions, internal refactoring | None / Patch |
+| `feat!:` / `BREAKING CHANGE:` | Breaking API or configuration changes | Major (`x.0.0`) |
+
+#### Examples:
+```bash
+git commit -m "feat(glossary): add initial pt-br terminology"
+git commit -m "fix(linter): adjust colon-spacing regex to ignore URLs"
+git commit -m "docs: improve contribution guide for custom handlers"
+```
+
+> **Note:** You do **not** need to manually edit `package.json` or `CHANGELOG.md` in your PR. The automated release bot (`release-please`) will aggregate merged commits, bump the version, update `CHANGELOG.md`, and publish to the VS Code Marketplace automatically.
+
+### 2. PR Workflow
 1. Fork the repository and create your feature branch:
    ```bash
    git checkout -b feature/add-portuguese-glossary
    ```
 2. Make your changes and verify with `npm test`.
-3. Commit with a concise, descriptive commit message:
-   ```bash
-   git commit -m "feat(glossary): add initial pt-br terminology"
-   ```
-4. Push to your fork and submit a Pull Request to `main`.
+3. Commit with a conventional commit message.
+4. Push to your fork and open a Pull Request to `main`.
+5. Ensure GitHub Actions CI passes (unit tests on Node 22/24 and VSIX packaging validation).

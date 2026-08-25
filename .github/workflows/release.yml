@@ -1,0 +1,63 @@
+name: Release & Publish
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    name: Release Please
+    runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+
+  publish:
+    name: Publish to VS Code Marketplace
+    needs: release-please
+    if: ${{ needs.release-please.outputs.release_created == 'true' || needs.release-please.outputs.release_created == true }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout release commit
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build VSIX package
+        run: npx @vscode/vsce package --no-dependencies
+
+      - name: Upload VSIX to GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload ${{ needs.release-please.outputs.tag_name }} *.vsix
+
+      - name: Publish to VS Code Marketplace
+        env:
+          VSCE_PAT: ${{ secrets.AZURE_DEVOPS_PAT || vars.AZURE_DEVOPS_PAT }}
+        run: |
+          if [ -z "$VSCE_PAT" ]; then
+            echo "::error::AZURE_DEVOPS_PAT secret or variable is not set."
+            exit 1
+          fi
+          npx @vscode/vsce publish -p "$VSCE_PAT"
