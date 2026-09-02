@@ -72,6 +72,45 @@
     "translation_sample": "securityContextを設定して非rootユーザーでの実行を強制します。"
   },
   {
+    "id": "signer-name",
+    "glossary_id": null,
+    "english": "signer name",
+    "translate": true,
+    "translation": "署名者名",
+    "definition": {
+      "english": "A domain-namespaced identifier (the spec.signerName field) that a CertificateSigningRequest or Pod certificate is addressed to, identifying which signer should issue the certificate.",
+      "translation": "CertificateSigningRequestやPod証明書がどの署名者に対して発行を要求しているかを示す、ドメイン名前空間形式の識別子(spec.signerNameフィールド)。"
+    },
+    "translation_sample": "開発者または管理者は署名者名を選択し、対応するコントローラーをデプロイします。",
+    "notes": "No official Japanese glossary page for this term yet — needs review. No prior ja translation precedent found before kubernetes-v1-37-release; カタカナ「サイナーネーム」は前例のない造語なので避けた。"
+  },
+  {
+    "id": "signer-controller",
+    "glossary_id": null,
+    "english": "signer controller",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "A controller that watches CertificateSigningRequest/PodCertificateRequest objects for a given signer name and issues/refreshes certificates for eligible Pods.",
+      "translation": "特定の署名者名に対するCertificateSigningRequest/PodCertificateRequestオブジェクトを監視し、対象Podの証明書を発行・更新するコントローラー。"
+    },
+    "translation_sample": "署名者は_signer controller_をデプロイして、対象となるPodに証明書を発行させます。",
+    "notes": "Undecided — kept as an English loanword (italicized \"_signer controller_\") in index.md for kubernetes-v1-37-release, but a previous translator (b1gb4by) fully translated it as 署名者コントローラー in the same document. No glossary page exists for this term. Needs a team decision before either choice is treated as settled."
+  },
+  {
+    "id": "trust-anchor",
+    "glossary_id": null,
+    "english": "trust anchor",
+    "translate": true,
+    "translation": "トラストアンカー",
+    "definition": {
+      "english": "The root of trust (e.g. a CA certificate or certificate bundle) used to verify a chain of trust to other certificates.",
+      "translation": "他の証明書の信頼チェーンを検証するために使われる、信頼の起点となるCA証明書や証明書バンドル。"
+    },
+    "translation_sample": "ClusterTrustBundleはX.509トラストアンカーをクラスターワークロードに配布します。",
+    "notes": "No official Japanese glossary page for this term yet — needs review. Katakana rendering is already established precedent (content/ja/blog/_posts/2025/kubernetes-v1-33-release/index.md)."
+  },
+  {
     "id": "userns",
     "glossary_id": "userns",
     "english": "user namespace",
