@@ -86,7 +86,8 @@
       "english": "A condition represents the current state of a Kubernetes resource, providing information about whether certain aspects of the resource are true.",
       "translation": "Kubernetesリソースの現在の状態を表し、リソースの特定の観点が真であるかどうかを示す情報を提供します。"
     },
-    "translation_sample": "PodのReady ConditionがTrueであることを確認します。"
+    "translation_sample": "PodのReady ConditionがTrueであることを確認します。",
+    "notes": "Kubernetes API以外のConditionは`条件`で翻訳可能, 例:条件を追加"
   },
   {
     "id": "container",
@@ -292,7 +293,6 @@
     "definition": {
       "english": "A type of container type that you can temporarily run inside a Pod"
     },
-    "notes": "No official Japanese glossary page for this term yet — needs review.",
     "translation_sample": "トラブルシューティングのためにデバッグ用Ephemeral ContainerをPodに注入します。"
   },
   {
@@ -304,7 +304,6 @@
     "definition": {
       "english": "Extensions are software components that extend and deeply integrate with Kubernetes to support new types of hardware."
     },
-    "notes": "No official Japanese glossary page for this term yet — needs review.",
     "translation_sample": "Kubernetes API Extensionsを利用して機能を拡張します。"
   },
   {
@@ -603,13 +602,13 @@
       "Service account",
       "Service accounts"
     ],
-    "translate": true,
-    "translation": "サービスアカウント",
+    "translate": false,
+    "translation": null,
     "definition": {
       "english": "Provides an identity for processes that run in a Pod.",
       "translation": "Pod内で動作するプロセスのアイデンティティを提供します。"
     },
-    "translation_sample": "Podにサービスアカウントを割り当ててAPIアクセス権限を付与します。"
+    "translation_sample": "PodにServiceAccountを割り当ててAPIアクセス権限を付与します。"
   },
   {
     "id": "shuffle-sharding",
@@ -722,6 +721,9 @@
   {
     "id": "workload",
     "glossary_id": "workload",
+    "aliases": [
+      "workloads"
+    ],
     "english": "Workload",
     "translate": true,
     "translation": "ワークロード",

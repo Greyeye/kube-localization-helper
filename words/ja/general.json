@@ -97,7 +97,8 @@
     "english": "Update",
     "aliases": [
       "updated",
-      "updates"
+      "updates",
+      "updating"
     ],
     "translate": true,
     "translation": "更新",
@@ -274,5 +275,24 @@
       "translation": "データ、リソース、設定などを外部システムやファイルへ出力・抽出すること。"
     },
     "translation_sample": "リソースの定義をYAML形式でエクスポートします。"
+  },
+  {
+    "id": "deprecated",
+    "glossary_id": null,
+    "english": "deprecated",
+    "aliases": [
+      "deprecate",
+      "deprecates",
+      "deprecated",
+      "deprecating",
+      "deprecation"
+    ],
+    "translate": true,
+    "translation": "非推奨",
+    "definition": {
+      "english": "No longer recommended for use and likely to be removed in the future.",
+      "translation": "使用が推奨されず、将来的に削除される可能性がある状態。"
+    },
+    "translation_sample": "このフィールドは非推奨です。"
   }
 ]
