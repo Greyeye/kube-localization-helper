@@ -99,12 +99,26 @@
     "id": "proxy",
     "glossary_id": "proxy",
     "english": "Proxy",
-    "translate": false,
-    "translation": null,
+    "translate": true,
+    "translation": "プロキシ",
     "definition": {
-      "english": "An application acting as an intermediary between clients and servers"
+      "english": "An application acting as an intermediary between clients and servers",
+      "translation": "クライアントとサーバーの間を中継するアプリケーション。"
     },
-    "translation_sample": "kube-proxyが各ノード上でトラフィックを転送します。",
-    "notes": "No official Japanese glossary page for this term yet — needs review."
+    "translation_sample": "認証プロキシとKubernetes APIサーバー間では安全に設定されたTLSを使用する必要があります。",
+    "notes": "The English glossary page (content/en/docs/reference/glossary/proxy.md) has no ja translation yet, so glossary_id doesn't resolve to a ja page — but this is not actually undecided: プロキシ is already the established rendering across content/ja/docs (50+ occurrences, e.g. organize-cluster-access-kubeconfig.md, hardening-guide/authentication-mechanisms.md, service.md). Keep English only for the literal enum value `\"Proxy\"` (as in `.status.loadBalancer.ingress.ipMode`) or the unrelated proper-noun feature name \"Mixed Version Proxy\" (tracked separately as `mvp`)."
+  },
+  {
+    "id": "headless",
+    "glossary_id": null,
+    "english": "Headless",
+    "translate": true,
+    "translation": "ヘッドレス",
+    "definition": {
+      "english": "Describes a Service created without a cluster IP, used when direct addressing of individual Pods is needed.",
+      "translation": "個々のPodへの直接アドレス指定が必要な場合に使われる、クラスターIPを持たずに作成されたServiceを指す。"
+    },
+    "translation_sample": "ヘッドレスServiceを使用してPodへ直接アクセスします。",
+    "notes": "Kept as katakana even though \"headless\" isn't itself a resource kind name — corrected from left-as-English \"Headless\" in PR #54056 (4 instances, t-inu)."
   }
 ]

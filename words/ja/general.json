@@ -294,5 +294,87 @@
       "translation": "使用が推奨されず、将来的に削除される可能性がある状態。"
     },
     "translation_sample": "このフィールドは非推奨です。"
+  },
+  {
+    "id": "pull",
+    "glossary_id": null,
+    "english": "Pull",
+    "aliases": [
+      "pulling",
+      "pulled",
+      "pulls"
+    ],
+    "translate": true,
+    "translation": "取得",
+    "definition": {
+      "english": "To retrieve a container image from a registry.",
+      "translation": "レジストリからコンテナイメージを取得すること。"
+    },
+    "translation_sample": "kubeletはコンテナイメージをレジストリから取得します。",
+    "notes": "Image-pull sense specifically — use 取得, not プル. Recurring correction: 13 instances across #51080, #51204, #52069, #53295, #53302, #53785 (kfess, t-inu). One reviewer (Okabe-Junya, PR #51037) noted this wasn't always the house style historically, so a few older pages may still say プル — that's a cleanup candidate, not a sign the current rule is unsettled."
+  },
+  {
+    "id": "superuser",
+    "glossary_id": null,
+    "english": "Superuser",
+    "aliases": [
+      "superusers"
+    ],
+    "translate": true,
+    "translation": "スーパーユーザー",
+    "definition": {
+      "english": "A user account with unrestricted, privileged access to a system.",
+      "translation": "システムへの制限のない特権的なアクセス権を持つユーザーアカウント。"
+    },
+    "translation_sample": "この操作にはスーパーユーザー権限が必要です。",
+    "notes": "Not 特権ユーザー (\"privileged user\") — corrected in PR #51204, #52070 (t-inu)."
+  },
+  {
+    "id": "discovery",
+    "glossary_id": null,
+    "english": "Discovery",
+    "translate": true,
+    "translation": "ディスカバリ",
+    "definition": {
+      "english": "The process by which a client locates a service, endpoint, or API version at runtime.",
+      "translation": "クライアントが実行時にサービスやエンドポイント、APIバージョンを見つけ出す仕組み。"
+    },
+    "translation_sample": "APIディスカバリのエンドポイントにリクエストを送信します。",
+    "notes": "Context-dependent, not a settled one-way rule like most entries here. In the protocol/API/service-discovery mechanism sense, reviewers have corrected 検出 (\"detection\") to katakana ディスカバリ (PR #54203, t-inu). But they've also gone the other way: PR #50770 shows kfess and nasa9084 debating ディスカバリー vs. 検出 for \"service discovery\" in a blog post and settling on 検出 there. Treat as genuinely contested — match how the specific page already renders it, and ask in #kubernetes-docs-ja if truly ambiguous rather than defaulting to either rendering."
+  },
+  {
+    "id": "rotation",
+    "glossary_id": null,
+    "english": "Rotation",
+    "aliases": [
+      "rotate",
+      "rotates",
+      "rotated",
+      "rotating"
+    ],
+    "translate": true,
+    "translation": "ローテーション",
+    "definition": {
+      "english": "Periodically replacing a credential, certificate, or key with a new one.",
+      "translation": "証明書や鍵などの認証情報を定期的に新しいものに置き換えること。"
+    },
+    "translation_sample": "証明書のローテーションを自動化します。",
+    "notes": "Credential/certificate rotation sense specifically — not 更新 (\"update\"), which is too generic and loses the periodic-replacement meaning. Corrected in PR #52070 (t-inu)."
+  },
+  {
+    "id": "configuration",
+    "glossary_id": null,
+    "english": "Configuration",
+    "aliases": [
+      "configurations"
+    ],
+    "translate": true,
+    "translation": "設定",
+    "definition": {
+      "english": "The set of settings that determine how a system or resource behaves.",
+      "translation": "システムやリソースの挙動を決める設定項目の集合。"
+    },
+    "translation_sample": "この設定は次回の起動時に反映されます。",
+    "notes": "As a plain noun, use 設定, not 構成 (which reads as \"structure/composition\" rather than \"settings\"). Corrected in PR #52340, #54641 (kfess, t-inu). Distinct from the existing configuration-file entry (設定ファイル)."
   }
 ]

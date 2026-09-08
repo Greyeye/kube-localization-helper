@@ -496,7 +496,20 @@
       "english": "An abstraction used by Kubernetes to support isolation of groups of resources within a single cluster.",
       "translation": "同一の物理クラスター上で複数の仮想クラスターをサポートするために使われる抽象概念です。"
     },
-    "translation_sample": "Namespaceを使用して環境ごとにリソースを分離します。"
+    "contextual_rules": [
+      {
+        "when": "refers to the Kubernetes Namespace resource (kind: Namespace, kubectl get namespaces, capitalized as a proper noun naming the resource)",
+        "translate": false,
+        "translation": "Namespace"
+      },
+      {
+        "when": "used as a plain descriptive noun in prose (the general isolation/grouping concept, not naming the resource itself)",
+        "translate": true,
+        "translation": "名前空間"
+      }
+    ],
+    "translation_sample": "Namespaceを使用して環境ごとにリソースを分離します。",
+    "notes": "Certain situations warrant 名前空間 over keeping the English word — same shape as the Node/Deployment contextual split. Recurs 25+ times across many PRs (including #54018, #54256, #56815) when \"Namespace\" is used generically in prose rather than naming the resource; reviewers consistently translate that usage to 名前空間. High-confidence, not just a caveat to double-check."
   },
   {
     "id": "pod-lifecycle",
@@ -680,7 +693,8 @@
       "english": "A core object consisting of three required properties: key, value, and effect. Taints prevent the scheduling of pods on nodes or node groups.",
       "translation": "key、value、effectの3つの必須属性からなり、Podが特定のノードやノードグループにスケジューリングされることを防ぎます。"
     },
-    "translation_sample": "ノードにTaintを付与して特定のPod以外のスケジュールを拒否します。"
+    "translation_sample": "ノードにTaintを付与して特定のPod以外のスケジュールを拒否します。",
+    "notes": "Stays English, not katakana テイント — corrected across at least 5 PRs (#49776, #50541, #50658, #51120, #52069, including a v1.34 release blog). Easy to assume translation is needed since \"taint\" isn't itself a resource kind name, but it should stay English like Pod/Service/Deployment."
   },
   {
     "id": "uid",
