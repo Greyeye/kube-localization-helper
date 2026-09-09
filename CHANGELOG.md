@@ -2,6 +2,13 @@
 
 All notable changes to the "kube-localization-helper" extension will be documented in this file.
 
+## [0.3.0](https://github.com/Greyeye/kube-localization-helper/compare/kube-localization-helper-v0.2.0...kube-localization-helper-v0.3.0) (2026-09-09)
+
+
+### Features
+
+* **glossary:** add new words, aliases ([#10](https://github.com/Greyeye/kube-localization-helper/issues/10)) ([e8318a4](https://github.com/Greyeye/kube-localization-helper/commit/e8318a4281f963e2ce5618297bea641607506cd6))
+
 ## [0.2.0](https://github.com/Greyeye/kube-localization-helper/compare/kube-localization-helper-v0.1.0...kube-localization-helper-v0.2.0) (2026-09-02)
 
 
