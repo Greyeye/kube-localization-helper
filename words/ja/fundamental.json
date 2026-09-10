@@ -524,6 +524,19 @@
     "translation_sample": "PodのライフサイクルフェーズがRunningからSucceededへ遷移します。"
   },
   {
+    "id": "podspec",
+    "glossary_id": null,
+    "english": "PodSpec",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "The Go/API type (`v1.PodSpec`) describing a Pod's desired state — the schema for a Pod's `.spec` field.",
+      "translation": "Podの望ましい状態を記述するGo/APIの型(`v1.PodSpec`)。Podの`.spec`フィールドのスキーマにあたる。"
+    },
+    "translation_sample": "このようなカスタムエントリーは、PodSpecのHostAliasesフィールドに追加できます。",
+    "notes": "Kept as literal English — it's the Go struct/API type name (`type PodSpec struct`, `io.k8s.api.core.v1.PodSpec` in the OpenAPI schema), not a descriptive phrase. Distinct from the generic `spec` entry (lowercase, the field itself) and from `Pod` — PodSpec specifically names the schema type for a Pod's `.spec` field."
+  },
+  {
     "id": "qos-class",
     "glossary_id": "qos-class",
     "english": "QoS Class",

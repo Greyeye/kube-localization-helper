@@ -376,5 +376,70 @@
     },
     "translation_sample": "この設定は次回の起動時に反映されます。",
     "notes": "As a plain noun, use 設定, not 構成 (which reads as \"structure/composition\" rather than \"settings\"). Corrected in PR #52340, #54641 (kfess, t-inu). Distinct from the existing configuration-file entry (設定ファイル)."
+  },
+  {
+    "id": "in-place",
+    "glossary_id": null,
+    "english": "In place",
+    "aliases": [
+      "in-place",
+      "inplace"
+    ],
+    "translate": true,
+    "translation": "インプレース",
+    "definition": {
+      "english": "Describes updating, resizing, or upgrading a resource directly, without deleting/recreating it or evicting/restarting the Pod.",
+      "translation": "リソースを削除・再作成したり、Podを退避・再起動したりすることなく、直接更新・リサイズ・アップグレードすることを指す。"
+    },
+    "translation_sample": "このタスクでは、`kubectl patch`を使用してAPIオブジェクトをインプレースで更新する方法を説明します。",
+    "notes": "Established rendering across content/ja/docs — always katakana インプレース, never a native-word translation. Used adverbially before 更新/アップデート/リサイズ/アップグレード (インプレース更新, インプレースアップデート, インプレースリサイズ, インプレースアップグレード). Sample is the opening sentence of update-api-object-kubectl-patch.md; also see autoscaling.md (\"インプレースPodの水平スケーリング\"), resize-container-resources.md, scale-stateful-set.md (\"StatefulSetのインプレースアップデート\"), and management.md (\"リソースのインプレース更新\")."
+  },
+  {
+    "id": "use",
+    "glossary_id": null,
+    "english": "Use",
+    "aliases": [
+      "used",
+      "using",
+      "uses"
+    ],
+    "translate": true,
+    "translation": "使用",
+    "definition": {
+      "english": "To employ a tool, command, resource, or feature.",
+      "translation": "道具・コマンド・リソース・機能などを用いること。"
+    },
+    "contextual_rules": [
+      {
+        "when": "directly operating/consuming a concrete tool, command, resource, feature, or flag for its own intended purpose (e.g. \"use kubectl\", \"use a Secret\", \"use a flag\", \"use a Deployment\") — by far the dominant sense in Kubernetes docs (2600+ occurrences of 使用 vs. ~240 of 利用 across content/ja/docs)",
+        "translate": true,
+        "translation": "使用"
+      },
+      {
+        "when": "leveraging/taking advantage of a facility, mechanism, cached result, spare capacity, or opportunity for benefit or efficiency, rather than operating a tool directly (e.g. reusing a cached image, a scheduler using stored capacity info to decide placement, using a flag to reserve resources, making use of an existing ConfigMap/field/system)",
+        "translate": true,
+        "translation": "利用"
+      }
+    ],
+    "translation_sample": "このタスクでは、{{< glossary_tooltip text=\"Kubernetes API\" term_id=\"kubernetes-api\" >}}を使用して保存されたリソースデータの暗号化について説明します。",
+    "notes": "Needs a per-instance context check — this isn't a settled one-way term like most entries here. Rule of thumb: if the object itself is being operated/consumed as-is, use 使用 (\"Use\" in the tool sense); if the point is benefiting from or making clever use of something already there, use 利用 (\"make use of / take advantage of\"). Contrast: \"kubectlを使用する\" (operating the kubectl tool) vs. \"キャッシュされたイメージを利用します\" (benefiting from an already-cached image) — content/ja/docs/concepts/configuration/overview.md. Default to 使用 when genuinely ambiguous; it's the overwhelmingly more common rendering."
+  },
+  {
+    "id": "terminate",
+    "glossary_id": null,
+    "english": "Terminate",
+    "aliases": [
+      "terminated",
+      "terminates",
+      "terminating",
+      "termination"
+    ],
+    "translate": true,
+    "translation": "終了",
+    "definition": {
+      "english": "To end the execution of a process, Pod, container, or Job.",
+      "translation": "プロセス、Pod、コンテナ、Jobなどの実行を終了させること。"
+    },
+    "translation_sample": "Podが多すぎる場合、ReplicationControllerは余分なPodを終了します。"
   }
 ]
