@@ -537,6 +537,34 @@
     "notes": "Kept as literal English — it's the Go struct/API type name (`type PodSpec struct`, `io.k8s.api.core.v1.PodSpec` in the OpenAPI schema), not a descriptive phrase. Distinct from the generic `spec` entry (lowercase, the field itself) and from `Pod` — PodSpec specifically names the schema type for a Pod's `.spec` field."
   },
   {
+    "id": "struct",
+    "glossary_id": null,
+    "english": "Struct",
+    "aliases": [
+      "structs"
+    ],
+    "translate": true,
+    "translation": "構造体",
+    "definition": {
+      "english": "A Go/C struct — a named composite type grouping fields together.",
+      "translation": "フィールドをまとめた名前付きの複合型(Go/C言語のstruct)。"
+    },
+    "contextual_rules": [
+      {
+        "when": "prose reference to a named struct type (e.g. \"the PodSpec struct\", \"the KubeletConfiguration struct\") — attach directly to the type name with no space, matching the no-space Latin-Japanese convention",
+        "translate": true,
+        "translation": "構造体"
+      },
+      {
+        "when": "part of a verbatim, backtick-quoted identifier copied as-is from source code (e.g. `` `struct utsname` `` — a literal C type name a reader would look up)",
+        "translate": false,
+        "translation": null
+      }
+    ],
+    "translation_sample": "kubeadm config print init-defaults --component-configs KubeletConfigurationを実行することによって、この構造体の全てのデフォルト値を確認することができます。",
+    "notes": "Established rendering across content/ja/docs: KubeletConfiguration構造体, TracingConfiguration構造体, KubeSchedulerConfiguration構造体, NodeRegistrationOptions構造体 (all no space before 構造体). Exception: `struct utsname` (dns-pod-service.md, pod-hostname.md) stays literal English inside backticks — it's a C type identifier, not a descriptive phrase. Note: content/ja/docs/concepts/configuration/secret.md:585 still has an untranslated \"KubeletConfiguration struct\" as stale link text (the linked English source has since changed) — a cleanup candidate, not a sign this rule is unsettled."
+  },
+  {
     "id": "qos-class",
     "glossary_id": "qos-class",
     "english": "QoS Class",
