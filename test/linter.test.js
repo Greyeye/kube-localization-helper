@@ -216,6 +216,24 @@ test('code-span-spacing requires a space between a code span and adjacent Latin 
   assert.equal(findingsFor('code-span-spacing', 'see`default`', rules).length, 1); // missing space before (Latin before)
 });
 
+test('emphasis-span-spacing flags a `_word_` emphasis span directly touching Japanese text on either side', () => {
+  const rule = {
+    id: 'emphasis-span-spacing',
+    kind: 'regex',
+    pattern:
+      '(?<=[\\p{Script=Han}\\p{Script=Hiragana}\\p{Script=Katakana}])(?<!_)_(?!_)[^_\\n]+(?<!_)_(?!_)|(?<!_)_(?!_)[^_\\n]+(?<!_)_(?!_)(?=[\\p{Script=Han}\\p{Script=Hiragana}\\p{Script=Katakana}])',
+    flags: 'gu',
+    message: bilingual('add a space'),
+  };
+  const rules = ruleSet(rule);
+  assert.equal(findingsFor('emphasis-span-spacing', 'である_リングアル(ringaal)_から織られた', rules).length, 1); // missing on both sides, one finding
+  assert.equal(findingsFor('emphasis-span-spacing', 'これは_italic_ です', rules).length, 1); // missing space before only
+  assert.equal(findingsFor('emphasis-span-spacing', 'これは _italic_です', rules).length, 1); // missing space after only
+  assert.equal(findingsFor('emphasis-span-spacing', 'これは _italic_ です', rules).length, 0); // correct, spaced both sides
+  assert.equal(findingsFor('emphasis-span-spacing', 'This is _italic_ text in English', rules).length, 0); // no Japanese adjacency
+  assert.equal(findingsFor('emphasis-span-spacing', '読み:_gaṛhvāl_)', rules).length, 0); // punctuation on both sides, not Japanese script
+});
+
 test('paren-period-order flags 。) and not )。', () => {
   const rule = { id: 'paren-period-order', kind: 'regex', pattern: '。\\)', message: bilingual('swap order') };
   const rules = ruleSet(rule);

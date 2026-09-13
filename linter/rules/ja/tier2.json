@@ -35,6 +35,17 @@
     "severity": "warning"
   },
   {
+    "id": "emphasis-span-spacing",
+    "kind": "regex",
+    "pattern": "(?<=[\\p{Script=Han}\\p{Script=Hiragana}\\p{Script=Katakana}])(?<!_)_(?!_)[^_\\n]+(?<!_)_(?!_)|(?<!_)_(?!_)[^_\\n]+(?<!_)_(?!_)(?=[\\p{Script=Han}\\p{Script=Hiragana}\\p{Script=Katakana}])",
+    "flags": "gu",
+    "message": {
+      "japanese": "`_単語_`のような強調表記が、直前または直後の日本語と直接接しています。半角スペースを入れてください。スペースがないと、Markdownがアンダースコアを強調ではなく文字どおりのアンダースコアとして扱ってしまう場合があります。",
+      "english": "This `_word_`-style emphasis span is directly touching Japanese text on one side — insert a half-width space there. Without it, Markdown may render the underscores literally instead of as emphasis (CommonMark treats intraword underscores as plain text)."
+    },
+    "severity": "warning"
+  },
+  {
     "id": "mid-sentence-linebreak",
     "kind": "prosePairMustEndWith",
     "endMarkers": ["。", ":", "："],

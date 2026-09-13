@@ -441,5 +441,62 @@
       "translation": "プロセス、Pod、コンテナ、Jobなどの実行を終了させること。"
     },
     "translation_sample": "Podが多すぎる場合、ReplicationControllerは余分なPodを終了します。"
+  },
+  {
+    "id": "comply",
+    "glossary_id": null,
+    "english": "Comply",
+    "aliases": [
+      "complies",
+      "complied",
+      "complying",
+      "compliant",
+      "compliance"
+    ],
+    "translate": true,
+    "translation": "従う",
+    "definition": {
+      "english": "To conform to a rule, policy, spec, or set of guidelines.",
+      "translation": "ルール、ポリシー、spec、ガイドラインなどに沿うこと。"
+    },
+    "translation_sample": "更新されたDeployment specに従う新しいPodを作成します。",
+    "notes": "Sample mirrors an as-yet-untranslated sentence in update-api-object-kubectl-patch.md (\"new Pods that comply with the updated Deployment spec\"). Established rendering elsewhere in content/ja/docs: 原則/ガイドライン/フォーマットルールに従う (rbac-good-practices.md, secrets-good-practices.md, secret.md)."
+  },
+  {
+    "id": "merge",
+    "glossary_id": null,
+    "english": "Merge",
+    "aliases": [
+      "merged",
+      "merges",
+      "merging"
+    ],
+    "translate": true,
+    "translation": "マージ",
+    "definition": {
+      "english": "To combine two data structures, patches, or branches into one.",
+      "translation": "2つのデータ構造・パッチ・ブランチなどを1つに組み合わせること。"
+    },
+    "translation_sample": "Kubernetesは、デフォルトでは、Podで定義された情報に加えて、コンテナイメージ内の`/etc/group`のグループ情報をマージします。",
+    "notes": "Not 統合 (\"integrate\"/\"consolidate\" — a different English word, see the separate `consolidate` entry). Established rendering across content/ja/docs (70+ occurrences): git/PR merging (Pull Requestをマージする), strategic merge patch / JSON merge patch (マージパッチ, as in update-api-object-kubectl-patch.md), and merging list/group data (security-context.md)."
+  },
+  {
+    "id": "consolidate",
+    "glossary_id": null,
+    "english": "Consolidate",
+    "aliases": [
+      "consolidated",
+      "consolidates",
+      "consolidation",
+      "consolidating"
+    ],
+    "translate": true,
+    "translation": "統合",
+    "definition": {
+      "english": "To combine underutilized Nodes or resources together, typically to reduce count or cost; the docs also use this same word for the general \"integrate\" sense.",
+      "translation": "利用率の低いノードやリソースなどをまとめること(ドキュメント内では一般的な「統合する」の意味でも使われる)。"
+    },
+    "translation_sample": "需要に適応し、コストを最適化するために、クラスター内のノードを自動的にプロビジョニングおよび統合します。",
+    "notes": "Distinct from `merge`→マージ — don't conflate the two even though both loosely mean \"combine\" in English. 統合 also covers \"integrate\" (e.g. 外部認証プロバイダーをKubernetesに統合する — authentication-mechanisms.md) but never means \"merge\" a git PR or a patch; that's マージ's job."
   }
 ]
