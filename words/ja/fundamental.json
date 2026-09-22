@@ -415,6 +415,25 @@
     "translation_sample": "Kubernetes APIに対して宣言的なマニフェストを送信します。"
   },
   {
+    "id": "kubernetes-api-reference",
+    "glossary_id": null,
+    "english": "Kubernetes API reference",
+    "aliases": [
+      "Kubernetes API Reference",
+      "API reference",
+      "API Reference",
+      "Kubernetes API documentation"
+    ],
+    "translate": true,
+    "translation": "Kubernetes APIリファレンス",
+    "definition": {
+      "english": "The generated API reference page (content/en/docs/reference/generated/kubernetes-api/) documenting every Kubernetes API type and field.",
+      "translation": "あらゆるKubernetes APIの型やフィールドを記載した、生成されたAPIリファレンスページ(content/en/docs/reference/generated/kubernetes-api/)。"
+    },
+    "translation_sample": "[Kubernetes APIリファレンス](/docs/reference/using-api/)",
+    "notes": "Established across multiple independent files (reference/_index.md, kustomization.md, object-management.md) as \"Kubernetes API Reference\"/\"API reference\" -> Kubernetes APIリファレンス. \"Kubernetes API documentation\" (update-api-object-kubectl-patch.md — the only 2 occurrences of that exact wording anywhere in the corpus, both still untranslated) is almost certainly a wording slip in that page's English source rather than a deliberately different term — every other page linking to the identical generated reference target says \"reference,\" not \"documentation.\" Render it the same way: Kubernetes APIリファレンス. Worth flagging/fixing upstream in the English source too, per localization.md's upstream-contribution note."
+  },
+  {
     "id": "label",
     "glossary_id": "label",
     "english": "Label",

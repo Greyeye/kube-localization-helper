@@ -175,12 +175,17 @@
     "id": "toleration",
     "glossary_id": "toleration",
     "english": "Toleration",
+    "aliases": [
+      "Tolerations",
+      "tolerations"
+    ],
     "translate": false,
     "translation": null,
     "definition": {
       "english": "A core object consisting of three required properties: key, value, and effect. Tolerations enable the scheduling of pods on nodes or node groups that have a matching taint.",
       "translation": "key、value、effectの3つの必須属性からなるコアオブジェクトです。 Tolerationは、対応するTaintを持つノードやノードグループにPodをスケジューリングできるようにします。"
     },
-    "translation_sample": "ノードのTaintに対応するTolerationをPodに設定します。"
+    "translation_sample": "ノードのTaintに対応するTolerationをPodに設定します。",
+    "notes": "Kept as literal English, singular, even when the English source is plural — e.g. glossary/toleration.md: \"1つ以上のTolerationが付与されます\" (\"one or more Toleration(s) are granted\"), same singular-form convention as Pod/Namespace resource names. Two exceptions found in content/ja/windows/user-guide.md (\"TaintsとTolerationsを使用して\") that keep the English plural \"Tolerations\" — inconsistent with the rest of the corpus and most likely a cleanup candidate, not an alternate convention to follow."
   }
 ]
