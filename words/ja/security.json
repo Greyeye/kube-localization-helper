@@ -111,6 +111,22 @@
     "notes": "No official Japanese glossary page for this term yet — needs review. Katakana rendering is already established precedent (content/ja/blog/_posts/2025/kubernetes-v1-33-release/index.md)."
   },
   {
+    "id": "claim",
+    "glossary_id": null,
+    "english": "Claim",
+    "aliases": [
+      "claims"
+    ],
+    "translate": true,
+    "translation": "クレーム",
+    "definition": {
+      "english": "A piece of information asserted about a subject, as a JWT payload field.",
+      "translation": "JWTのペイロード内で主体について主張される情報の一片。"
+    },
+    "translation_sample": "JWTのクレームにサービスアカウント名を含めます。",
+    "notes": "JWT-specific sense only — established reviewer precedent (PR #48886, t-inu) to keep クレーム rather than translate literally as 要求/請求/主張, which read as unrelated everyday meanings (complaint, request, claim-for-payment) and don't help comprehension. This was a reviewer decision on a new term, not a correction of an existing mistranslation."
+  },
+  {
     "id": "userns",
     "glossary_id": "userns",
     "english": "user namespace",
@@ -121,5 +137,22 @@
       "translation": "非特権ユーザーに対して管理者権限をエミュレートするLinuxカーネルの機能。"
     },
     "translation_sample": "ユーザー名前空間を有効化してホストとコンテナのUIDを分離します。"
+  },
+  {
+    "id": "private-key",
+    "glossary_id": null,
+    "english": "Private key",
+    "aliases": [
+      "private-key",
+      "private keys"
+    ],
+    "translate": true,
+    "translation": "秘密鍵",
+    "definition": {
+      "english": "The secret half of a public/private key pair, used to sign or decrypt data.",
+      "translation": "公開鍵と対をなす、署名や復号に使われる非公開の鍵。"
+    },
+    "translation_sample": "サービスアカウントトークン発行者の現在の秘密鍵を含むファイルのパスを指定します。",
+    "notes": "Established across multiple independent files (configure-service-account.md, kubeadm-certs.md, best-practices/certificates.md, high-availability.md). Its counterpart \"public key\" -> 公開鍵 recurs alongside it constantly (e.g. \"公開鍵/秘密鍵のペア\") but isn't a separate word-list entry yet."
   }
 ]

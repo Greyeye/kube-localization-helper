@@ -294,5 +294,209 @@
       "translation": "使用が推奨されず、将来的に削除される可能性がある状態。"
     },
     "translation_sample": "このフィールドは非推奨です。"
+  },
+  {
+    "id": "pull",
+    "glossary_id": null,
+    "english": "Pull",
+    "aliases": [
+      "pulling",
+      "pulled",
+      "pulls"
+    ],
+    "translate": true,
+    "translation": "取得",
+    "definition": {
+      "english": "To retrieve a container image from a registry.",
+      "translation": "レジストリからコンテナイメージを取得すること。"
+    },
+    "translation_sample": "kubeletはコンテナイメージをレジストリから取得します。",
+    "notes": "Image-pull sense specifically — use 取得, not プル. Recurring correction: 13 instances across #51080, #51204, #52069, #53295, #53302, #53785 (kfess, t-inu). One reviewer (Okabe-Junya, PR #51037) noted this wasn't always the house style historically, so a few older pages may still say プル — that's a cleanup candidate, not a sign the current rule is unsettled."
+  },
+  {
+    "id": "superuser",
+    "glossary_id": null,
+    "english": "Superuser",
+    "aliases": [
+      "superusers"
+    ],
+    "translate": true,
+    "translation": "スーパーユーザー",
+    "definition": {
+      "english": "A user account with unrestricted, privileged access to a system.",
+      "translation": "システムへの制限のない特権的なアクセス権を持つユーザーアカウント。"
+    },
+    "translation_sample": "この操作にはスーパーユーザー権限が必要です。",
+    "notes": "Not 特権ユーザー (\"privileged user\") — corrected in PR #51204, #52070 (t-inu)."
+  },
+  {
+    "id": "discovery",
+    "glossary_id": null,
+    "english": "Discovery",
+    "translate": true,
+    "translation": "ディスカバリ",
+    "definition": {
+      "english": "The process by which a client locates a service, endpoint, or API version at runtime.",
+      "translation": "クライアントが実行時にサービスやエンドポイント、APIバージョンを見つけ出す仕組み。"
+    },
+    "translation_sample": "APIディスカバリのエンドポイントにリクエストを送信します。",
+    "notes": "Context-dependent, not a settled one-way rule like most entries here. In the protocol/API/service-discovery mechanism sense, reviewers have corrected 検出 (\"detection\") to katakana ディスカバリ (PR #54203, t-inu). But they've also gone the other way: PR #50770 shows kfess and nasa9084 debating ディスカバリー vs. 検出 for \"service discovery\" in a blog post and settling on 検出 there. Treat as genuinely contested — match how the specific page already renders it, and ask in #kubernetes-docs-ja if truly ambiguous rather than defaulting to either rendering."
+  },
+  {
+    "id": "rotation",
+    "glossary_id": null,
+    "english": "Rotation",
+    "aliases": [
+      "rotate",
+      "rotates",
+      "rotated",
+      "rotating"
+    ],
+    "translate": true,
+    "translation": "ローテーション",
+    "definition": {
+      "english": "Periodically replacing a credential, certificate, or key with a new one.",
+      "translation": "証明書や鍵などの認証情報を定期的に新しいものに置き換えること。"
+    },
+    "translation_sample": "証明書のローテーションを自動化します。",
+    "notes": "Credential/certificate rotation sense specifically — not 更新 (\"update\"), which is too generic and loses the periodic-replacement meaning. Corrected in PR #52070 (t-inu)."
+  },
+  {
+    "id": "configuration",
+    "glossary_id": null,
+    "english": "Configuration",
+    "aliases": [
+      "configurations"
+    ],
+    "translate": true,
+    "translation": "設定",
+    "definition": {
+      "english": "The set of settings that determine how a system or resource behaves.",
+      "translation": "システムやリソースの挙動を決める設定項目の集合。"
+    },
+    "translation_sample": "この設定は次回の起動時に反映されます。",
+    "notes": "As a plain noun, use 設定, not 構成 (which reads as \"structure/composition\" rather than \"settings\"). Corrected in PR #52340, #54641 (kfess, t-inu). Distinct from the existing configuration-file entry (設定ファイル)."
+  },
+  {
+    "id": "in-place",
+    "glossary_id": null,
+    "english": "In place",
+    "aliases": [
+      "in-place",
+      "inplace"
+    ],
+    "translate": true,
+    "translation": "インプレース",
+    "definition": {
+      "english": "Describes updating, resizing, or upgrading a resource directly, without deleting/recreating it or evicting/restarting the Pod.",
+      "translation": "リソースを削除・再作成したり、Podを退避・再起動したりすることなく、直接更新・リサイズ・アップグレードすることを指す。"
+    },
+    "translation_sample": "このタスクでは、`kubectl patch`を使用してAPIオブジェクトをインプレースで更新する方法を説明します。",
+    "notes": "Established rendering across content/ja/docs — always katakana インプレース, never a native-word translation. Used adverbially before 更新/アップデート/リサイズ/アップグレード (インプレース更新, インプレースアップデート, インプレースリサイズ, インプレースアップグレード). Sample is the opening sentence of update-api-object-kubectl-patch.md; also see autoscaling.md (\"インプレースPodの水平スケーリング\"), resize-container-resources.md, scale-stateful-set.md (\"StatefulSetのインプレースアップデート\"), and management.md (\"リソースのインプレース更新\")."
+  },
+  {
+    "id": "use",
+    "glossary_id": null,
+    "english": "Use",
+    "aliases": [
+      "used",
+      "using",
+      "uses"
+    ],
+    "translate": true,
+    "translation": "使用",
+    "definition": {
+      "english": "To employ a tool, command, resource, or feature.",
+      "translation": "道具・コマンド・リソース・機能などを用いること。"
+    },
+    "contextual_rules": [
+      {
+        "when": "directly operating/consuming a concrete tool, command, resource, feature, or flag for its own intended purpose (e.g. \"use kubectl\", \"use a Secret\", \"use a flag\", \"use a Deployment\") — by far the dominant sense in Kubernetes docs (2600+ occurrences of 使用 vs. ~240 of 利用 across content/ja/docs)",
+        "translate": true,
+        "translation": "使用"
+      },
+      {
+        "when": "leveraging/taking advantage of a facility, mechanism, cached result, spare capacity, or opportunity for benefit or efficiency, rather than operating a tool directly (e.g. reusing a cached image, a scheduler using stored capacity info to decide placement, using a flag to reserve resources, making use of an existing ConfigMap/field/system)",
+        "translate": true,
+        "translation": "利用"
+      }
+    ],
+    "translation_sample": "このタスクでは、{{< glossary_tooltip text=\"Kubernetes API\" term_id=\"kubernetes-api\" >}}を使用して保存されたリソースデータの暗号化について説明します。",
+    "notes": "Needs a per-instance context check — this isn't a settled one-way term like most entries here. Rule of thumb: if the object itself is being operated/consumed as-is, use 使用 (\"Use\" in the tool sense); if the point is benefiting from or making clever use of something already there, use 利用 (\"make use of / take advantage of\"). Contrast: \"kubectlを使用する\" (operating the kubectl tool) vs. \"キャッシュされたイメージを利用します\" (benefiting from an already-cached image) — content/ja/docs/concepts/configuration/overview.md. Default to 使用 when genuinely ambiguous; it's the overwhelmingly more common rendering."
+  },
+  {
+    "id": "terminate",
+    "glossary_id": null,
+    "english": "Terminate",
+    "aliases": [
+      "terminated",
+      "terminates",
+      "terminating",
+      "termination"
+    ],
+    "translate": true,
+    "translation": "終了",
+    "definition": {
+      "english": "To end the execution of a process, Pod, container, or Job.",
+      "translation": "プロセス、Pod、コンテナ、Jobなどの実行を終了させること。"
+    },
+    "translation_sample": "Podが多すぎる場合、ReplicationControllerは余分なPodを終了します。"
+  },
+  {
+    "id": "comply",
+    "glossary_id": null,
+    "english": "Comply",
+    "aliases": [
+      "complies",
+      "complied",
+      "complying",
+      "compliant",
+      "compliance"
+    ],
+    "translate": true,
+    "translation": "従う",
+    "definition": {
+      "english": "To conform to a rule, policy, spec, or set of guidelines.",
+      "translation": "ルール、ポリシー、spec、ガイドラインなどに沿うこと。"
+    },
+    "translation_sample": "更新されたDeployment specに従う新しいPodを作成します。",
+    "notes": "Sample mirrors an as-yet-untranslated sentence in update-api-object-kubectl-patch.md (\"new Pods that comply with the updated Deployment spec\"). Established rendering elsewhere in content/ja/docs: 原則/ガイドライン/フォーマットルールに従う (rbac-good-practices.md, secrets-good-practices.md, secret.md)."
+  },
+  {
+    "id": "merge",
+    "glossary_id": null,
+    "english": "Merge",
+    "aliases": [
+      "merged",
+      "merges",
+      "merging"
+    ],
+    "translate": true,
+    "translation": "マージ",
+    "definition": {
+      "english": "To combine two data structures, patches, or branches into one.",
+      "translation": "2つのデータ構造・パッチ・ブランチなどを1つに組み合わせること。"
+    },
+    "translation_sample": "Kubernetesは、デフォルトでは、Podで定義された情報に加えて、コンテナイメージ内の`/etc/group`のグループ情報をマージします。",
+    "notes": "Not 統合 (\"integrate\"/\"consolidate\" — a different English word, see the separate `consolidate` entry). Established rendering across content/ja/docs (70+ occurrences): git/PR merging (Pull Requestをマージする), strategic merge patch / JSON merge patch (マージパッチ, as in update-api-object-kubectl-patch.md), and merging list/group data (security-context.md)."
+  },
+  {
+    "id": "consolidate",
+    "glossary_id": null,
+    "english": "Consolidate",
+    "aliases": [
+      "consolidated",
+      "consolidates",
+      "consolidation",
+      "consolidating"
+    ],
+    "translate": true,
+    "translation": "統合",
+    "definition": {
+      "english": "To combine underutilized Nodes or resources together, typically to reduce count or cost; the docs also use this same word for the general \"integrate\" sense.",
+      "translation": "利用率の低いノードやリソースなどをまとめること(ドキュメント内では一般的な「統合する」の意味でも使われる)。"
+    },
+    "translation_sample": "需要に適応し、コストを最適化するために、クラスター内のノードを自動的にプロビジョニングおよび統合します。",
+    "notes": "Distinct from `merge`→マージ — don't conflate the two even though both loosely mean \"combine\" in English. 統合 also covers \"integrate\" (e.g. 外部認証プロバイダーをKubernetesに統合する — authentication-mechanisms.md) but never means \"merge\" a git PR or a patch; that's マージ's job."
   }
 ]

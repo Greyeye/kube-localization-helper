@@ -415,6 +415,25 @@
     "translation_sample": "Kubernetes APIに対して宣言的なマニフェストを送信します。"
   },
   {
+    "id": "kubernetes-api-reference",
+    "glossary_id": null,
+    "english": "Kubernetes API reference",
+    "aliases": [
+      "Kubernetes API Reference",
+      "API reference",
+      "API Reference",
+      "Kubernetes API documentation"
+    ],
+    "translate": true,
+    "translation": "Kubernetes APIリファレンス",
+    "definition": {
+      "english": "The generated API reference page (content/en/docs/reference/generated/kubernetes-api/) documenting every Kubernetes API type and field.",
+      "translation": "あらゆるKubernetes APIの型やフィールドを記載した、生成されたAPIリファレンスページ(content/en/docs/reference/generated/kubernetes-api/)。"
+    },
+    "translation_sample": "[Kubernetes APIリファレンス](/docs/reference/using-api/)",
+    "notes": "Established across multiple independent files (reference/_index.md, kustomization.md, object-management.md) as \"Kubernetes API Reference\"/\"API reference\" -> Kubernetes APIリファレンス. \"Kubernetes API documentation\" (update-api-object-kubectl-patch.md — the only 2 occurrences of that exact wording anywhere in the corpus, both still untranslated) is almost certainly a wording slip in that page's English source rather than a deliberately different term — every other page linking to the identical generated reference target says \"reference,\" not \"documentation.\" Render it the same way: Kubernetes APIリファレンス. Worth flagging/fixing upstream in the English source too, per localization.md's upstream-contribution note."
+  },
+  {
     "id": "label",
     "glossary_id": "label",
     "english": "Label",
@@ -496,7 +515,20 @@
       "english": "An abstraction used by Kubernetes to support isolation of groups of resources within a single cluster.",
       "translation": "同一の物理クラスター上で複数の仮想クラスターをサポートするために使われる抽象概念です。"
     },
-    "translation_sample": "Namespaceを使用して環境ごとにリソースを分離します。"
+    "contextual_rules": [
+      {
+        "when": "refers to the Kubernetes Namespace resource (kind: Namespace, kubectl get namespaces, capitalized as a proper noun naming the resource)",
+        "translate": false,
+        "translation": "Namespace"
+      },
+      {
+        "when": "used as a plain descriptive noun in prose (the general isolation/grouping concept, not naming the resource itself)",
+        "translate": true,
+        "translation": "名前空間"
+      }
+    ],
+    "translation_sample": "Namespaceを使用して環境ごとにリソースを分離します。",
+    "notes": "Certain situations warrant 名前空間 over keeping the English word — same shape as the Node/Deployment contextual split. Recurs 25+ times across many PRs (including #54018, #54256, #56815) when \"Namespace\" is used generically in prose rather than naming the resource; reviewers consistently translate that usage to 名前空間. High-confidence, not just a caveat to double-check."
   },
   {
     "id": "pod-lifecycle",
@@ -509,6 +541,47 @@
       "translation": "Podがそのライフサイクル中にたどる一連の状態。"
     },
     "translation_sample": "PodのライフサイクルフェーズがRunningからSucceededへ遷移します。"
+  },
+  {
+    "id": "podspec",
+    "glossary_id": null,
+    "english": "PodSpec",
+    "translate": false,
+    "translation": null,
+    "definition": {
+      "english": "The Go/API type (`v1.PodSpec`) describing a Pod's desired state — the schema for a Pod's `.spec` field.",
+      "translation": "Podの望ましい状態を記述するGo/APIの型(`v1.PodSpec`)。Podの`.spec`フィールドのスキーマにあたる。"
+    },
+    "translation_sample": "このようなカスタムエントリーは、PodSpecのHostAliasesフィールドに追加できます。",
+    "notes": "Kept as literal English — it's the Go struct/API type name (`type PodSpec struct`, `io.k8s.api.core.v1.PodSpec` in the OpenAPI schema), not a descriptive phrase. Distinct from the generic `spec` entry (lowercase, the field itself) and from `Pod` — PodSpec specifically names the schema type for a Pod's `.spec` field."
+  },
+  {
+    "id": "struct",
+    "glossary_id": null,
+    "english": "Struct",
+    "aliases": [
+      "structs"
+    ],
+    "translate": true,
+    "translation": "構造体",
+    "definition": {
+      "english": "A Go/C struct — a named composite type grouping fields together.",
+      "translation": "フィールドをまとめた名前付きの複合型(Go/C言語のstruct)。"
+    },
+    "contextual_rules": [
+      {
+        "when": "prose reference to a named struct type (e.g. \"the PodSpec struct\", \"the KubeletConfiguration struct\") — attach directly to the type name with no space, matching the no-space Latin-Japanese convention",
+        "translate": true,
+        "translation": "構造体"
+      },
+      {
+        "when": "part of a verbatim, backtick-quoted identifier copied as-is from source code (e.g. `` `struct utsname` `` — a literal C type name a reader would look up)",
+        "translate": false,
+        "translation": null
+      }
+    ],
+    "translation_sample": "kubeadm config print init-defaults --component-configs KubeletConfigurationを実行することによって、この構造体の全てのデフォルト値を確認することができます。",
+    "notes": "Established rendering across content/ja/docs: KubeletConfiguration構造体, TracingConfiguration構造体, KubeSchedulerConfiguration構造体, NodeRegistrationOptions構造体 (all no space before 構造体). Exception: `struct utsname` (dns-pod-service.md, pod-hostname.md) stays literal English inside backticks — it's a C type identifier, not a descriptive phrase. Note: content/ja/docs/concepts/configuration/secret.md:585 still has an untranslated \"KubeletConfiguration struct\" as stale link text (the linked English source has since changed) — a cleanup candidate, not a sign this rule is unsettled."
   },
   {
     "id": "qos-class",
@@ -680,7 +753,8 @@
       "english": "A core object consisting of three required properties: key, value, and effect. Taints prevent the scheduling of pods on nodes or node groups.",
       "translation": "key、value、effectの3つの必須属性からなり、Podが特定のノードやノードグループにスケジューリングされることを防ぎます。"
     },
-    "translation_sample": "ノードにTaintを付与して特定のPod以外のスケジュールを拒否します。"
+    "translation_sample": "ノードにTaintを付与して特定のPod以外のスケジュールを拒否します。",
+    "notes": "Stays English, not katakana テイント — corrected across at least 5 PRs (#49776, #50541, #50658, #51120, #52069, including a v1.34 release blog). Easy to assume translation is needed since \"taint\" isn't itself a resource kind name, but it should stay English like Pod/Service/Deployment."
   },
   {
     "id": "uid",
