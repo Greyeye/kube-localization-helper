@@ -1,17 +1,5 @@
 [
   {
-    "id": "interface",
-    "glossary_id": null,
-    "english": "Interface",
-    "translate": true,
-    "translation": "インターフェース",
-    "definition": {
-      "english": "A defined boundary or contract between two components or systems.",
-      "translation": "コンポーネントやシステム間の境界となる取り決め。"
-    },
-    "translation_sample": "ネットワークインターフェースを構成します。"
-  },
-  {
     "id": "quota",
     "glossary_id": null,
     "english": "Quota",
@@ -198,10 +186,23 @@
     "translate": true,
     "translation": "指定",
     "definition": {
-      "english": "To explicitly state, configure, or define a value, attribute, or requirement.",
-      "translation": "値、属性、要件などを明示的に設定または記述すること。"
+      "english": "To name or point to a particular item among options — a file, a flag, a field, or a named value — rather than assigning a value to it.",
+      "translation": "選択肢の中から特定のもの（ファイル、フラグ、フィールド、名前付きの値など）を名指しして示すこと。値を代入する「設定(set)」とは異なる。"
     },
-    "translation_sample": "設定ファイル内で必要なフィールドの値を指定します。"
+    "contextual_rules": [
+      {
+        "when": "the source verb is \"specify\" / \"is specified\" / \"specifying\" — the writer or user names which file, flag, field, resource, or named value to use (e.g. \"specify a file\", \"specify the namespace\", \"`--subresource=[subresource-name]`\", \"specify the value of a field\")",
+        "translate": true,
+        "translation": "指定"
+      },
+      {
+        "when": "the source actually says \"set X to Y\" / \"X is set to Y\" / \"X has a Y of Z\" — a value is being assigned to a field, flag, or parameter. That is the `set` entry's sense (設定); do not render it as 指定 just because a field name is mentioned.",
+        "translate": true,
+        "translation": "設定"
+      }
+    ],
+    "translation_sample": "設定ファイル内で必要なフィールドの値を指定します。",
+    "notes": "Paired with the `set` entry — this is the most commonly confused pair in the ja docs. Rule: 指定 = name/point at something (specify); 設定 = assign a value (set). Evidence from content/ja/docs: 〜を指定します 126 vs 〜を設定します 90 (both common, so the English verb decides, not the count), but 〜に指定されています 1 vs 〜に設定されています 14 and 〜に指定してください 1 vs 〜に設定してください 10 — anything of the form \"X is set to Y\" must be 設定. Caught in review: update-api-object-kubectl-patch.md had 「`patchStrategy`の値は`merge`に指定されています」 for en \"the `Containers` field of `PodSpec` struct has a `patchStrategy` of `merge`\" — no \"specify\" in the source, so it was corrected to 設定 (ja:135)."
   },
   {
     "id": "source",
@@ -498,5 +499,133 @@
     },
     "translation_sample": "需要に適応し、コストを最適化するために、クラスター内のノードを自動的にプロビジョニングおよび統合します。",
     "notes": "Distinct from `merge`→マージ — don't conflate the two even though both loosely mean \"combine\" in English. 統合 also covers \"integrate\" (e.g. 外部認証プロバイダーをKubernetesに統合する — authentication-mechanisms.md) but never means \"merge\" a git PR or a patch; that's マージ's job."
+  },
+  {
+    "id": "see",
+    "glossary_id": null,
+    "english": "See",
+    "aliases": [
+      "see",
+      "See also",
+      "you can see",
+      "can see"
+    ],
+    "translate": true,
+    "translation": "参照",
+    "definition": {
+      "english": "To direct the reader to another document, section, or resource; or to point out something observable in a command's output.",
+      "translation": "読者を別の文書・セクション・リソースへ導くこと。またはコマンドの出力で観察できる事柄を指し示すこと。"
+    },
+    "contextual_rules": [
+      {
+        "when": "Imperative pointer to a document, section, or link: \"See X.\", \"See also X.\", \"For more information, see X.\" This is the dominant sense — 参照してください appears 634 times across content/ja/docs against 14 for 参照できます. For the longer form add the house discourse connector: \"For more information, see X\" → 詳細については、Xを参照してください (162 occurrences); 詳しくは、Xを参照してください (16) is also used.",
+        "translate": true,
+        "translation": "〜を参照してください"
+      },
+      {
+        "when": "Descriptive statement that something is visible in a document or resource: \"You can (also) see X in the [link].\" Keep the descriptive mood — do not convert to an imperative 参照してください, which would add a command the source does not have (ja style guide: 意訳と直訳で迷った場合は「直訳」で訳す).",
+        "translate": true,
+        "translation": "〜で参照できます"
+      },
+      {
+        "when": "Reader observing a command's output: \"In the output, you can see that ...\", \"The output shows that ...\". Do NOT use 参照 here (that means \"consult/refer to a document\"); use 確認できます (145 occurrences in content/ja/docs) or わかります.",
+        "translate": true,
+        "translation": "〜が確認できます"
+      }
+    ],
+    "translation_sample": "詳しくは、[Podネットワークアドオンのインストール](#pod-network)を参照してください。",
+    "notes": "Three-way split decided by the source's mood, not by the word \"see\" alone (update-api-object-kubectl-patch.md was the test case). (1) Imperative \"See X\" → 〜を参照してください — the overwhelming house style. (2) Descriptive \"you can see X in the [link]\" → 〜で参照できます — faithful to the source, but a minority rendering: about 5 of the 14 参照できます instances in content/ja/docs are doc pointers. (3) \"In the output, you can see ...\" → 〜が確認できます. Default when unsure: 〜を参照してください. Caveat: 参照できます is ambiguous in Japanese — 9 of those 14 instances use it in the \"object references another object\" sense (e.g. RoleBindingは同じNamespace内の任意のRoleを参照できます — rbac.md:101), so for doc pointers 〜に記載されています / 〜で確認できます are unambiguous alternatives. Established example for rule (1): create-cluster-kubeadm.md en:171 \"See [Installing a Pod network add-on](#pod-network).\" → ja:129 詳しくは、[Podネットワークアドオンのインストール](#pod-network)を参照してください。"
+  },
+  {
+    "id": "different",
+    "glossary_id": null,
+    "english": "different",
+    "translate": true,
+    "translation": "異なる",
+    "definition": {
+      "english": "Not the same as something else; distinct in nature, appearance, or quality.",
+      "translation": "他のものとは同じではないこと。性質、外見、または質において区別されること。"
+    },
+    "translation_sample": "以前のPodとは異なる名前になっていることが出力から示されています。"
+  },
+  {
+    "id": "set",
+    "glossary_id": null,
+    "english": "Set",
+    "aliases": [
+      "set",
+      "sets",
+      "setting",
+      "is set to",
+      "set to"
+    ],
+    "translate": true,
+    "translation": "設定",
+    "definition": {
+      "english": "To assign a value to a field, flag, or parameter (\"set `type` to `merge`\"). Distinct from naming which item to use, which is specify → 指定.",
+      "translation": "フィールド、フラグ、パラメータに値を代入すること（「`type`を`merge`に設定する」）。どれを使うかを名指しする「指定(specify)」とは異なる。"
+    },
+    "contextual_rules": [
+      {
+        "when": "\"set X to Y\", \"X is set to Y\", \"set the value of X\", or a statement that X \"has a Y of Z\" — a value is assigned to a field, flag, parameter, or field tag (e.g. \"set `type` to `merge`\", \"the `type` field is set to `NodePort`\", \"has a `patchStrategy` of `merge`\")",
+        "translate": true,
+        "translation": "設定"
+      },
+      {
+        "when": "the source verb is \"specify\" / \"is specified\" — the writer or user names which file, flag, field, or named value to use. That belongs to the `specify` entry (指定); don't use 設定 there.",
+        "translate": true,
+        "translation": "指定"
+      },
+      {
+        "when": "\"set\" used as a noun — \"a set of X\" (e.g. \"a set of Pods\", \"a set of nodes\", \"a set of rules\") meaning a collection, not a configuration action",
+        "translate": true,
+        "translation": "セット / 集合 / 一連"
+      }
+    ],
+    "translation_sample": "パッチコマンドで`type`を`merge`に設定してください:",
+    "notes": "Paired with the `specify` entry — this is the most commonly confused pair in the ja docs. Rule: 設定 = assign a value (set); 指定 = name/point at something (specify). Evidence from content/ja/docs: 〜に設定します 90 vs 〜に指定します 9, 〜に設定してください 10 vs 〜に指定してください 1, 〜に設定されています 14 vs 〜に指定されています 1, 設定可能 19 vs 指定可能 7. Same-pattern precedents: service.md:386 「`type`フィールドを`NodePort`に設定すると…」, service.md:460 「…`LoadBalancer`に設定すると…」, update-api-object-kubectl-patch.md ja:238 「パッチコマンドで`type`を`merge`に設定してください:」 (en:249 \"In your patch command, set `type` to `merge`:\"). Beware the noun sense: \"a set of Pods\" → 「Podのセット」 (のセット 133 occurrences), 「の集合」 43, 「一連の」 62 — never 設定."
+  },
+  {
+    "id": "list",
+    "glossary_id": null,
+    "english": "List",
+    "aliases": [
+      "list",
+      "lists",
+      "listed",
+      "listing",
+      "list the",
+      "list all"
+    ],
+    "translate": true,
+    "translation": "一覧表示",
+    "definition": {
+      "english": "As a verb, to display the items of a collection (\"List the running Pods:\"). As a noun, an ordered collection of items, or a listing of them.",
+      "translation": "動詞では、ある集まりの項目を表示すること（「実行中のPodを一覧表示します:」）。名詞では、項目の並び、またはそれを列挙したもの。"
+    },
+    "contextual_rules": [
+      {
+        "when": "verb — an instruction or step heading telling the reader to run a command whose output is a collection: \"List the running Pods:\", \"List all Pods:\", \"List the available commands.\"",
+        "translate": true,
+        "translation": "〜を一覧表示します:"
+      },
+      {
+        "when": "verb inside running prose — \"the command lists ...\", \"... is listed below\", \"lists the resources that ...\"",
+        "translate": true,
+        "translation": "一覧表示（します／されます）"
+      },
+      {
+        "when": "noun — \"a list of X\" / \"the list\" as an ordered collection of items, including the data-structure sense (a list of strings, the `containers` list, a list of plugins or options, a list of conditions)",
+        "translate": true,
+        "translation": "〜のリスト"
+      },
+      {
+        "when": "noun — a reference-style listing of what exists or is supported (a list of available addons, supported values, flags, formats), where the emphasis is on an overview/index rather than a data collection",
+        "translate": true,
+        "translation": "〜の一覧"
+      }
+    ],
+    "translation_sample": "実行中のPodを一覧表示します:",
+    "notes": "Verb: 〜を一覧表示します is the established rendering (一覧表示 47 vs リストアップ 18 across content/ja/docs). Decisive precedent — the identical sentence \"List the running Pods:\" is already translated as 「実行中のPodを一覧表示します:」 in 3 pages (inject-data-application/define-environment-variable-container.md:35, define-interdependent-environment-variables.md:40, and update-api-object-kubectl-patch.md:261). リストアップ is a valid but minority and looser choice (mostly crictl.md and debug pages); the ja style guide prefers 和語・漢語 over katakana when both are natural, so prefer 一覧表示. Noun: リスト is well established and exempt from the katakana-avoidance rule (style guide: カタカナで定着している用語はその限りではない) — のリスト 173 vs の一覧 64. Use 一覧 when the sense is an overview/index of what exists or is supported (利用可能なアドオンの一覧, サポートされているJSONフォーマットの一覧). Do NOT use 一覧表: it never appears in content/ja/docs as a standalone word (the 47 raw hits for 一覧表 are all 一覧表示)."
   }
 ]
